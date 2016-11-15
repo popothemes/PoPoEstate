@@ -2,12 +2,78 @@ jQuery(document).ready(
 
     function(){
 
+        //Localities
+
+        var current_page=1;
+
+        function load_localities()
+        {
+            var data = {
+                'action': 'realtor_home_localities',
+                'paged' : current_page
+            };
+
+            jQuery.post(my_ajax_vars.ajaxurl, data, function(response) {
+                jQuery("#realtor-home-localities").append(response);
+                if(current_page == jQuery('#localities_total_pages').val())
+                {
+                    jQuery('#realtor-localities-load-more').hide();
+
+                }
+
+
+            });
+
+
+
+        }
+        jQuery("#realtor-home-localities").empty();
+        load_localities();
+
+        jQuery('#realtor-localities-load-more').on('click',function(e) {
+            current_page++;
+            load_localities();
+        });
+
+
+        //Search Suggestions
+        var data = {
+            'action': 'realtor_search_suggestions',
+        };
+
+        var locations;
+
+        jQuery.post(my_ajax_vars.ajaxurl, data, function(response) {
+            locations = response;
+
+        });
+
 
 
         jQuery('#realtor-home-search-box').on('input',function(e){
 
             jQuery("#realtor-search-dropdown-menu").empty();
-            jQuery("#realtor-search-dropdown-menu").append('<li class="suggestion"><a href="javascript:;" >Gola Ganda!</a></li>');
+
+
+            jQuery(document).ready(function(jQuery) {
+
+                jQuery.each(locations, function(index,value){
+
+                    if(jQuery('#realtor-home-search-box').val().trim() != "") {
+
+                        if (value.includes(jQuery('#realtor-home-search-box').val()) || value.toLowerCase().includes(jQuery('#realtor-home-search-box').val()) || value.toUpperCase().includes(jQuery('#realtor-home-search-box').val())) {
+                            jQuery("#realtor-search-dropdown-menu").append('<li class="suggestion"><a href="javascript:;" >' + value + '</a></li>');
+
+                        }
+                    }
+
+
+
+                })
+
+            });
+
+
 
             jQuery(".suggestion").on('click',function(){
 

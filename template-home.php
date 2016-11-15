@@ -6,7 +6,6 @@
 *
 */
 get_header();
-//print_r($GLOBALS['realtor_default_options']['realtor_home_banner_background_image']);
 ?>
 
 <?php get_template_part('template-parts/home/search-box'); ?>

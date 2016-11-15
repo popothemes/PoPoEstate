@@ -7,8 +7,10 @@
                 <div class="sale-form">
 
                   <form method="get" action="<?php echo get_theme_mod('realtor_search_page'); ?>">
-                    <div class="form-group"><label><?php echo __('Enter Your Keyword', 'realtor'); ?></label><input type="text" class="form-control" name="keyword" placeholder="Search by features, location, zip, area" value="<?php if(isset($_GET['keyword'])) {echo $_GET['keyword'];
+                    <div class="form-group"><label><?php echo __('Enter Your Keyword', 'realtor'); ?></label><input type="text" class="form-control" name="keyword" placeholder="Search by title, description or features" value="<?php if(isset($_GET['keyword'])) {echo $_GET['keyword'];
                    } ?>" /></div>
+                      <div class="form-group"><label><?php echo __('Location', 'realtor'); ?></label><input type="text" class="form-control" name="location" placeholder="Search by location, area etc." value="<?php if(isset($_GET['location'])) {echo $_GET['location'];
+                          } ?>" /></div>
                     <div class="form-group"><label><?php echo __('Property Status', 'realtor'); ?></label><select type="text" name="status" class="form-control" >
                       <option value="any"><?php echo __('Any', 'realtor'); ?></option>
                         <?php

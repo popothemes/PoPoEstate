@@ -1,4 +1,7 @@
-<?php global $realtor_default_options; ?>
+<?php
+global $realtor_default_options;
+
+?>
 <header>
     <div class="header" id="home">
         <div class="banner-header">
@@ -37,7 +40,7 @@
                                                 </div>
                                             </div>
                                             <div class="text-option">
-                                                <input id="realtor-home-search-box" autocomplete="off" type="text" name="keyword" class="form-control" placeholder="<?php echo __("Keyword","realtor"); ?>"/>
+                                                <input id="realtor-home-search-box" autocomplete="off" type="text" name="location" class="form-control" placeholder="<?php echo __("Location","realtor"); ?>"/>
                                                 <i>X</i>
                                                 <ul class="dropdown-menu" id="realtor-search-dropdown-menu">
 

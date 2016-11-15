@@ -35,6 +35,20 @@
 */
 
 /* Begin Code for WordPress adaption */
+
+@media all and (max-width :1600px)  {
+    .locality-odd{display: none;}
+
+}
+@media all and (min-width :1601px)  {
+    .localities-box .locality-odd-flip{display: none;}
+    .locality-odd-flip{display: none;}
+    .mobile-locality.locality-odd{display:none;}
+    .hidden-md-col.mobile-locality.locality-odd-flip {
+        display: none;
+    }
+
+}
 #wpml-selector #lang_sel li {
     width: auto;
 }
@@ -115,15 +129,15 @@ padding:0 15px;font-weight: 500;
     margin: 0;
     text-align: center;
 }
-
-/*#home-banner-image img {*/
-    /*width:100%;*/
-/*}*/
 #home-banner-image {
     height: 448px;
     width: 100%;
     position: relative;
     overflow: hidden;
+}
+#realtor-localities-spinner {
+    margin: auto;
+    display: inherit;
 }
 
 /* End Code for WordPress adaption */
@@ -884,17 +898,22 @@ a.property-link i{margin-left:7px;position:relative;top:1px;font-size:14px;}
 @media all and (min-width :1600px)  {
 .section-localities .col-lg-4{width:33.33333333333333%;}
 .section-localities .hidden-md-col{display:block;}
+    .section-localities .hidden-localities{display:none;}
+
 }
 
 
 @media all and (min-width :992px)  {
     .modal-lg {width: 900px;}
+    .hidden-md-col{display:none;}
     }
-    
-    
+
+
+
+
 @media all and (min-width :768px)  {
 .faqs-tabs{border:0;font-size:16px;font-weight:bold;}
-
+    .hidden-md-col{display:none;}
 .hide-xl{display:none;}
 .tab-pane{min-height:300px;}
 .modal-sm {width: 300px;}
@@ -908,7 +927,7 @@ a.property-link i{margin-left:7px;position:relative;top:1px;font-size:14px;}
 @media all and (max-width:1400px){
         .carousel-caption h1{margin-top:75px;}
     }
-    
+
 
 @media all and (max-width: 1024px){
 .container{}
@@ -937,13 +956,13 @@ a.navbar-brand{display:block;color:#fff;text-align:left;padding:10px;}
 .navbar-default .navbar-brand{color:#fff;}
 .navbar-default .navbar-brand:hover{color:#fff;}
     }
-    
+
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {.carousel-caption h2 {margin-top: 0;}
 .process-caption{padding:10px;}
 .game-box .links a.red,.account-box .links a.red {padding-left: 10px;margin-left: 10px;}
 .game-box .links,.account-box .links {font-size: 12px;white-space: nowrap;}
 
-article, footer, header{overflow: hidden;}    
+article, footer, header{overflow: hidden;}
 .container{padding-left:15px;padding-right:15px;}
 .top-header{padding-top:0px;}
 .section-intelead .content {padding-top: 0;}
@@ -973,11 +992,19 @@ article, footer, header{overflow: hidden;}
 .para_left{padding:15px;}
 .para_right{padding:15px;}
 header, article, footer,.top-header{overflow:;}
+.hidden-md-col{display:none;}
+.hidden-localities{display:none;}
+.mobile-locality{display:block;}
+.mobile-locality-hidden{display:none;}
+.locality-odd-flip{display:none;}
+
+
 
 }
+@media all and (min-width: 801px){
+    .mobile-locality{display:none;}
 
-
-
+}
 
 @media(max-width:767px){
 .one-link{text-align:center;}
@@ -1027,7 +1054,7 @@ a.navbar-brand{display:block;color:#fff;text-align:left;padding:10px;}
 .arrow {text-align: center;position: relative;top: -10px;}
 .phone-img {text-align: right;padding: 20px 0 0;}
 .section-testimonials{padding:40px 0;}
-.testimonial-image {padding: 0 0 3px;background: none;}    
+.testimonial-image {padding: 0 0 3px;background: none;}
 .news-img img {width:100%;}
 .page-title {padding: 15px;}
 .page-title .breadcrumb {text-align: left;padding: 5px 0;}

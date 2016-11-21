@@ -38,11 +38,11 @@ global $post;
                                     } elseif ($num_comments > 1 ) {
                                         $comments = $num_comments . __(' Comments', 'realtor');
                                     } else {
-                                        $comments = __('1 Comment');
+                                        $comments = __('1 Comment','realtor');
                                     }
                                     $write_comments = '<a href="' . get_comments_link() .'"><i class="ei ei-comment" aria-hidden="true"></i>'. $comments.'</a>';
                                 } else {
-                                    $write_comments =  __('Comments Disabled');
+                                    $write_comments =  __('Comments Disabled','realtor');
                                 }
                                     echo $write_comments;
                                     ?>

@@ -110,7 +110,7 @@
                             <div class="col-sm-3"><i class="garage"></i><?php echo __('Parking', 'realtor'); ?> <?php echo get_post_meta(get_the_id(), 'parking', true); ?></div>
                         </div>
                     </div>
-                    <div class="property-price"><span class=""><?php echo get_theme_mod('realtor_currency_prefix', $realtor_default_options['realtor_currency_prefix']) ?><?php echo get_post_meta(get_the_id(), 'price')[0]; ?></span> <a href="<?php the_permalink(); ?>"><?php echo __('More Details', 'realtor'); ?><i
+                    <div class="property-price"><span class=""><?php echo get_theme_mod('realtor_currency_prefix', $realtor_default_options['realtor_currency_prefix']) ?><?php echo get_post_meta(get_the_id(), 'price')[0]; ?></span> <a href="<?php the_permalink(); ?>"><?php echo __('More Details', 'realtor'); ?><span class="screen-reader-text">of <?php the_title(); ?></span><i
                                 class="fa fa-caret-right" aria-hidden="true"></i></a></div>
                 </div>
             </div>

@@ -13,7 +13,17 @@
                     }
                     ?>
 
-                    <span id="top-header-left-content"><?php echo get_theme_mod('realtor_header_top_left_content', $realtor_default_options['realtor_header_top_left_content']); ?></span>
+                    <span id="top-header-left-content">
+                        <?php
+
+                        for($i=1;$i<=3;$i++)
+                        {
+                            if(trim(get_theme_mod('realtor_top_header_link_'.$i.'_title',"")) == ""){continue;}
+                            echo '<a href="'.get_theme_mod('realtor_top_header_link_'.$i.'_url', '#').'"><i class="fa '.get_theme_mod('realtor_top_header_link_'.$i.'_icon', $realtor_default_options['realtor_top_header_link_'.$i.'_icon']).'" aria-hidden="true"></i> '.get_theme_mod('realtor_top_header_link_'.$i.'_title', '').'</a>';
+
+                        }
+
+                        ?>
                 </div>
                 <div class="col-sm-6">
                     <?php echo realtor_get_social_icons(); ?>
@@ -30,11 +40,12 @@
                 <div class="col-sm-9 text-right">
           <span class="address-button">
             <i class="fa fa-map-marker" aria-hidden="true"></i>
-              <?php echo get_theme_mod('realtor_header_address', $realtor_default_options['realtor_header_address']); ?>
+              <div class="realtor_header_address"><?php echo get_theme_mod('realtor_header_address', $realtor_default_options['realtor_header_address']); ?></div>
           </span>
           <span class="call-button" id="header-number">
             <i class="fa fa-phone" aria-hidden="true"></i>
-              <?php echo get_theme_mod('realtor_header_contact', $realtor_default_options['realtor_header_contact']); ?>
+              <div class="realtor_header_contact"><?php echo get_theme_mod('realtor_header_contact', $realtor_default_options['realtor_header_contact']); ?></div>
+
           </span>
                 </div>
             </div>

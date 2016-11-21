@@ -7,8 +7,6 @@
     <div class="container">
         <div class="row">
           <div class="col-sm-6">
-            <h4>Rencent News & Blog Section</h4>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
           <span class="line"></span>
         </div>        
       </div>

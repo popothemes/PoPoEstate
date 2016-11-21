@@ -6,11 +6,6 @@
     <div class="page-result">
     <div class="container">
         <div class="row">
-          <div class="col-sm-6">
-            <h4>Rencent News & Blog Section</h4>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
-          <span class="line"></span>
-        </div>        
       </div>
       </div>
     </div>
@@ -40,20 +35,62 @@
                                     } elseif ($num_comments > 1 ) {
                                         $comments = $num_comments . __(' Comments', 'realtor');
                                     } else {
-                                        $comments = __('1 Comment');
+                                        $comments = __('1 Comment','realtor');
                                     }
                                         $write_comments = '<a href="' . get_comments_link() .'">'. $comments.'</a>';
                                 } else {
-                                        $write_comments =  __('Comments Disabled');
+                                        $write_comments =  __('Comments Disabled','realtor');
                                 }
                                 echo $write_comments;
                                 ?>
 
                               </span>   |        <span><a href="javascript:;"><i class="more"></i>Share this post</a></span></div>
                             <?php the_content(); ?>
+                            <?php
+                            $defaults = array(
+                                'before'           => '<li>',
+                                'after'            => '</li>',
+                                'link_before'      => '',
+                                'link_after'       => '',
+                                'next_or_number'   => 'number',
+                                'separator'        => ' ',
+                                'nextpagelink'     => __( 'Next page', 'realtor' ),
+                                'previouspagelink' => __( 'Previous page', 'realtor' ),
+                                'pagelink'         => '%',
+                                'echo'             => 1
+                            );
+
+                            global $multipage;
+                            if( $multipage)
+                            {
+
+                                ?>
+                                <nav aria-label="Page navigation" id="blog-single">
+                                        <?php wp_link_pages( 'before=<ul class="pagination">&after=</ul>&link_before=<li class="page-link">&link_after=</li>'); ?>
+                                </nav>
+
+
+                            <?php
+
+                            }
+
+
+
+
+                            ?>
                         <?php endwhile; wp_reset_query();?>
                           </div>
-                      <div class="tags"> <?php __("Tags:", 'realtor'); the_tags();?> </div>
+                        <?php
+                        if(has_tag())
+                        {
+                            ?>
+                            <div class="tags"> <?php __("Tags:", 'realtor'); the_tags();?> </div>
+
+                        <?php
+
+                        }
+                        ?>
+
                     </div>
                   </div>
                 </div>
@@ -71,242 +108,9 @@
                     } ?>
                   
                 </div>
-                <div class="leave-comment">
-                  <h2>Leave a Comment</h2>
-                  <form class="form-horizontal">
-                    <div class="form-group">
-                      <div class="col-sm-4"><input type="text" class="form-control" placeholder="Your Name" /></div>
-                      <div class="col-sm-4"><input type="text" class="form-control" placeholder="Email" /></div>
-                      <div class="col-sm-4"><input type="text" class="form-control" placeholder="http://" /></div>
-                    </div>
-                    <div class="form-group">
-                      <div class="col-sm-12"><textarea class="form-control" rows="5" placeholder="Your Comment"></textarea></div>
-                    </div>
-                    <div class="form-group">
-                      <div class="col-sm-12"><input type="button" class="btn btn-danger" value="Submit Comment" /></div>
-                    </div>
-                  </form>
-                </div>
               </div>
               <div class="col-sm-4">
-                <div class="search-section">
-                  <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search by keyword">
-                    <span class="input-group-btn">
-                    <button class="btn btn-default" type="button"><i class="ti-search"></i></button>
-                    </span> </div>
-                  <!-- /input-group --> 
-                </div>
-                <div> 
-                  <!-- Nav tabs -->
-                  <ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation" class="active"><a href="#sale" aria-controls="home" role="tab" data-toggle="tab">Sale</a></li>
-                    <li role="presentation"><a href="#rent" aria-controls="profile" role="tab" data-toggle="tab">Rent</a></li>
-                    <li role="presentation"><a href="#aprtment" aria-controls="messages" role="tab" data-toggle="tab">Apparment</a></li>
-                  </ul>
-                  <!-- Tab panes -->
-                  <div class="tab-content">
-                  <div role="tabpanel" class="tab-pane active" id="sale">
-                    <div class="sale-form">
-                      <form>
-                        <div class="form-group"><label>Enter Your Keyword</label><input type="text" class="form-control" placeholder="Search by location, zip, area" /></div>
-                        <div class="form-group"><label>Property Status</label><select type="text" class="form-control" >
-                          <option>Select Property Status</option><option>Select Property Status</option>
-                        </select></div>
-                        <div class="row form-group">
-                          <div class="col-sm-6"><label>No. Beds</label><select type="text" class="form-control" >
-                          <option>Any</option><option>Any</option>
-                        </select></div>
-                          <div class="col-sm-6"><label>No. Baths</label><select type="text" class="form-control" >
-                          <option>Any</option><option>Any</option>
-                        </select></div>
-                        </div>
-                        <div class="row form-group">
-                          <div class="col-sm-6"><label>Min. Area (Sqft)</label><select type="text" class="form-control" >
-                          <option>Any</option><option>Any</option>
-                        </select></div>
-                          <div class="col-sm-6"><label>Max. Area (Sqft)</label><select type="text" class="form-control" >
-                          <option>Any</option><option>Any</option>
-                        </select></div>
-                        </div>
-                        <div class="row form-group">
-                          <div class="col-sm-6"><label>Price From</label><select type="text" class="form-control" >
-                          <option>Any</option><option>Any</option>
-                        </select></div>
-                          <div class="col-sm-6"><label>Price To</label><select type="text" class="form-control" >
-                          <option>Any</option><option>Any</option>
-                        </select></div>
-                        </div>
-                        <div class="form-group">
-                          <input type="button" value="Find Properties" class="btn btn-success" />
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                  <div role="tabpanel" class="tab-pane" id="rent">
-                    <div class="sale-form">
-                      <form>
-                        <div class="form-group"><label>Enter Your Keyword</label><input type="text" class="form-control" placeholder="Search by location, zip, area" /></div>
-                        <div class="form-group"><label>Property Status</label><select type="text" class="form-control" >
-                          <option>Select Property Status</option><option>Select Property Status</option>
-                        </select></div>
-                        <div class="row form-group">
-                          <div class="col-sm-6"><label>No. Beds</label><select type="text" class="form-control" >
-                          <option>Any</option><option>Any</option>
-                        </select></div>
-                          <div class="col-sm-6"><label>No. Baths</label><select type="text" class="form-control" >
-                          <option>Any</option><option>Any</option>
-                        </select></div>
-                        </div>
-                        <div class="row form-group">
-                          <div class="col-sm-6"><label>Min. Area (Sqft)</label><select type="text" class="form-control" >
-                          <option>Any</option><option>Any</option>
-                        </select></div>
-                          <div class="col-sm-6"><label>Max. Area (Sqft)</label><select type="text" class="form-control" >
-                          <option>Any</option><option>Any</option>
-                        </select></div>
-                        </div>
-                        <div class="row form-group">
-                          <div class="col-sm-6"><label>Price From</label><select type="text" class="form-control" >
-                          <option>Any</option><option>Any</option>
-                        </select></div>
-                          <div class="col-sm-6"><label>Price To</label><select type="text" class="form-control" >
-                          <option>Any</option><option>Any</option>
-                        </select></div>
-                        </div>
-                        <div class="form-group">
-                          <input type="button" value="Find Properties" class="btn btn-success" />
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                  <div role="tabpanel" class="tab-pane" id="aprtment">
-                    <div class="sale-form">
-                      <form>
-                        <div class="form-group"><label>Enter Your Keyword</label><input type="text" class="form-control" placeholder="Search by location, zip, area" /></div>
-                        <div class="form-group"><label>Property Status</label><select type="text" class="form-control" >
-                          <option>Select Property Status</option><option>Select Property Status</option>
-                        </select></div>
-                        <div class="row form-group">
-                          <div class="col-sm-6"><label>No. Beds</label><select type="text" class="form-control" >
-                          <option>Any</option><option>Any</option>
-                        </select></div>
-                          <div class="col-sm-6"><label>No. Baths</label><select type="text" class="form-control" >
-                          <option>Any</option><option>Any</option>
-                        </select></div>
-                        </div>
-                        <div class="row form-group">
-                          <div class="col-sm-6"><label>Min. Area (Sqft)</label><select type="text" class="form-control" >
-                          <option>Any</option><option>Any</option>
-                        </select></div>
-                          <div class="col-sm-6"><label>Max. Area (Sqft)</label><select type="text" class="form-control" >
-                          <option>Any</option><option>Any</option>
-                        </select></div>
-                        </div>
-                        <div class="row form-group">
-                          <div class="col-sm-6"><label>Price From</label><select type="text" class="form-control" >
-                          <option>Any</option><option>Any</option>
-                        </select></div>
-                          <div class="col-sm-6"><label>Price To</label><select type="text" class="form-control" >
-                          <option>Any</option><option>Any</option>
-                        </select></div>
-                        </div>
-                        <div class="form-group">
-                          <input type="button" value="Find Properties" class="btn btn-success" />
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-                </div>
-                <div class="left-container">
-                  <h3>Featured Properties</h3>
-                  <div class="s-property">
-                    <div class="row">
-                      <div class="col-xs-5"><img src="images/small-property.png" width="137" height="137" alt="" class="img-responsive" /></div>
-                      <div class="col-xs-7 s-property-detail">
-                        <h5>Awesome villa for sale</h5>
-                        <span class="price">$625,000</span>
-                        <div class="r-property-space">
-                          <div class="row">
-                            <div class="col-sm-6"><i class="sqm"></i>161 Sqm</div>
-                            <div class="col-sm-6"><i class="bed"></i>Beds: 2</div>
-                            <div class="col-sm-6"><i class="bath"></i>Baths: 2</div>
-                            <div class="col-sm-6"><i class="garage"></i>Garage: 2</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="s-property">
-                    <div class="row">
-                      <div class="col-xs-5"><img src="images/small-property.png" width="137" height="137" alt="" class="img-responsive" /></div>
-                      <div class="col-xs-7 s-property-detail">
-                        <h5>Awesome villa for sale</h5>
-                        <span class="price">$625,000</span>
-                        <div class="r-property-space">
-                          <div class="row">
-                            <div class="col-sm-6"><i class="sqm"></i>161 Sqm</div>
-                            <div class="col-sm-6"><i class="bed"></i>Beds: 2</div>
-                            <div class="col-sm-6"><i class="bath"></i>Baths: 2</div>
-                            <div class="col-sm-6"><i class="garage"></i>Garage: 2</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="s-property">
-                    <div class="row">
-                      <div class="col-xs-5"><img src="images/small-property.png" width="137" height="137" alt="" class="img-responsive" /></div>
-                      <div class="col-xs-7 s-property-detail">
-                        <h5>Awesome villa for sale</h5>
-                        <span class="price">$625,000</span>
-                        <div class="r-property-space">
-                          <div class="row">
-                            <div class="col-sm-6"><i class="sqm"></i>161 Sqm</div>
-                            <div class="col-sm-6"><i class="bed"></i>Beds: 2</div>
-                            <div class="col-sm-6"><i class="bath"></i>Baths: 2</div>
-                            <div class="col-sm-6"><i class="garage"></i>Garage: 2</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="s-property">
-                    <div class="row">
-                      <div class="col-xs-5"><img src="images/small-property.png" width="137" height="137" alt="" class="img-responsive" /></div>
-                      <div class="col-xs-7 s-property-detail">
-                        <h5>Awesome villa for sale</h5>
-                        <span class="price">$625,000</span>
-                        <div class="r-property-space">
-                          <div class="row">
-                            <div class="col-sm-6"><i class="sqm"></i>161 Sqm</div>
-                            <div class="col-sm-6"><i class="bed"></i>Beds: 2</div>
-                            <div class="col-sm-6"><i class="bath"></i>Baths: 2</div>
-                            <div class="col-sm-6"><i class="garage"></i>Garage: 2</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="s-property">
-                    <div class="row">
-                      <div class="col-xs-5"><img src="images/small-property.png" width="137" height="137" alt="" class="img-responsive" /></div>
-                      <div class="col-xs-7 s-property-detail">
-                        <h5>Awesome villa for sale</h5>
-                        <span class="price">$625,000</span>
-                        <div class="r-property-space">
-                          <div class="row">
-                            <div class="col-sm-6"><i class="sqm"></i>161 Sqm</div>
-                            <div class="col-sm-6"><i class="bed"></i>Beds: 2</div>
-                            <div class="col-sm-6"><i class="bath"></i>Baths: 2</div>
-                            <div class="col-sm-6"><i class="garage"></i>Garage: 2</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <a href="javascript:;" class="property-link">All Properties <i class="fa fa-caret-right" aria-hidden="true"></i></a> </div>
+                <?php dynamic_sidebar( 'Blog' );?>
               </div>
             </div>
           </div>

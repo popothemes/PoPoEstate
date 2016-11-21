@@ -1,38 +1,11 @@
+<?php global $realtor_default_options; ?>
 <section class="section-app" id="apps">
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
-                <div class="app-section">
-                    <h2 class="wow fadeInDown" data-wow-delay="200ms">Top-rated real estate app</h2>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <ul class="oval-list wow fadeInLeft" data-wow-delay="400ms">
-                                <li>Browse homes for sale and for rent</li>
-                                <li> 1 million Plus listings</li>
-                                <li>Search near top-rated schools </li>
-                                <li>Get instant notifications</li>
-                            </ul>
-                        </div>
-                        <div class="col-sm-6">
-                            <ul class="oval-list wow fadeInLeft" data-wow-delay="500ms">
-                                <li>Explore neighborhoods</li>
-                                <li>Save your search</li>
-                                <li>5 Million Downloads on App Store</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="store-section  wow fadeInLeft" data-wow-delay="700ms">
-                        <a href="javascript:;"><i class="apple-icon"></i>
-                            <span class="dn">Download on the</span>
-                            <span class="app">App Store</span></a>
-                        <a href="javascript:;">
-                            <i class="andrid-icon"></i>
-                            <span class="dn">Download on the</span>
-                            <span class="app"><img src="images/gplus.png" width="99" height="21" alt="" /></span>
-                        </a></div>
-                </div>
+                <?php echo get_theme_mod('realtor_home_call_to_action_two_col_with_image_left_col_content',$realtor_default_options['realtor_home_call_to_action_two_col_with_image_left_col_content']); ?>
             </div>
-            <div class="col-sm-6 phone-img wow fadeInLeft" data-wow-delay="900ms"><img src="images/phone.jpg" width="371" height="402" alt="" /></div>
+            <div class="col-sm-6 phone-img wow fadeInLeft" data-wow-delay="900ms"><img src="<?php echo get_theme_mod('realtor_home_call_to_action_two_col_with_image_right_col_image',$realtor_default_options['realtor_home_call_to_action_two_col_with_image_right_col_image']); ?>" width="371" height="402" alt="" /></div>
         </div>
     </div>
 </section>

@@ -1,12 +1,9 @@
 <?php
-/*
-* Template Name: Property Listing
-*
-* Property Listing Template
-*
-*/
+
 get_header();
 
+global $wp_query;
+$curauth = $wp_query->get_queried_object();
 ?>
 
 
@@ -16,29 +13,19 @@ get_header();
             <?php get_template_part('template-parts/page-title'); ?>
             <div class="page-result">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <?php while ( have_posts() ) : the_post(); ?>
-                                <h4><?php the_title(); ?></h4>
-                                <p><?php the_content(); ?></p>
-                            <?php endwhile; wp_reset_query();?>
-                            <span class="line"></span>
-                        </div>
-                        <div class="col-sm-6 sort-item">
-                            <a href="javascript:;" class="sort">Sort By: Default Order <i class="fa fa-angle-down"></i></a>
-                        </div>
-                    </div>
+
                 </div>
             </div>
             <section class="section-inner">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-4">
-                            <?php dynamic_sidebar( 'Property Listing' );?>
+                            <?php dynamic_sidebar( 'Sidebar' );?>
                         </div>
 
                         <div class="col-sm-8">
                             <div class="row">
+                                <?php get_template_part("template-parts/agent-details-author-page"); ?>
 
                                 <?php
 
@@ -46,6 +33,7 @@ get_header();
 
                                     'post_type'       =>  'property',
                                     'paged'         =>  get_query_var('paged'),
+                                    'author__in'    =>  $curauth->ID,
 
                                 );
                                 query_posts($regular_posts_args);

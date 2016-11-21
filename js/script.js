@@ -264,7 +264,7 @@ jQuery(document).ready(
                 jQuery(".custom-galery").removeClass('open');
             }
         );
-        jQuery(".r-property-image a,.news-img,#owl-floor-plan .item img").on(
+        jQuery("#owl-floor-plan .item img").on(
             'click', function(){
                 jQuery(".custom-galery").addClass('open');
             }

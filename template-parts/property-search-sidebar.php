@@ -93,7 +93,7 @@
                       </div>
 
                     <div class="row form-group">
-                      <div class="col-sm-6"><label><?php echo __('Min. Area ('.get_theme_mod('realtor_area_postfix', $realtor_default_options['realtor_area_postfix']).')', 'realtor'); ?></label><select type="text" name="minarea" class="form-control" >
+                      <div class="col-sm-6"><label><?php printf(__('Min. Area (%s)', 'realtor'),get_theme_mod('realtor_area_postfix', $realtor_default_options['realtor_area_postfix'])); ?></label><select type="text" name="minarea" class="form-control" >
                       <option value="any">Any</option>
                               <?php
 
@@ -108,7 +108,7 @@
 
                               ?>
                     </select></div>
-                      <div class="col-sm-6"><label><?php echo __('Max. Area ('.get_theme_mod('realtor_area_postfix', $realtor_default_options['realtor_area_postfix']).')', 'realtor'); ?></label><select type="text" name="maxarea" class="form-control" >
+                      <div class="col-sm-6"><label><?php printf(__('Max. Area (%s)', 'realtor'),get_theme_mod('realtor_area_postfix', $realtor_default_options['realtor_area_postfix'])); ?></label><select type="text" name="maxarea" class="form-control" >
                       <option value="any">Any</option>
                               <?php
 
@@ -125,7 +125,7 @@
                     </select></div>
                     </div>
                     <div class="row form-group">
-                      <div class="col-sm-6"><label><?php echo __('Price From ('.get_theme_mod('realtor_currency_prefix', $realtor_default_options['realtor_currency_prefix']).')', 'realtor'); ?></label><select type="text" name="pricefrom" class="form-control" >
+                      <div class="col-sm-6"><label><?php printf(__('Price From (%s)', 'realtor'),get_theme_mod('realtor_currency_prefix', $realtor_default_options['realtor_currency_prefix'])); ?></label><select type="text" name="pricefrom" class="form-control" >
                       <option value="any">Any</option>
                               <?php
 
@@ -140,7 +140,7 @@
 
                               ?>
                     </select></div>
-                      <div class="col-sm-6"><label><?php echo __('Price To ('.get_theme_mod('realtor_currency_prefix', $realtor_default_options['realtor_currency_prefix']).')', 'realtor'); ?></label><select type="text" name="priceto" class="form-control" >
+                      <div class="col-sm-6"><label><?php printf(__('Price To (%s)', 'realtor'), get_theme_mod('realtor_currency_prefix', $realtor_default_options['realtor_currency_prefix'])); ?></label><select type="text" name="priceto" class="form-control" >
                       <option value="any">Any</option>
                               <?php
 

@@ -1,5 +1,5 @@
 <div class="p-box p-contact-agent">
-              <h4>Contact Agent</h4>
+              <h4><?php echo __('Contact Agent', 'realtor'); ?></h4>
               
               <div class="row">
                 <div class="col-sm-6 agent-detail">

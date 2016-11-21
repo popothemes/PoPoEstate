@@ -10,19 +10,67 @@ get_header();
 
 <?php get_template_part('template-parts/home/search-box'); ?>
 <div class="article">
-
-    <?php get_template_part('template-parts/home/feature-boxes'); ?>
-    <?php get_template_part('template-parts/home/localities'); ?>
-    <?php get_template_part('template-parts/home/trending-properties'); ?>
-    <section class="section-recent-property" id="recent-property">
-        <?php get_template_part('template-parts/home/recent-properties'); ?>
+    <?php
+     if(get_theme_mod('realtor_home_feature_boxes_switch', '1'))
+     {
+          get_template_part('template-parts/home/feature-boxes');
+     }
+  else
+  { ?>
+  <div class="divider-dashless"></div>
+  <?php
+  }
+     if(get_theme_mod('realtor_home_localities_switch', '1'))
+     {
+          get_template_part('template-parts/home/localities');
+     }
+     if(get_theme_mod('realtor_home_trending_properties_switch', '1'))
+     {
+          get_template_part('template-parts/home/trending-properties');
+     }
+     if(get_theme_mod('realtor_home_recent_properties_switch', '1'))
+     {
+          ?>
+          <section class="section-recent-property" id="recent-property">
+            <?php get_template_part('template-parts/home/recent-properties'); ?>
+          </section>
+          <?php
+     }
+     if(get_theme_mod('realtor_home_call_to_action_plain_switch', '1'))
+     {
+          get_template_part('template-parts/home/call-to-action-plain');
+     }
+     if(get_theme_mod('realtor_home_agents_switch', '1'))
+     {
+          get_template_part('template-parts/home/agents');
+     }
+     if(get_theme_mod('realtor_call_to_action_with_image_switch', '1'))
+     {
+          get_template_part('template-parts/home/call-to-action-with-image');
+     }
+     if(get_theme_mod('realtor_home_testimonials_switch', '1'))
+     {
+     ?>
+     <section class="section-testimonials" id="home-testimonials">
+        <?php get_template_part('template-parts/home/testimonials'); ?>
     </section>
-    <?php get_template_part('template-parts/home/call-to-action-plain'); ?>
-    <?php get_template_part('template-parts/home/agents'); ?>
-    <?php get_template_part('template-parts/home/call-to-action-with-image'); ?>
-    <?php get_template_part('template-parts/home/testimonials'); ?>
-    <?php get_template_part('template-parts/home/call-to-action-compact'); ?>
-    <?php get_template_part('template-parts/home/recent-posts'); ?>
+     <?php
+     }
+     if(get_theme_mod('realtor_call_to_action_compact_switch', '1'))
+     {
+          get_template_part('template-parts/home/call-to-action-compact');
+     }
+
+     if(get_theme_mod('realtor_home_posts_switch', '1'))
+     {
+     ?>
+        <section class="section-recent-news" id="recent-news">
+            <?php get_template_part('template-parts/home/recent-posts'); ?>
+        </section>
+     <?php
+     }
+    ?>
+
 
 
   </div>

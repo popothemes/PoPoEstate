@@ -25,8 +25,14 @@ function custom_breadcrumbs()
         echo '<li class="separator separator-home"> ' . $separator . ' </li>';
       
         if (is_archive() && !is_tax() && !is_category() && !is_tag() ) {
-       
-            echo '<li class="item-current item-archive"><strong class="bread-current bread-archive"> ' . post_type_archive_title($prefix, false) . '</strong></li>';
+
+            if(is_author())
+            {
+                echo '<li class="item-current item-archive"><strong class="bread-current bread-archive"> Agent' . post_type_archive_title('', false) . '</strong></li>';
+            }
+            else{
+                echo '<li class="item-current item-archive"><strong class="bread-current bread-archive"> ' . post_type_archive_title('', false) . '</strong></li>';
+            }
        
         } else if (is_archive() && is_tax() && !is_category() && !is_tag() ) {
        
@@ -213,7 +219,7 @@ function custom_breadcrumbs()
         } else if (get_query_var('paged') ) {
         
             // Paginated archives
-            echo '<li class="item-current item-current-' . get_query_var('paged') . '"><strong class="bread-current bread-current-' . get_query_var('paged') . '" title="Page ' . get_query_var('paged') . '">'.__('Page') . ' ' . get_query_var('paged') . '</strong></li>';
+            echo '<li class="item-current item-current-' . get_query_var('paged') . '"><strong class="bread-current bread-current-' . get_query_var('paged') . '" title="Page ' . get_query_var('paged') . '">'.__('Page', 'realtor') . ' ' . get_query_var('paged') . '</strong></li>';
         
         } else if (is_search() ) {
       

@@ -26,7 +26,7 @@
                                     class="category"><?php echo get_post_meta(get_the_id(), 'address-locality')[0]; ?></span>
 
                                 <p><?php echo wp_trim_words(get_the_excerpt(), 10); ?></p>
-                                <a href="<?php the_permalink(); ?>">More Details <i class="fa fa-long-arrow-right"
+                                <a href="<?php echo get_theme_mod('realtor_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]; ?>">More Details <i class="fa fa-long-arrow-right"
                                                                                     aria-hidden="true"></i></a></div>
                         </div>
                     </div>
@@ -43,7 +43,7 @@
                                     class="category"><?php echo get_post_meta(get_the_id(), 'address-locality')[0]; ?></span>
 
                                 <p><?php echo wp_trim_words(get_the_excerpt(), 10); ?></p>
-                                <a href="<?php the_permalink(); ?>">More Details <i class="fa fa-long-arrow-right"
+                                <a href="<?php echo get_theme_mod('realtor_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]; ?>">More Details <i class="fa fa-long-arrow-right"
                                                                                     aria-hidden="true"></i></a></div>
                         </div>
                         <div class="col-sm-6">
@@ -74,7 +74,7 @@
             $last_post['title'] = get_the_title();
             $last_post['address-locality'] = get_post_meta(get_the_id(), 'address-locality')[0];
             $last_post['excerpt'] = wp_trim_words(get_the_excerpt(), 10);
-            $last_post['permalink'] = get_the_permalink();
+            $last_post['permalink'] = get_theme_mod('realtor_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0];
 
             $flip_counter++;
             continue;
@@ -93,7 +93,7 @@
                                     class="category"><?php echo get_post_meta(get_the_id(), 'address-locality')[0]; ?></span>
 
                                 <p><?php echo wp_trim_words(get_the_excerpt(), 10); ?></p>
-                                <a href="<?php the_permalink(); ?>">More Details <i class="fa fa-long-arrow-right"
+                                <a href="<?php echo get_theme_mod('realtor_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]; ?>">More Details <i class="fa fa-long-arrow-right"
                                                                                     aria-hidden="true"></i></a></div>
                         </div>
                         <div class="col-sm-6">
@@ -140,7 +140,7 @@
                                     class="category"><?php echo get_post_meta(get_the_id(), 'address-locality')[0]; ?></span>
 
                                 <p><?php echo wp_trim_words(get_the_excerpt(), 10); ?></p>
-                                <a href="<?php the_permalink(); ?>">More Details <i class="fa fa-long-arrow-right"
+                                <a href="<?php echo get_theme_mod('realtor_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]; ?>">More Details <i class="fa fa-long-arrow-right"
                                                                                     aria-hidden="true"></i></a></div>
                         </div>
                         <div class="col-sm-6">
@@ -198,7 +198,7 @@
                                     class="category"><?php echo get_post_meta(get_the_id(), 'address-locality')[0]; ?></span>
 
                                 <p><?php echo wp_trim_words(get_the_excerpt(), 10); ?></p>
-                                <a href="<?php the_permalink(); ?>">More Details <i class="fa fa-long-arrow-right"
+                                <a href="<?php echo get_theme_mod('realtor_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]; ?>">More Details <i class="fa fa-long-arrow-right"
                                                                                     aria-hidden="true"></i></a></div>
                         </div>
 
@@ -226,7 +226,7 @@
                                     class="category"><?php echo get_post_meta(get_the_id(), 'address-locality')[0]; ?></span>
 
                                 <p><?php echo wp_trim_words(get_the_excerpt(), 10); ?></p>
-                                <a href="<?php the_permalink(); ?>">More Details <i class="fa fa-long-arrow-right"
+                                <a href="<?php echo get_theme_mod('realtor_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]; ?>">More Details <i class="fa fa-long-arrow-right"
                                                                                     aria-hidden="true"></i></a></div>
                         </div>
 
@@ -252,7 +252,7 @@
                                     class="category"><?php echo get_post_meta(get_the_id(), 'address-locality')[0]; ?></span>
 
                                 <p><?php echo wp_trim_words(get_the_excerpt(), 10); ?></p>
-                                <a href="<?php the_permalink(); ?>">More Details <i class="fa fa-long-arrow-right"
+                                <a href="<?php echo get_theme_mod('realtor_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]; ?>">More Details <i class="fa fa-long-arrow-right"
                                                                                     aria-hidden="true"></i></a></div>
                         </div>
                         <div class="col-sm-6">
@@ -291,7 +291,7 @@
                                     class="category"><?php echo get_post_meta(get_the_id(), 'address-locality')[0]; ?></span>
 
                                 <p><?php echo wp_trim_words(get_the_excerpt(), 10); ?></p>
-                                <a href="<?php the_permalink(); ?>">More Details <i class="fa fa-long-arrow-right"
+                                <a href="<?php echo get_theme_mod('realtor_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]; ?>">More Details <i class="fa fa-long-arrow-right"
                                                                                     aria-hidden="true"></i></a></div>
                         </div>
 
@@ -310,7 +310,7 @@
                                     class="category"><?php echo get_post_meta(get_the_id(), 'address-locality')[0]; ?></span>
 
                                 <p><?php echo wp_trim_words(get_the_excerpt(), 10); ?></p>
-                                <a href="<?php the_permalink(); ?>">More Details <i class="fa fa-long-arrow-right"
+                                <a href="<?php echo get_theme_mod('realtor_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]; ?>">More Details <i class="fa fa-long-arrow-right"
                                                                                     aria-hidden="true"></i></a></div>
                         </div>
                         <div class="col-sm-6">
@@ -350,7 +350,7 @@
                                     class="category"><?php echo get_post_meta(get_the_id(), 'address-locality')[0]; ?></span>
 
                                 <p><?php echo wp_trim_words(get_the_excerpt(), 10); ?></p>
-                                <a href="<?php the_permalink(); ?>">More Details <i class="fa fa-long-arrow-right"
+                                <a href="<?php echo get_theme_mod('realtor_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]; ?>">More Details <i class="fa fa-long-arrow-right"
                                                                                     aria-hidden="true"></i></a></div>
                         </div>
 
@@ -395,7 +395,7 @@
                                     class="category"><?php echo get_post_meta(get_the_id(), 'address-locality')[0]; ?></span>
 
                             <p><?php echo wp_trim_words(get_the_excerpt(), 10); ?></p>
-                            <a href="<?php the_permalink(); ?>">More Details <i class="fa fa-long-arrow-right"
+                            <a href="<?php echo get_theme_mod('realtor_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]; ?>">More Details <i class="fa fa-long-arrow-right"
                                                                                 aria-hidden="true"></i></a></div>
                     </div>
                 </div>
@@ -412,7 +412,7 @@
                                     class="category"><?php echo get_post_meta(get_the_id(), 'address-locality')[0]; ?></span>
 
                             <p><?php echo wp_trim_words(get_the_excerpt(), 10); ?></p>
-                            <a href="<?php the_permalink(); ?>">More Details <i class="fa fa-long-arrow-right"
+                            <a href="<?php echo get_theme_mod('realtor_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]; ?>">More Details <i class="fa fa-long-arrow-right"
                                                                                 aria-hidden="true"></i></a></div>
                     </div>
                     <div class="col-sm-6">
@@ -451,7 +451,7 @@
                                     class="category"><?php echo get_post_meta(get_the_id(), 'address-locality')[0]; ?></span>
 
                             <p><?php echo wp_trim_words(get_the_excerpt(), 10); ?></p>
-                            <a href="<?php the_permalink(); ?>">More Details <i class="fa fa-long-arrow-right"
+                            <a href="<?php echo get_theme_mod('realtor_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]; ?>">More Details <i class="fa fa-long-arrow-right"
                                                                                 aria-hidden="true"></i></a></div>
                     </div>
 

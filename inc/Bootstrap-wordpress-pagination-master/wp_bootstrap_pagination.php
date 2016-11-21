@@ -9,8 +9,8 @@ function wp_bootstrap_pagination( $args = array() )
     $defaults = array(
         'range'           => 4,
         'custom_query'    => false,
-        'previous_string' => __('Previous', 'text-domain'),
-        'next_string'     => __('Next', 'text-domain'),
+        'previous_string' => __('Previous', 'realtor'),
+        'next_string'     => __('Next', 'realtor'),
         'before_output'   => '<div class="post-nav"><ul class="pager">',
         'after_output'    => '</ul></div>'
     );
@@ -58,11 +58,11 @@ function wp_bootstrap_pagination( $args = array() )
     
     $firstpage = esc_attr(get_pagenum_link(1));
     if ($firstpage && (1 != $page) ) {
-        $echo .= '<li class="previous"><a href="' . $firstpage . '">' . __('First', 'text-domain') . '</a></li>';
+        $echo .= '<li class="previous"><a href="' . $firstpage . '">' . __('First', 'realtor') . '</a></li>';
     }
 
     if ($previous && (1 != $page) ) {
-        $echo .= '<li><a href="' . $previous . '" title="' . __('previous', 'text-domain') . '">' . $args['previous_string'] . '</a></li>';
+        $echo .= '<li><a href="' . $previous . '" title="' . __('previous', 'realtor') . '">' . $args['previous_string'] . '</a></li>';
     }
     
     if (!empty($min) && !empty($max) ) {
@@ -78,12 +78,12 @@ function wp_bootstrap_pagination( $args = array() )
     $next = intval($page) + 1;
     $next = esc_attr(get_pagenum_link($next));
     if ($next && ($count != $page) ) {
-        $echo .= '<li><a href="' . $next . '" title="' . __('next', 'text-domain') . '">' . $args['next_string'] . '</a></li>';
+        $echo .= '<li><a href="' . $next . '" title="' . __('next', 'realtor') . '">' . $args['next_string'] . '</a></li>';
     }
     
     $lastpage = esc_attr(get_pagenum_link($count));
     if ($lastpage ) {
-        $echo .= '<li class="next"><a href="' . $lastpage . '">' . __('Last', 'text-domain') . '</a></li>';
+        $echo .= '<li class="next"><a href="' . $lastpage . '">' . __('Last', 'realtor') . '</a></li>';
     }
 
     if (isset($echo) ) {

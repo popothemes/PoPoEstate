@@ -6,7 +6,7 @@
 
                 <?php if(has_post_thumbnail()) { ?>
 
-                                    <div class="blog-item">
+                                    <div <?php post_class('blog-item'); ?>>
                                           <div class="avtar"><?php echo get_avatar(get_the_author_meta('ID'), 75); ?><div><span><?php the_time('j'); ?></span><?php echo substr(get_the_time('F'), 0, 3); ?></div></div>
                                         <div class="blog-detail">
                                             <div class="b-image"><?php the_post_thumbnail("realtor_blog_thumbnail", ['class' => 'img-responsive']); ?></div>
@@ -22,18 +22,18 @@
                             } elseif ($num_comments > 1 ) {
                                 $comments = $num_comments . __(' Comments', 'realtor');
                             } else {
-                                $comments = __('1 Comment');
+                                $comments = __('1 Comment', 'realtor');
                             }
                                      $write_comments = '<a href="' . get_comments_link() .'">'. $comments.'</a>';
                         } else {
-                                     $write_comments =  __('Comments Disabled');
+                                     $write_comments =  __('Comments Disabled','realtor');
                         }
                         echo $write_comments;
                         ?>
 
                                           </span>   |        <span><a href="javascript:;"><i class="more"></i>Share this post</a></span></div>
                                           <p><?php the_excerpt(); ?></p>
-                                          <a href="<?php the_permalink(); ?>" class="blog-read-more">READ MORE <i class="ti-arrow-right"></i></a>
+                                          <a href="<?php the_permalink(); ?>" class="blog-read-more"><?php echo __('READ MORE', 'realtor'); ?><span class="screen-reader-text">of <?php the_title(); ?></span> <i class="ti-arrow-right"></i></a>
                                         </div>
                                         </div>
                                       </div>
@@ -59,18 +59,18 @@ else {
             } elseif ($num_comments > 1 ) {
                 $comments = $num_comments . __(' Comments', 'realtor');
             } else {
-                $comments = __('1 Comment');
+                $comments = __('1 Comment', 'realtor');
             }
                  $write_comments = '<a href="' . get_comments_link() .'">'. $comments.'</a>';
         } else {
-                 $write_comments =  __('Comments Disabled');
+                 $write_comments =  __('Comments Disabled', 'realtor');
         }
         echo $write_comments;
                 ?>
 
              </span>   |        <span><a href="javascript:;"><i class="more"></i>Share this post</a></span></div>
              <p><?php the_excerpt(); ?></p>
-                                          <a href="<?php the_permalink(); ?>" class="blog-read-more">READ MORE <i class="ti-arrow-right"></i></a>
+                                          <a href="<?php the_permalink(); ?>" class="blog-read-more"><?php echo __('READ MORE', 'realtor'); ?> <span class="screen-reader-text">of <?php the_title(); ?></span><i class="ti-arrow-right"></i></a>
                                         </div>
                                         </div>
                                       </div>
@@ -85,6 +85,12 @@ else {
         if (function_exists('wp_bootstrap_pagination') ) {
                         wp_bootstrap_pagination();
         }
+    else
+    {
+        posts_nav_link( ' &#183; ', __('previous page', 'realtor'), __('next page', 'realtor') );
+
+    }
+
         ?>
 
                     

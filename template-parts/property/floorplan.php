@@ -16,8 +16,7 @@
                     ?>
                   </div>
                   <a href="javascript:;" class="left-arrow"><span class="ti-arrow-circle-left"></span></a><a href="javascript:;" class="right-arrow"><span class="ti-arrow-circle-right"></span></a></div>
-                <?php /*<div class="custom-galery">
-                  <input class="no-icheck gal" type="checkbox" id="op">
+                <div class="custom-galery">
                   <div class="lower"></div>
                   <div class="overlay overlay-hugeinc">
                     <label for="op"></label>
@@ -29,13 +28,13 @@
                         foreach (get_post_meta(get_the_id(), 'attachments') as $key => $value) {
                             echo '<div class="item" style="background-image: url(\''.wp_get_attachment_image_src($value, 'realtor_attachments')[0].'\');"></div>';
                         }
-
                         ?>
+
                       </div>
                       <!-- End Owl carousel -->
                       <div class="owl-nav"><div class="owl-prev" style=""><i class="fa fa-chevron-left"></i></div><div class="owl-next" style=""><i class="fa fa-chevron-right"></i></div></div>
                     </nav>
                   </div>
-                </div>*/?>
+                </div>
               </div>
 <?php } ?>

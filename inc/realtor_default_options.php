@@ -35,7 +35,48 @@ $realtor_default_options = array(
     'realtor_home_feature_box_4_icon'           =>  'fa-user',
     'realtor_home_feature_box_5_icon'           =>  'fa-home',
     'realtor_home_feature_box_6_icon'           =>  'fa-search',
+    'realtor_top_header_link_1_icon'            =>  'fa-comments',
+    'realtor_top_header_link_2_icon'            =>  'fa-comments',
+    'realtor_top_header_link_3_icon'            =>  'fa-comments',
+    'realtor_home_call_to_action_two_col_with_image_left_col_content' => ' <h2 class="wow fadeInDown animated" data-wow-delay="200ms" style="visibility: visible; animation-delay: 200ms; animation-name: fadeInDown;">Top-rated real estate app</h2>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <ul class="oval-list wow fadeInLeft animated" data-wow-delay="400ms" style="visibility: visible; animation-delay: 400ms; animation-name: fadeInLeft;">
+                                <li>Browse homes for sale and for rent</li>
+                                <li> 1 million Plus listings</li>
+                                <li>Search near top-rated schools </li>
+                                <li>Get instant notifications</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6">
+                            <ul class="oval-list wow fadeInLeft animated" data-wow-delay="500ms" style="visibility: visible; animation-delay: 500ms; animation-name: fadeInLeft;">
+                                <li>Explore neighborhoods</li>
+                                <li>Save your search</li>
+                                <li>5 Million Downloads on App Store</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="store-section  wow fadeInLeft animated" data-wow-delay="700ms" style="visibility: visible; animation-delay: 700ms; animation-name: fadeInLeft;">
+                        <a href="javascript:;"><i class="apple-icon"></i>
+                            <span class="dn">Download on the</span>
+                            <span class="app">App Store</span></a>
+                        <a href="javascript:;">
+                            <i class="andrid-icon"></i>
+                            <span class="dn">Download on the</span>
+                            <span class="app"><img src="'.get_template_directory_uri().'/images/gplus.png" width="99" height="21" alt=""></span>
+                        </a></div>',
 
-    );
+    'realtor_home_call_to_action_two_col_with_image_right_col_image' => get_template_directory_uri().'/images/phone.jpg',
+    'realtor_home_call_to_action_compact_content'       =>  '<h4 class="wow fadeInLeft animated" data-wow-delay="200ms" style="visibility: visible; animation-delay: 200ms; animation-name: fadeInLeft;"><strong>ExProperties</strong> is the Perfect Solution for Your Real Estate</h4>
+                <p class="wow fadeInLeft animated" data-wow-delay="300ms" style="visibility: visible; animation-delay: 300ms; animation-name: fadeInLeft;">Don\'t Forget to Rate the Template. Thanks you so much!</p>',
+    'realtor_home_call_to_action_compact_button_text'   =>  'Purchase Now',
+    'realtor_home_posts_title'  =>  'Recent News',
+    'realtor_home_posts_description'  =>  'Here are some recently added news posts that might interest you.',
+    'realtor_home_posts_number'        => 6,
+    'realtor_footer_left_content'   =>  '&copy; 2017 Realtor. All Rights Reserved.',
+    'realtor_footer_right_content'   =>  '<a href="#">Privacy Policy</a><a href="#">Term of Use</a><a href="#">Help</a><a href="#">FAQs</a><a href="#">Contact Us</a>',
+);
+
+
 
 ?>

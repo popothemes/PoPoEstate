@@ -1,7 +1,7 @@
 <?php global $realtor_default_options; ?>
 <section class="section-features" id="features">
     <div class="container">
-        <div class="row ">
+        <div class="row" id="feature_boxes_home">
             <?php for ($i = 1; $i <= 6; $i++) { ?>
                 <?php if (get_theme_mod('realtor_home_feature_box_'.$i.'_title') != "" && get_theme_mod('realtor_home_feature_box_'.$i.'_description') != '') {
                     ?>
@@ -14,9 +14,9 @@
                                  id="home-featured-box-<?php echo $i; ?>-text">
                                 <h3><?php echo get_theme_mod('realtor_home_feature_box_'.$i.'_title'); ?></h3>
 
-                                <p id="home-featured-box-<?php echo $i; ?>-description"><? echo get_theme_mod('realtor_home_feature_box_'.$i.'_description'); ?></p>
+                                <p id="home-featured-box-<?php echo $i; ?>-description"><?php echo get_theme_mod('realtor_home_feature_box_'.$i.'_description'); ?></p>
 
-                                <a href="<? echo get_theme_mod('realtor_home_feature_box_'.$i.'_url'); ?>"><?php echo __('READ MORE'); ?>
+                                <a href="<?php echo get_theme_mod('realtor_home_feature_box_'.$i.'_url'); ?>"><?php echo __('READ MORE', 'realtor'); ?>
                                     <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                             </div>
                         </div>

@@ -1,4 +1,4 @@
-<?php global $realtor_default_options; ?>
+ <?php global $realtor_default_options; ?>
 <?php if (have_posts()) : ?>
     <div class="row">
         <?php while (have_posts()): the_post(); ?>
@@ -39,7 +39,7 @@
                         </div>
                         <div class="r-property-image"><img
                                 src="<?php echo the_post_thumbnail_url('realtor_property_thumb'); ?>" alt=""
-                                class="img-responsive"/><a href="javascript:;"></a></div>
+                                class="img-responsive"/><a href="<?php the_permalink(); ?>"></a></div>
                         <div class="r-property-space">
                             <div class="row">
                                 <div class="col-sm-3"><i
@@ -68,11 +68,11 @@
                                 } elseif ($num_comments > 1) {
                                     $comments = $num_comments . __(' Reviews', 'realtor');
                                 } else {
-                                    $comments = __('1 Review');
+                                    $comments = __('1 Review', 'realtor');
                                 }
                                 $write_comments = '<a href="' . get_comments_link() . '"><i class="ti-comment-alt"></i> ' . $comments . '</a>';
                             } else {
-                                $write_comments = __('Reviews Disabled');
+                                $write_comments = __('Reviews Disabled', 'realtor');
                             }
                             echo $write_comments;
                             ?>
@@ -117,8 +117,8 @@
                                     </span>
                         </div>
                         <div class="r-property-image"><img
-                                src="http://placehold.it/369x202" alt=""
-                                class="img-responsive"/><a href="javascript:;"></a></div>
+                                src="http://placehold.it/369x202" alt="<?php __('Click to read more', 'realtor'); ?>"
+                                class="img-responsive"/><a href="<?php the_permalink(); ?>"></a></div>
                         <div class="r-property-space">
                             <div class="row">
                                 <div class="col-sm-3"><i
@@ -147,11 +147,11 @@
                                 } elseif ($num_comments > 1) {
                                     $comments = $num_comments . __(' Reviews', 'realtor');
                                 } else {
-                                    $comments = __('1 Review');
+                                    $comments = __('1 Review', 'realtor');
                                 }
                                 $write_comments = '<a href="' . get_comments_link() . '"><i class="ti-comment-alt"></i> ' . $comments . '</a>';
                             } else {
-                                $write_comments = __('Reviews Disabled');
+                                $write_comments = __('Reviews Disabled', 'realtor');
                             }
                             echo $write_comments;
                             ?>
@@ -164,22 +164,22 @@
 
         if (comments_open()) {
             if ($num_comments == 0) {
-                $comments = __('No Comments', 'realtor');
+                $comments = __('No Reviews', 'realtor');
             } elseif ($num_comments > 1) {
                 $comments = $num_comments . __(' Comments', 'realtor');
             } else {
-                $comments = __('1 Comment');
+                $comments = __('1 Review', 'realtor');
             }
             $write_comments = '<a href="' . get_comments_link() . '">' . $comments . '</a>';
         } else {
-            $write_comments = __('Comments Disabled');
+            $write_comments = __('Reviews Disabled','realtor');
         }
         echo $write_comments;
         ?>
 
              </span> | <span><a href="javascript:;"><i class="more"></i>Share this post</a></span></div>
                             <p><?php the_excerpt(); ?></p>
-                            <a href="<?php the_permalink(); ?>" class="blog-read-more">READ MORE <i
+                            <a href="<?php the_permalink(); ?>" class="blog-read-more"><?php echo __('READ MORE', 'realtor');?> <i
                                     class="ti-arrow-right"></i></a>
                         </div>
                     </div>

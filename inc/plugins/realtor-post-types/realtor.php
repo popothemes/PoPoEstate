@@ -3,7 +3,7 @@
 Plugin Name: Realtor Post Types
 Description: Used for importing/exporting customizer options.
 Author:	PopoThemes
-Version: 1.1
+Version: 1.2
 */
 
 //Localities AJAX function
@@ -346,7 +346,7 @@ function realtor_localities_post_type()
         'can_export' => true,
         'has_archive' => false,
         'exclude_from_search' => false,
-        'publicly_queryable' => true,
+        'publicly_queryable' => false,
         'menu_icon' => 'dashicons-location-alt',
 
 
@@ -356,7 +356,7 @@ function realtor_localities_post_type()
 
 }
 
-add_action('init', 'realtor_localities_post_type', 0);
+add_action('init', 'realtor_localities_post_type', 2);
 
 function realtor_testimonials_post_type()
 {
@@ -393,7 +393,7 @@ function realtor_testimonials_post_type()
         'can_export' => true,
         'has_archive' => false,
         'exclude_from_search' => false,
-        'publicly_queryable' => true,
+        'publicly_queryable' => false,
         'menu_icon' => 'dashicons-smiley',
 
 
@@ -403,7 +403,7 @@ function realtor_testimonials_post_type()
 
 }
 
-add_action('init', 'realtor_testimonials_post_type', 0);
+add_action('init', 'realtor_testimonials_post_type', 3);
 
 function realtor_properties_post_type()
 {
@@ -452,7 +452,7 @@ function realtor_properties_post_type()
 
 }
 
-add_action('init', 'realtor_properties_post_type', 0);
+add_action('init', 'realtor_properties_post_type', 1);
 
 function realtor_property_type_taxonomy()
 {
@@ -527,9 +527,83 @@ function realtor_property_status_taxonomy()
 }
 add_action('init', 'realtor_property_status_taxonomy');
 
+add_filter('rwmb_meta_boxes', 'realtor_localities_meta_boxes');
+
+//Feature Boxes Post Type
+function realtor_feature_boxes_post_type()
+{
+    $labels = array(
+        'name' => _x('Feature Boxes', 'Post Type General Name', 'realtor'),
+        'singular name' => _x('Feature Box', 'Post Type Singular Name', 'realtor'),
+        'menu_name' => __('Feature Boxes', 'realtor'),
+        'all_items' => __('All Feature Boxes', 'realtor'),
+        'view_item' => __('View Feature Box', 'realtor'),
+        'add_new_item' => __('Add New Feature Box', 'realtor'),
+        'add_new' => __('Add New', 'realtor'),
+        'edit_item' => __('Edit Feature Box', 'realtor'),
+        'update_item' => __('Update Feature Box', 'realtor'),
+        'search_item' => __('Search Feature Box', 'realtor'),
+        'not_found' => __('Not Found', 'realtor'),
+        'not_found_in_trash' => __('Not Found In Trash', 'realtor'),
+        'set_featured_image' => __('Set Featured image', 'realtor')
 
 
-//function realtor_page_function()
-//{
-//}
+    );
+
+    $args = array(
+
+        'label' => __('Feature Box', 'realtor'),
+        'description' => __('Feature Boxes', 'realtor'),
+        'labels' => $labels,
+        'supports' => array('title', 'editor'),
+        'hierarchical' => false,
+        'public' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'show_in_nav_menus' => true,
+        'show_in_admin_bar' => true,
+        'menu_position' => 10,
+        'can_export' => true,
+        'has_archive' => false,
+        'exclude_from_search' => true,
+        'publicly_queryable' => false,
+        'menu_icon' => 'dashicons-exerpt-view',
+
+
+    );
+
+    register_post_type('feature-box', $args);
+
+}
+
+add_action('init', 'realtor_feature_boxes_post_type', 0);
+
+//Feature Boxes Meta Boxes
+add_filter('rwmb_meta_boxes', 'realtor_feature_boxes_meta_boxes');
+
+function realtor_feature_boxes_meta_boxes($meta_boxes)
+{
+    $meta_boxes[] = array(
+        'title' => __('Feature Box Options', 'realtor'),
+        'post_types' => 'feature-box',
+        'fields' => array(
+            array(
+                'id' => 'icon',
+                'name' => __('Icon', 'realtor'),
+                'type' => 'select',
+                'options' => realtor_smk_font_awesome()
+            ),
+            array(
+                'id' => 'url',
+                'name' => __('Url', 'realtor'),
+                'type' => 'text',
+            ),
+
+
+        ),
+
+
+    );
+    return $meta_boxes;
+}
 ?>

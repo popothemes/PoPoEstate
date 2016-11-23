@@ -35,6 +35,17 @@
 */
 
 /* Begin Code for WordPress adaption */
+.widget_displaytweetswidget p small.muted {
+    font-size: 11px;
+    color: #8f9ca4;
+    opacity: .3;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #3c414c;
+    padding-bottom: 15px;
+}
+
 #blog-single .pagination a li {
     background: #e5e9ed;
     border: 1px solid #e5e9ed;

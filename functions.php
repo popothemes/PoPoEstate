@@ -28,7 +28,7 @@ add_theme_support( 'title-tag' );
 //Global Variables
 global $realtor_default_options;
 global $realtor_search_locations;
-
+add_option( 'realtor_last_searches','');
 //Post Thumbnails Support
 
 add_theme_support('post-thumbnails');
@@ -777,6 +777,34 @@ function realtor_get_search_query_arguments()
 
         );
     } else {
+
+
+        $searches=get_option('realtor_last_searches');
+
+        if(!empty($searches))
+        {
+            $searches_array=$searches;
+            $searches_array[]=$_GET['location'];
+
+            if(count(get_option('realtor_last_searchers'))>10)
+            {
+                array_pop($searches_array);
+            }
+            if(!in_array($_GET['location'], $searches))
+            {
+                update_option('realtor_last_searches', $searches_array);
+
+            }
+
+        }
+        else
+        {
+            update_option('realtor_last_searches',array($_GET['location']));
+
+        }
+
+
+
         $regular_posts_args = array(
             'post_type' => 'property',
             'paged' => get_query_var('paged'),
@@ -942,7 +970,7 @@ register_sidebar(array(
 
 ));
 
-register_sidebars(3, array(
+register_sidebars(4, array(
 
     'name' => __('Footer %d', 'realtor'),
     'before_widget' => '<section id="%1$s" class="widget %2$s">',
@@ -1627,11 +1655,10 @@ if (is_customize_preview()) {
     add_action('wp_head', 'realtor_embedded_css_output');
 }
 
-//Geat Realtor Primary Color
+//Get Realtor Primary Color
 function realtor_get_primary_color()
 {
     return get_theme_mod("realtor_styles_primary_color", REALTOR_PRIMARY_COLOR);
 }
-
 
 ?>

@@ -13,27 +13,10 @@
                     <?php dynamic_sidebar('Footer 2'); ?>
                 </div>
                 <div class="col-sm-3 wow fadeInLeft" data-wow-delay="500ms">
-                    <h6>Hot Searches</h6>
-
-                    <div class="footer-tag"><a href="javascript:;">Listing</a><a href="javascript:;">Property</a><a
-                            href="javascript:;">Trending</a><a href="javascript:;">Hot</a><a href="javascript:;">Hot</a><a
-                            href="javascript:;">Listing</a><a href="javascript:;">Property</a><a href="javascript:;">Trending</a><a
-                            href="javascript:;">Listing</a><a href="javascript:;">Property</a><a href="javascript:;">Trending</a><a
-                            href="javascript:;">Hot</a><a href="javascript:;">Hot</a><a
-                            href="javascript:;">Listing</a><a href="javascript:;">Property</a><a href="javascript:;">Trending</a>
-                    </div>
+                    <?php dynamic_sidebar('Footer 3'); ?>
                 </div>
                 <div class="col-sm-3 wow fadeInLeft" data-wow-delay="600ms">
-                    <h6>Flickr Widget</h6>
-
-                    <div class="flicker-image">
-                        <a href="javascript:;"><img src="images/sample-image.png" width="87" height="87" alt=""/></a><a
-                            href="javascript:;"><img src="images/sample-image.png" width="87" height="87" alt=""/></a><a
-                            href="javascript:;"><img src="images/sample-image.png" width="87" height="87" alt=""/></a><a
-                            href="javascript:;"><img src="images/sample-image.png" width="87" height="87" alt=""/></a><a
-                            href="javascript:;"><img src="images/sample-image.png" width="87" height="87" alt=""/></a><a
-                            href="javascript:;"><img src="images/sample-image.png" width="87" height="87" alt=""/></a>
-                    </div>
+                    <?php dynamic_sidebar('Footer 4'); ?>
                 </div>
             </div>
 

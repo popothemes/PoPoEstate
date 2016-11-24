@@ -49,6 +49,8 @@ if ( class_exists( 'Kirki' ) ) {
         'section' => 'realtor_recaptcha_section',
     ));
 
+    //Styles Options
+
     Kirki::add_field('realtor_styles_primary_color_control', array(
         'type' => 'color',
         'settings' => 'realtor_styles_primary_color',

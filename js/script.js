@@ -2,8 +2,17 @@ jQuery(document).ready(
 
     function(){
 
-        //Localities
+        //Home page menu search
 
+        jQuery('.search-sec button i').on('click',function(e) {
+
+            jQuery('<form action = "'+my_ajax_vars.blogurl+'" method="GET">' +
+                '<input type="hidden" name="s" value="' + jQuery('#header-1-search-keyword').val() + '">' +
+                '</form>').submit();
+
+        });
+
+        //Localities
         var current_page=1;
 
         function load_localities()

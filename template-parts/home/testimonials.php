@@ -1,6 +1,5 @@
  <div class="container">
-        <div class="testimonial-image"><span class="image-66-quote"><img src="<?php echo get_template_directory_uri(); ?>/images/66.png" width="47" height="31"
-                                                                         alt=""/></span>
+        <div class="testimonial-image">
 
             <div class="testimonial-box">
                 <div id="owl-testimonial" class="owl-carousel owl-theme">

@@ -150,7 +150,7 @@ if (!function_exists('realtor_enqueue_theme_scripts')) {
             wp_enqueue_script('owl-carousel', get_template_directory_uri() . '/js/owl.carousel.js', array('jquery'));
 
             //Bootstrap Select
-            wp_enqueue_script('bootstrap-select', get_template_directory_uri() . '/js/bootstrap-select.min.js', array('jquery'));
+            wp_enqueue_script('bootstrap-select', get_template_directory_uri() . '/js/bootstrap-select.min.js');
 
             //Google Captcha
             wp_enqueue_script('google-captcha', 'https://www.google.com/recaptcha/api.js', array('jquery'));
@@ -159,7 +159,8 @@ if (!function_exists('realtor_enqueue_theme_scripts')) {
             wp_register_script('realtor-custom', get_template_directory_uri() . '/js/script.js', array('jquery'));
             wp_localize_script(
                 'realtor-custom', 'my_ajax_vars', array(
-                    'ajaxurl' => admin_url('admin-ajax.php')
+                    'ajaxurl' => admin_url('admin-ajax.php'),
+                    'blogurl' => esc_url( home_url( '/' ) )
                 )
             );
             wp_enqueue_script('realtor-custom');
@@ -781,7 +782,7 @@ function realtor_get_search_query_arguments()
 
         $searches=get_option('realtor_last_searches');
 
-        if(!empty($searches))
+        if(!empty($searches) && isset($_GET['location']))
         {
             $searches_array=$searches;
             $searches_array[]=$_GET['location'];
@@ -797,7 +798,7 @@ function realtor_get_search_query_arguments()
             }
 
         }
-        else
+        else if(isset($_GET['location']))
         {
             update_option('realtor_last_searches',array($_GET['location']));
 

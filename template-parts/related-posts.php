@@ -21,7 +21,7 @@ global $post;
 
           <div class="col-sm-6">
                       <div class="row blog-box wow fadeInLeft animated" data-wow-delay="500ms">
-                        <div class="blog-img"><?php the_post_thumbnail("realtor_related_posts_thumbnail"); ?></div>
+                        <div class="blog-img"><?php the_post_thumbnail("poporealestate_related_posts_thumbnail"); ?></div>
                         <span class="lable-tag">31 Dec 15</span>
                         <div class="rblog-detail">
                           <h5><?php the_title(); ?></h5>
@@ -34,22 +34,22 @@ global $post;
 
                                 if (comments_open() ) {
                                     if ($num_comments == 0 ) {
-                                        $comments = __('No Comments', 'realtor');
+                                        $comments = __('No Comments', 'poporealestate');
                                     } elseif ($num_comments > 1 ) {
-                                        $comments = $num_comments . __(' Comments', 'realtor');
+                                        $comments = $num_comments . __(' Comments', 'poporealestate');
                                     } else {
-                                        $comments = __('1 Comment','realtor');
+                                        $comments = __('1 Comment','poporealestate');
                                     }
                                     $write_comments = '<a href="' . get_comments_link() .'"><i class="ei ei-comment" aria-hidden="true"></i>'. $comments.'</a>';
                                 } else {
-                                    $write_comments =  __('Comments Disabled','realtor');
+                                    $write_comments =  __('Comments Disabled','poporealestate');
                                 }
                                     echo $write_comments;
                                     ?>
 
                                   </div>
                                   <div class="col-sm-4"><a href="javascript:;"><i aria-hidden="true" class="ei ei-tag"></i>Property</a></div>
-                                  <div class="col-sm-3"><a href="<?php the_permalink(); ?>"><i class="more"></i><?php echo __('More', 'realtor'); ?></a></div>
+                                  <div class="col-sm-3"><a href="<?php the_permalink(); ?>"><i class="more"></i><?php echo __('More', 'poporealestate'); ?></a></div>
                                 </div>
                               </div>
                             </div>
@@ -65,7 +65,7 @@ global $post;
     }  
     else
     {
-        echo __('No Related Posts Found', 'realtor');
+        echo __('No Related Posts Found', 'poporealestate');
     }
 
 

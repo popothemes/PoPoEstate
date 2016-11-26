@@ -10,7 +10,7 @@
                         <div class="news-img">
         <?php if(has_post_thumbnail())
         {
-            the_post_thumbnail("realtor_blog_home_thumbnail", ['class' => 'img-responsive']);
+            the_post_thumbnail("poporealestate_blog_home_thumbnail", ['class' => 'img-responsive']);
         }
         else
         {
@@ -31,21 +31,21 @@
 
                                         if (comments_open() ) {
                                             if ($num_comments == 0 ) {
-                                                $comments = __('<i class="ei ei-comment" aria-hidden="true"></i> No Comments', 'realtor');
+                                                $comments = __('<i class="ei ei-comment" aria-hidden="true"></i> No Comments', 'poporealestate');
                                             } elseif ($num_comments > 1 ) {
-                                                $comments = '<i class="ei ei-comment" aria-hidden="true"></i>'.$num_comments . __(' Comments', 'realtor');
+                                                $comments = '<i class="ei ei-comment" aria-hidden="true"></i>'.$num_comments . __(' Comments', 'poporealestate');
                                             } else {
-                                                $comments = __('<i class="ei ei-comment" aria-hidden="true"></i> 1 Comment','realtor');
+                                                $comments = __('<i class="ei ei-comment" aria-hidden="true"></i> 1 Comment','poporealestate');
                                             }
                                             $write_comments = '<a href="' . get_comments_link() .'">'. $comments.'</a>';
                                         } else {
-                                            $write_comments =  __('<i class="ei ei-comment" aria-hidden="true"></i> Comments Disabled','realtor');
+                                            $write_comments =  __('<i class="ei ei-comment" aria-hidden="true"></i> Comments Disabled','poporealestate');
                                         }
                                         echo $write_comments;
                                         ?>
                                     </div>
                                 <div class="col-sm-5"><a href="<?php echo esc_url( get_category_link( get_the_category()[0]->term_id ) ) ?>"><i aria-hidden="true" class="ei ei-tag"></i><?php print_r(get_the_category()[0]->name); ?></a></div>
-                                <div class="col-sm-3"><a href="<?php get_the_permalink(); ?>"><i class="more"></i>More<span class="screen-reader-text">of <?php the_title(); ?></span></a></div>
+                                <div class="col-sm-3"><a href="<?php echo get_the_permalink(); ?>"><i class="more"></i>More<span class="screen-reader-text">of <?php the_title(); ?></span></a></div>
                             </div>
                         </div>
                     </div>
@@ -59,8 +59,8 @@
 
 <?php else: ?>
     <div class="not-found">
-        <h2><?php _e("Blog is empty", "realtor"); ?></h2>
-        <span><?php _e("No posts were found", "realtor"); ?> </span>
+        <h2><?php _e("Blog is empty", "poporealestate"); ?></h2>
+        <span><?php _e("No posts were found", "poporealestate"); ?> </span>
     </div>
 
 

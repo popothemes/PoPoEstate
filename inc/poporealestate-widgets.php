@@ -1,16 +1,16 @@
 <?php
 
-class Realtor_Property_Search extends WP_Widget {
+class poporealestate_Property_Search extends WP_Widget {
 
     /**
      * Sets up the widgets name etc
      */
     public function __construct() {
         $widget_ops = array(
-            'classname' => 'realtor-property-search',
-            'description' => 'Property Search',
+            'classname' => 'poporealestate-property-search',
+            'description' => 'PopoHomes Property Search',
         );
-        parent::__construct( 'realtor-property-search', 'Realtor Property Search', $widget_ops );
+        parent::__construct( 'poporealestate-property-search', 'PopoHomes Property Search', $widget_ops );
     }
 
     public function widget( $args, $instance ) {
@@ -19,7 +19,9 @@ class Realtor_Property_Search extends WP_Widget {
 
 
     public function form( $instance ) {
-        // outputs the options form on admin
+        echo "<p>";
+        _e('Property Search Form','poporealestate');
+        echo "</p>";
     }
 
     public function update( $new_instance, $old_instance ) {
@@ -27,20 +29,20 @@ class Realtor_Property_Search extends WP_Widget {
     }
 }
 add_action( 'widgets_init', function(){
-    register_widget( 'Realtor_Property_Search' );
+    register_widget( 'poporealestate_Property_Search' );
 });
 
-class Realtor_Recent_Searches extends WP_Widget {
+class poporealestate_Recent_Searches extends WP_Widget {
 
     /**
      * Sets up the widgets name etc
      */
     public function __construct() {
         $widget_ops = array(
-            'classname' => 'realtor-recent-searches',
-            'description' => __('Realtor Recent Searches','realtor'),
+            'classname' => 'poporealestate-recent-searches',
+            'description' => __('PopoHomes Recent Searches','poporealestate'),
         );
-        parent::__construct( 'realtor-recent-searches', __('Realtor Recent Searches','realtor'), $widget_ops );
+        parent::__construct( 'poporealestate-recent-searches', __('PopoHomes Recent Searches','poporealestate'), $widget_ops );
     }
 
     public function widget( $args, $instance ) {
@@ -52,12 +54,24 @@ class Realtor_Recent_Searches extends WP_Widget {
         <div class="footer-tag">
 
             <?php
-            $searches=get_option('realtor_last_searches');
-            sort($searches);
+            $searches=get_option('poporealestate_last_searches');
+
+            if(empty($searches))
+            {
+                sort($searches);
                 foreach($searches as $value) {
                     echo '<a href="">' . $value . '</a>';
 
                 }
+
+            }
+            else
+            {
+                echo "<p>";
+                _e('There are no recent searches to show.','poporealestate');
+                echo "</p>";
+            }
+
 
             ?>
 
@@ -70,13 +84,13 @@ class Realtor_Recent_Searches extends WP_Widget {
 
     public function form( $instance ) {
 
-        $title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( 'Featured Properties', 'realtor' );
+        $title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( 'Recent Searches', 'poporealestate' );
         ?>
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_attr_e( 'Title:', 'realtor' ); ?></label>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_attr_e( 'Title:', 'poporealestate' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
         </p>
-        <p> <?php _e("Show recent searches", 'realtor'); ?>
+        <p> <?php _e("Show recent searches", 'poporealestate'); ?>
         </p>
 
         <?php
@@ -91,20 +105,20 @@ class Realtor_Recent_Searches extends WP_Widget {
     }
 }
 add_action( 'widgets_init', function(){
-    register_widget( 'Realtor_Recent_Searches' );
+    register_widget( 'poporealestate_Recent_Searches' );
 });
 
-class Realtor_Featured_Properties extends WP_Widget {
+class poporealestate_Featured_Properties extends WP_Widget {
 
     /**
      * Sets up the widgets name etc
      */
     public function __construct() {
         $widget_ops = array(
-            'classname' => 'realtor-featured-properties',
-            'description' => __('Realtor Featured Properties','realtor'),
+            'classname' => 'poporealestate-featured-properties',
+            'description' => __('PopoHomes Featured Properties','poporealestate'),
         );
-        parent::__construct( 'realtor-featured-properties', __('Realtor Featured Properties','realtor'), $widget_ops );
+        parent::__construct( 'poporealestate-featured-properties', __('PopoHomes Featured Properties','poporealestate'), $widget_ops );
     }
 
     public function widget( $args, $instance ) {
@@ -115,15 +129,15 @@ class Realtor_Featured_Properties extends WP_Widget {
 
     public function form( $instance ) {
 
-        $title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( 'Featured Properties', 'realtor' );
-        $listing_link = ! empty( $instance['listing_link'] ) ? $instance['listing_link'] : esc_html__( '', 'realtor' );
+        $title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( 'Featured Properties', 'poporealestate' );
+        $listing_link = ! empty( $instance['listing_link'] ) ? $instance['listing_link'] : esc_html__( '', 'poporealestate' );
         ?>
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_attr_e( 'Title:', 'realtor' ); ?></label>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_attr_e( 'Title:', 'poporealestate' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
         </p>
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'listing_link' ) ); ?>"><?php esc_attr_e( 'Properties List URL:', 'realtor' ); ?></label>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'listing_link' ) ); ?>"><?php esc_attr_e( 'Properties List URL:', 'poporealestate' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'listing_link' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'listing_link' ) ); ?>" type="text" value="<?php echo esc_attr( $listing_link ); ?>">
         </p>
     <?php
@@ -138,27 +152,27 @@ class Realtor_Featured_Properties extends WP_Widget {
     }
 }
 add_action( 'widgets_init', function(){
-    register_widget( 'Realtor_Featured_Properties' );
+    register_widget( 'poporealestate_Featured_Properties' );
 });
 
-class Realtor_Social_Icons extends WP_Widget {
+class poporealestate_Social_Icons extends WP_Widget {
 
     public function __construct() {
         $widget_ops = array(
-            'classname' => 'realtor-social-icons',
-            'description' => 'Realtor Social Icons',
+            'classname' => 'poporealestate-social-icons',
+            'description' => 'PopoHomes Social Icons',
         );
-        parent::__construct( 'realtor-social-icons', 'Realtor Social Icons', $widget_ops );
+        parent::__construct( 'poporealestate-social-icons', 'PopoHomes Social Icons', $widget_ops );
     }
 
     public function widget( $args, $instance ) {
-        echo realtor_get_social_icons();
+        echo poporealestate_get_social_icons();
     }
 
 
     public function form( $instance ) {
         echo '<p>';
-        echo __('Configure Social Icons by going to Appearance > Customizer.','realtor');
+        echo __('Configure Social Icons by going to Appearance > Customizer.','poporealestate');
         echo '</p>';
     }
 
@@ -167,40 +181,40 @@ class Realtor_Social_Icons extends WP_Widget {
     }
 }
 add_action( 'widgets_init', function(){
-    register_widget( 'Realtor_Social_Icons' );
+    register_widget( 'poporealestate_Social_Icons' );
 });
 
-class Realtor_Short_Description extends WP_Widget {
+class poporealestate_Short_Description extends WP_Widget {
 
 
     public function __construct() {
         $widget_ops = array(
-            'classname' => 'realtor-short-description',
-            'description' => __('Realtor Short Description','realtor'),
+            'classname' => 'poporealestate-short-description',
+            'description' => __('PopoHomes Short Description','poporealestate'),
         );
-        parent::__construct( 'realtor-short-description', __('Realtor Short Description','realtor'), $widget_ops );
+        parent::__construct( 'poporealestate-short-description', __('PopoHomes Short Description','poporealestate'), $widget_ops );
     }
 
     public function widget( $args, $instance ) {
         ?>
             <?php get_template_part('template-parts/logo'); ?>
             <p><?php echo $instance['description']; ?></p>
-            <a href="<?php $instance['link']; ?>"><?php echo __('Read More', 'realtor'); ?> <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+            <a href="<?php $instance['link']; ?>"><?php echo __('Read More', 'poporealestate'); ?> <i class="fa fa-caret-right" aria-hidden="true"></i></a>
         <?php
     }
 
 
     public function form( $instance ) {
 
-        $description = ! empty( $instance['description'] ) ? $instance['description'] : esc_html__( '', 'realtor' );
-        $link = ! empty( $instance['link'] ) ? $instance['link'] : esc_html__( '', 'realtor' );
+        $description = ! empty( $instance['description'] ) ? $instance['description'] : esc_html__( '', 'poporealestate' );
+        $link = ! empty( $instance['link'] ) ? $instance['link'] : esc_html__( '', 'poporealestate' );
         ?>
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'description' ) ); ?>"><?php esc_attr_e( 'Short Description:', 'realtor' ); ?></label>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'description' ) ); ?>"><?php esc_attr_e( 'Short Description:', 'poporealestate' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'description' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'description' ) ); ?>" type="textarea" value="<?php echo esc_attr( $description ); ?>">
         </p>
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'link' ) ); ?>"><?php esc_attr_e( 'Read More Link:', 'realtor' ); ?></label>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'link' ) ); ?>"><?php esc_attr_e( 'Read More Link:', 'poporealestate' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'link' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'link' ) ); ?>" type="text" value="<?php echo esc_attr( $link ); ?>">
         </p>
         <?php
@@ -215,6 +229,6 @@ class Realtor_Short_Description extends WP_Widget {
     }
 }
 add_action( 'widgets_init', function(){
-    register_widget( 'Realtor_Short_Description' );
+    register_widget( 'poporealestate_Short_Description' );
 });
 ?>

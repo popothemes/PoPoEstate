@@ -78,6 +78,6 @@ get_header();
         </section>
 
     </div>
-    <h4 class="hidden">Realtor</h4>
+    <h4 class="hidden">poporealestate</h4>
 
 <?php get_footer(); ?>

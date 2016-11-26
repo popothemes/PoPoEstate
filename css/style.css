@@ -35,6 +35,64 @@
 */
 
 /* Begin Code for WordPress adaption */
+#blog-single li.page-link {
+    padding: 8px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.blog-page nav ul li:before {
+    content: '';
+    margin-left: inherit;
+    width: auto;
+}
+
+.wpcf7-text {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #555;
+    vertical-align: middle;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    background: #f0f2f3;
+    height: 42px;
+}
+.wpcf7-textarea {
+    width: 100%;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #555;
+    vertical-align: middle;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    background: #f0f2f3;
+}
+.wpcf7-submit {
+    border-radius: 0;
+    border: 0;
+    box-shadow: none;
+    padding: 17px 0;
+    width: 100%;
+    font-size: 17px;
+    font-weight: 700;
+    text-shadow: none;
+    margin: 0;
+    color: #ffffff;
+}
 
 .blog-page ul li:before {
     content: "\f111";
@@ -204,7 +262,7 @@ code {
     line-height: 42px;
 }
 
-.realtor_header_address, .realtor_header_contact {
+.poporealestate_header_address, .poporealestate_header_contact {
     float: left;
 }
 #top-header-left-content {
@@ -309,7 +367,7 @@ padding:0 15px;font-weight: 500;
     position: relative;
     overflow: hidden;
 }
-#realtor-localities-spinner {
+#poporealestate-localities-spinner {
     margin: auto;
     display: inherit;
 }
@@ -325,7 +383,7 @@ a:hover{text-decoration:none;color:#3ad1b0;}
 
 /**======Header======*/
 
-.top-header{background:#1a1c28; padding:0;position:relative;z-index:999;-webkit-transition: all .3s ease-in-out;-moz-transition: all .3s ease-in-out;-ms-transition: all .37s ease-in-out;-o-transition: all .3s ease-in-out;transition: all .3s ease-in-out;}
+.top-header{padding:0;position:relative;z-index:999;-webkit-transition: all .3s ease-in-out;-moz-transition: all .3s ease-in-out;-ms-transition: all .37s ease-in-out;-o-transition: all .3s ease-in-out;transition: all .3s ease-in-out;}
 
 /*+++Head One+++*/
 
@@ -736,7 +794,7 @@ ul.oval-list li:before{content:' ';display:inline-block;width:13px;height:13px;b
 
 /*======Footer=====*/
 
-.footer{background:#1a1c28;padding:70px 0 40px;color:#8f9ca4;font-size:13px;}
+.footer{padding:70px 0 40px;color:#8f9ca4;font-size:13px;}
 .logo-bottom p{padding:20px 0 10px}
 .logo-bottom a i{position:relative;top:1px;margin-left:3px;}
 .logo-bottom .social-media{text-align:center;border-top:1px solid #2a2c3a;margin-top:20px;padding-top:10px;}

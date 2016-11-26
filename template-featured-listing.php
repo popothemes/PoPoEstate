@@ -1,8 +1,8 @@
 <?php
 /*
-* Template Name: Property Listing
+* Template Name: Featured Properties Listing
 *
-* Property Listing Template
+* Featured Properties Listing Template
 *
 */
 get_header();
@@ -44,8 +44,20 @@ get_header();
 
                                 $regular_posts_args = array(
 
-                                    'post_type'       =>  'property',
+                                    'post_type' => 'property',
                                     'paged'         =>  get_query_var('paged'),
+                                    'meta_query' => array(
+
+                                        array(
+
+                                            'key' => 'featured',
+                                            'value' => '1',
+                                            'compare' => '=',
+                                            'type' => 'NUMERIC'
+                                        )
+
+                                    ),
+
 
                                 );
                                 query_posts($regular_posts_args);

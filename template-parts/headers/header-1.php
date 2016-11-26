@@ -1,4 +1,4 @@
-<?php global $realtor_default_options; ?>
+<?php global $poporealestate_default_options; ?>
 <div class="top-header">
     <div class="head-one">
         <div class="container">
@@ -18,15 +18,15 @@
 
                         for($i=1;$i<=3;$i++)
                         {
-                            if(trim(get_theme_mod('realtor_top_header_link_'.$i.'_title',"")) == ""){continue;}
-                            echo '<a href="'.get_theme_mod('realtor_top_header_link_'.$i.'_url', '#').'"><i class="fa '.get_theme_mod('realtor_top_header_link_'.$i.'_icon', $realtor_default_options['realtor_top_header_link_'.$i.'_icon']).'" aria-hidden="true"></i> '.get_theme_mod('realtor_top_header_link_'.$i.'_title', '').'</a>';
+                            if(trim(get_theme_mod('poporealestate_top_header_link_'.$i.'_title',"")) == ""){continue;}
+                            echo '<a href="'.get_theme_mod('poporealestate_top_header_link_'.$i.'_url', '#').'"><i class="fa '.get_theme_mod('poporealestate_top_header_link_'.$i.'_icon', $poporealestate_default_options['poporealestate_top_header_link_'.$i.'_icon']).'" aria-hidden="true"></i> '.get_theme_mod('poporealestate_top_header_link_'.$i.'_title', '').'</a>';
 
                         }
 
                         ?>
                 </div>
                 <div class="col-sm-6">
-                    <?php echo realtor_get_social_icons(); ?>
+                    <?php echo poporealestate_get_social_icons(); ?>
                 </div>
             </div>
         </div>
@@ -40,11 +40,11 @@
                 <div class="col-sm-9 text-right">
           <span class="address-button">
             <i class="fa fa-map-marker" aria-hidden="true"></i>
-              <div class="realtor_header_address"><?php echo get_theme_mod('realtor_header_address', $realtor_default_options['realtor_header_address']); ?></div>
+              <div class="poporealestate_header_address"><?php echo get_theme_mod('poporealestate_header_address', $poporealestate_default_options['poporealestate_header_address']); ?></div>
           </span>
           <span class="call-button" id="header-number">
             <i class="fa fa-phone" aria-hidden="true"></i>
-              <div class="realtor_header_contact"><?php echo get_theme_mod('realtor_header_contact', $realtor_default_options['realtor_header_contact']); ?></div>
+              <div class="poporealestate_header_contact"><?php echo get_theme_mod('poporealestate_header_contact', $poporealestate_default_options['poporealestate_header_contact']); ?></div>
 
           </span>
                 </div>
@@ -78,7 +78,7 @@
                     wp_nav_menu($menu_args);
                     ?>
                     <div class="search-sec navbar-right">
-                        <input type="text" class="form-control" id="header-1-search-keyword" name="s" placeholder="<?php _e('Type','realtor') ?>" />
+                        <input type="text" class="form-control" id="header-1-search-keyword" name="s" placeholder="<?php _e('Type','poporealestate') ?>" />
                         <button type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
                     </div>
                     <div class="clearfix"></div>

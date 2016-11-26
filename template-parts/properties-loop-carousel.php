@@ -1,4 +1,4 @@
-<?php global $realtor_default_options; ?>
+<?php global $poporealestate_default_options; ?>
 <?php if (have_posts()) : ?>
         <?php while (have_posts()): the_post(); ?>
 
@@ -8,7 +8,7 @@
                 <div class="property-box">
                     <div class="property-detail">
                         <div class="row">
-                            <div class="col-sm-5"><img src="<?php echo the_post_thumbnail_url('realtor_property_thumb'); ?>" width="222" height="142" alt=""
+                            <div class="col-sm-5"><img src="<?php echo the_post_thumbnail_url('poporealestate_property_thumb'); ?>" width="222" height="142" alt=""
                                                        class="img-responsive"/></div>
                             <div class="col-sm-7">
                                 <div class="property-text">
@@ -40,23 +40,23 @@
                         <div class="row">
                             <div class="col-sm-3">
                             <i class="sqm"></i>
-                            <?php echo __('Area', 'realtor'); ?> <?php echo get_post_meta(get_the_id(), 'area', true); ?> <?php echo get_theme_mod('realtor_area_postfix', $realtor_default_options['realtor_area_postfix']) ?>
+                            <?php echo __('Area', 'poporealestate'); ?> <?php echo get_post_meta(get_the_id(), 'area', true); ?> <?php echo get_theme_mod('poporealestate_area_postfix', $poporealestate_default_options['poporealestate_area_postfix']) ?>
                             </div>
                             <div class="col-sm-3">
                             <i class="bath"></i>
-                            <?php echo __('Baths', 'realtor'); ?> <?php echo get_post_meta(get_the_id(), 'baths', true); ?>
+                            <?php echo __('Baths', 'poporealestate'); ?> <?php echo get_post_meta(get_the_id(), 'baths', true); ?>
                             </div>
                             <div class="col-sm-3">
                             <i class="bed"></i>
-                            <?php echo __('Beds', 'realtor'); ?> <?php echo get_post_meta(get_the_id(), 'beds', true); ?>
+                            <?php echo __('Beds', 'poporealestate'); ?> <?php echo get_post_meta(get_the_id(), 'beds', true); ?>
                             </div>
                             <div class="col-sm-3">
                             <i class="garage"></i>
-                            <?php echo __('Parking', 'realtor'); ?> <?php echo get_post_meta(get_the_id(), 'parking', true); ?>
+                            <?php echo __('Parking', 'poporealestate'); ?> <?php echo get_post_meta(get_the_id(), 'parking', true); ?>
                             </div>
                         </div>
                     </div>
-                    <div class="property-price"><span class=""><?php echo get_theme_mod('realtor_currency_prefix', $realtor_default_options['realtor_currency_prefix']) ?><?php echo get_post_meta(get_the_id(), 'price')[0]; ?></span> <a href="<?php the_permalink(); ?>"><?php echo __('More Details', 'realtor'); ?><i
+                    <div class="property-price"><span class=""><?php echo get_theme_mod('poporealestate_currency_prefix', $poporealestate_default_options['poporealestate_currency_prefix']) ?><?php echo get_post_meta(get_the_id(), 'price')[0]; ?></span> <a href="<?php the_permalink(); ?>"><?php echo __('More Details', 'poporealestate'); ?><i
                                 class="fa fa-caret-right" aria-hidden="true"></i></a></div>
                 </div>
             </div>
@@ -104,13 +104,13 @@
                     </span></div>
                     <div class="property-space">
                         <div class="row">
-                            <div class="col-sm-3"><i class="sqm"></i><?php echo __('Area', 'realtor'); ?> <?php echo get_post_meta(get_the_id(), 'area', true); ?> <?php echo get_theme_mod('realtor_area_postfix', $realtor_default_options['realtor_area_postfix']) ?></div>
-                            <div class="col-sm-3"><i class="bath"></i><?php echo __('Bathrooms', 'realtor'); ?> <?php echo get_post_meta(get_the_id(), 'baths', true); ?></div>
-                            < class="col-sm-3"><i class="bed"></i><?php echo __('Bedrooms', 'realtor'); ?> <?php echo get_post_meta(get_the_id(), 'beds', true); ?></div>
-                            <div class="col-sm-3"><i class="garage"></i><?php echo __('Parking', 'realtor'); ?> <?php echo get_post_meta(get_the_id(), 'parking', true); ?></div>
+                            <div class="col-sm-3"><i class="sqm"></i><?php echo __('Area', 'poporealestate'); ?> <?php echo get_post_meta(get_the_id(), 'area', true); ?> <?php echo get_theme_mod('poporealestate_area_postfix', $poporealestate_default_options['poporealestate_area_postfix']) ?></div>
+                            <div class="col-sm-3"><i class="bath"></i><?php echo __('Bathrooms', 'poporealestate'); ?> <?php echo get_post_meta(get_the_id(), 'baths', true); ?></div>
+                            < class="col-sm-3"><i class="bed"></i><?php echo __('Bedrooms', 'poporealestate'); ?> <?php echo get_post_meta(get_the_id(), 'beds', true); ?></div>
+                            <div class="col-sm-3"><i class="garage"></i><?php echo __('Parking', 'poporealestate'); ?> <?php echo get_post_meta(get_the_id(), 'parking', true); ?></div>
                         </div>
                     </div>
-                    <div class="property-price"><span class=""><?php echo get_theme_mod('realtor_currency_prefix', $realtor_default_options['realtor_currency_prefix']) ?><?php echo get_post_meta(get_the_id(), 'price')[0]; ?></span> <a href="<?php the_permalink(); ?>"><?php echo __('More Details', 'realtor'); ?><span class="screen-reader-text">of <?php the_title(); ?></span><i
+                    <div class="property-price"><span class=""><?php echo get_theme_mod('poporealestate_currency_prefix', $poporealestate_default_options['poporealestate_currency_prefix']) ?><?php echo get_post_meta(get_the_id(), 'price')[0]; ?></span> <a href="<?php the_permalink(); ?>"><?php echo __('More Details', 'poporealestate'); ?><span class="screen-reader-text">of <?php the_title(); ?></span><i
                                 class="fa fa-caret-right" aria-hidden="true"></i></a></div>
                 </div>
             </div>
@@ -124,8 +124,8 @@
 <?php else: ?>
 
     <div class="not-found">
-        <h1><?php _e("No Properties Found", "realtor"); ?><h2/>
-            <span><?php _e("Properties you are looking for were not found", "realtor"); ?> </span>
+        <h1><?php _e("No Properties Found", "poporealestate"); ?><h2/>
+            <span><?php _e("Properties you are looking for were not found", "poporealestate"); ?> </span>
     </div>
 
 <?php endif;

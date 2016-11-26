@@ -1,4 +1,4 @@
-<?php global $realtor_default_options; ?>
+<?php global $poporealestate_default_options; ?>
 <section class="section-features" id="features">
     <div class="container">
         <div class="row" id="feature_boxes_home">

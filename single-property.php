@@ -21,7 +21,7 @@
                 <?php dynamic_sidebar( 'Property Listing' );?>
             </div>
             <div class="col-sm-8">
-              <div class="p-image"><img src="<?php echo the_post_thumbnail_url('realtor_property_single');?>" alt="" class="img-responsive" /></div>
+              <div class="p-image"><img src="<?php echo the_post_thumbnail_url('poporealestate_property_single');?>" alt="" class="img-responsive" /></div>
               <div class="p-box p-detail p-paddingless">
                 <div class="single-status"><?php the_terms(get_the_id(), 'property_statuses', '', ', ', ''); ?></div><div class="single-type"><?php the_terms(get_the_id(), 'property_types', '', ', ', ''); ?></div><div class="single-brief"><?php echo get_post_meta(get_the_id(), 'area', true); ?> Sqm | <?php echo get_post_meta(get_the_id(), 'beds', true); ?> Beds | <?php echo get_post_meta(get_the_id(), 'baths', true); ?> Baths | <?php echo get_post_meta(get_the_id(), 'parking', true); ?> Parking </div><div class="price">$<?php echo get_post_meta(get_the_id(), 'price', true); ?> </div>
               </div>
@@ -30,7 +30,7 @@
                {
                ?>
                <div class="p-box p-detail">
-                <h4><?php echo __('Property Description', 'realtor'); ?></h4>
+                <h4><?php echo __('Property Description', 'poporealestate'); ?></h4>
                 <p><?php the_content(); ?></p>
 
               </div>
@@ -93,7 +93,7 @@
                             array_push($features_col_1, $all_features[0]);
                         }
                         ?>
-                <h4><?php echo __('Property Features', 'realtor'); ?></h4>
+                <h4><?php echo __('Property Features', 'poporealestate'); ?></h4>
                 <div class="row">
                   <div class="col-sm-4">
                     <ul>
@@ -138,7 +138,7 @@
                 {
                 ?>
                 <div class="p-box">
-                <h4><?php echo __('Location', 'realtor'); ?></h4>
+                <h4><?php echo __('Location', 'poporealestate'); ?></h4>
                 <p><?php echo get_post_meta(get_the_id(), 'address')[0]; ?></p>
                 <div id="single-property-map"></div>
 
@@ -163,7 +163,7 @@
       </section>
       
     </div>
-    <h4 class="hidden">Realtor</h4>
+    <h4 class="hidden">poporealestate</h4>
   </article>
     <?php endwhile; ?>
     <?php get_footer(); ?>

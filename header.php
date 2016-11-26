@@ -1,4 +1,4 @@
-<?php global $realtor_default_options; ?>
+<?php global $poporealestate_default_options; ?>
 <!DOCTYPE>
 <html <?php language_attributes(); ?> xmlns="http://www.w3.org/1999/xhtml">
 <head>

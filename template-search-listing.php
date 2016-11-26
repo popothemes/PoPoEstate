@@ -7,7 +7,7 @@
  */
 get_header();
 
-$search_arguments=realtor_get_search_query_arguments();
+$search_arguments=poporealestate_get_search_query_arguments();
 $obj_name = new WP_Query($search_arguments);
 $results_found=$obj_name->found_posts;
 
@@ -23,7 +23,7 @@ $results_found=$obj_name->found_posts;
       <div class="row">
         <div class="col-sm-6">
           <p>
-            <h4><?php printf( esc_html__( '%d Results Found', 'realtor' ), $results_found ); ?></h4>
+            <h4><?php printf( esc_html__( '%d Results Found', 'poporealestate' ), $results_found ); ?></h4>
 
             <?php while ( have_posts() ) : the_post(); ?>
                 <?php the_content(); ?>
@@ -33,7 +33,7 @@ $results_found=$obj_name->found_posts;
           <span class="line"></span>
         </div>
         <div class="col-sm-6 sort-item">
-          <a href="javascript:;" class="sort">Sort By: Default Order <i class="fa fa-angle-down"></i></a>
+
         </div>
       </div>
       </div>
@@ -61,6 +61,6 @@ $results_found=$obj_name->found_posts;
     </section>
     
   </div>
-  <h4 class="hidden">Realtor</h4>
+  <h4 class="hidden">poporealestate</h4>
 </article>    
 <?php get_footer(); ?>

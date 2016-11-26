@@ -2,8 +2,14 @@ jQuery(document).ready(
 
     function(){
 
-        //Home page menu search
+        jQuery('button.btn.dropdown-toggle.btn-default').on('click',function(e) {
 
+
+
+        });
+
+
+        //Home page menu search
         jQuery('.search-sec button i').on('click',function(e) {
 
             jQuery('<form action = "'+my_ajax_vars.blogurl+'" method="GET">' +
@@ -18,15 +24,15 @@ jQuery(document).ready(
         function load_localities()
         {
             var data = {
-                'action': 'realtor_home_localities',
+                'action': 'poporealestate_home_localities',
                 'paged' : current_page
             };
 
             jQuery.post(my_ajax_vars.ajaxurl, data, function(response) {
-                jQuery("#realtor-home-localities").append(response);
+                jQuery("#poporealestate-home-localities").append(response);
                 if(current_page == jQuery('#localities_total_pages').val())
                 {
-                    jQuery('#realtor-localities-load-more').hide();
+                    jQuery('#poporealestate-localities-load-more').hide();
 
                 }
 
@@ -36,10 +42,10 @@ jQuery(document).ready(
 
 
         }
-        jQuery("#realtor-home-localities").empty();
+        jQuery("#poporealestate-home-localities").empty();
         load_localities();
 
-        jQuery('#realtor-localities-load-more').on('click',function(e) {
+        jQuery('#poporealestate-localities-load-more').on('click',function(e) {
             current_page++;
             load_localities();
         });
@@ -47,7 +53,7 @@ jQuery(document).ready(
 
         //Search Suggestions
         var data = {
-            'action': 'realtor_search_suggestions',
+            'action': 'poporealestate_search_suggestions',
         };
 
         var locations;
@@ -59,19 +65,19 @@ jQuery(document).ready(
 
 
 
-        jQuery('#realtor-home-search-box').on('input',function(e){
+        jQuery('#poporealestate-home-search-box').on('input',function(e){
 
-            jQuery("#realtor-search-dropdown-menu").empty();
+            jQuery("#poporealestate-search-dropdown-menu").empty();
 
 
             jQuery(document).ready(function(jQuery) {
 
                 jQuery.each(locations, function(index,value){
 
-                    if(jQuery('#realtor-home-search-box').val().trim() != "") {
+                    if(jQuery('#poporealestate-home-search-box').val().trim() != "") {
 
-                        if (value.includes(jQuery('#realtor-home-search-box').val()) || value.toLowerCase().includes(jQuery('#realtor-home-search-box').val()) || value.toUpperCase().includes(jQuery('#realtor-home-search-box').val())) {
-                            jQuery("#realtor-search-dropdown-menu").append('<li class="suggestion"><a href="javascript:;" >' + value + '</a></li>');
+                        if (value.includes(jQuery('#poporealestate-home-search-box').val()) || value.toLowerCase().includes(jQuery('#poporealestate-home-search-box').val()) || value.toUpperCase().includes(jQuery('#poporealestate-home-search-box').val())) {
+                            jQuery("#poporealestate-search-dropdown-menu").append('<li class="suggestion"><a href="javascript:;" >' + value + '</a></li>');
 
                         }
                     }
@@ -87,7 +93,7 @@ jQuery(document).ready(
             jQuery(".suggestion").on('click',function(){
 
                 //alert();
-                jQuery('#realtor-home-search-box').val(jQuery(this).text());
+                jQuery('#poporealestate-home-search-box').val(jQuery(this).text());
                 jQuery(".text-option i").fadeOut();
                 jQuery(".text-option .dropdown-menu").slideUp();
 

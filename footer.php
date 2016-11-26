@@ -1,4 +1,4 @@
-<?php global $realtor_default_options; ?>
+<?php global $poporealestate_default_options; ?>
 <!-- FOOTER -->
 <footer>
     <?php wp_footer(); ?>
@@ -26,9 +26,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6"
-                     id="footer-left-content"><?php echo get_theme_mod('realtor_footer_left_content', $realtor_default_options['realtor_footer_left_content']); ?></div>
+                     id="footer-left-content"><?php echo get_theme_mod('poporealestate_footer_left_content', $poporealestate_default_options['poporealestate_footer_left_content']); ?></div>
                 <div
-                    class="col-sm-6 footer-menu"><?php echo get_theme_mod('realtor_footer_right_content', $realtor_default_options['realtor_footer_right_content']); ?></div>
+                    class="col-sm-6 footer-menu"><?php echo get_theme_mod('poporealestate_footer_right_content', $poporealestate_default_options['poporealestate_footer_right_content']); ?></div>
             </div>
         </div>
     </div>

@@ -1,9 +1,9 @@
-<?php if ( get_theme_mod( 'realtor_logo' ) ) : ?>
+<?php if ( get_theme_mod( 'poporealestate_logo' ) ) : ?>
 
-    <?php global $realtor_default_options; ?>
+    <?php global $poporealestate_default_options; ?>
 
 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo-a" title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
-    <img src='<?php echo esc_url( get_theme_mod( 'realtor_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' width="<?php echo get_theme_mod('realtor_logo_width', $realtor_default_options['logo_width']); ?>px" rel='home' class="img-responsive" alt="Realtor" />
+    <img src='<?php echo esc_url( get_theme_mod( 'poporealestate_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' width="<?php echo get_theme_mod('poporealestate_logo_width', $poporealestate_default_options['logo_width']); ?>px" rel='home' class="img-responsive" alt="poporealestate" />
 </a>
 <?php else : ?>
     <hgroup>

@@ -11,7 +11,7 @@
                         <div class="col-sm-6">
                             <?php
                             if (has_post_thumbnail()) {
-                                echo the_post_thumbnail("realtor_localities_thumbnail", ['class' => 'img-responsive']);
+                                echo the_post_thumbnail("poporealestate_localities_thumbnail", ['class' => 'img-responsive']);
                             } else { ?>
                                 <img src="http://placehold.it/320x300" width="320" height="300" alt=""
                                      class="img-responsive"/>
@@ -26,7 +26,7 @@
                                     class="category"><?php echo get_post_meta(get_the_id(), 'address-locality')[0]; ?></span>
 
                                 <p><?php echo wp_trim_words(get_the_excerpt(), 10); ?></p>
-                                <a href="<?php echo get_theme_mod('realtor_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]; ?>">More Details <i class="fa fa-long-arrow-right"
+                                <a href="<?php echo get_theme_mod('poporealestate_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]; ?>">More Details <i class="fa fa-long-arrow-right"
                                                                                     aria-hidden="true"></i></a></div>
                         </div>
                     </div>
@@ -43,13 +43,13 @@
                                     class="category"><?php echo get_post_meta(get_the_id(), 'address-locality')[0]; ?></span>
 
                                 <p><?php echo wp_trim_words(get_the_excerpt(), 10); ?></p>
-                                <a href="<?php echo get_theme_mod('realtor_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]; ?>">More Details <i class="fa fa-long-arrow-right"
+                                <a href="<?php echo get_theme_mod('poporealestate_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]; ?>">More Details <i class="fa fa-long-arrow-right"
                                                                                     aria-hidden="true"></i></a></div>
                         </div>
                         <div class="col-sm-6">
                             <?php
                             if (has_post_thumbnail()) {
-                                echo the_post_thumbnail("realtor_localities_thumbnail", ['class' => 'img-responsive']);
+                                echo the_post_thumbnail("poporealestate_localities_thumbnail", ['class' => 'img-responsive']);
                             } else { ?>
                                 <img src="http://placehold.it/320x300" width="320" height="300" alt=""
                                      class="img-responsive"/>
@@ -66,7 +66,7 @@
             <?php
 
             if (has_post_thumbnail()) {
-                $last_post['image'] = get_the_post_thumbnail(get_the_id(),"realtor_localities_thumbnail", ['class' => 'img-responsive']);
+                $last_post['image'] = get_the_post_thumbnail(get_the_id(),"poporealestate_localities_thumbnail", ['class' => 'img-responsive']);
             } else {
                 $last_post['image'] = '<img src="http://placehold.it/320x300" width="320" height="300" alt="" class="img-responsive"/>';
 
@@ -74,7 +74,7 @@
             $last_post['title'] = get_the_title();
             $last_post['address-locality'] = get_post_meta(get_the_id(), 'address-locality')[0];
             $last_post['excerpt'] = wp_trim_words(get_the_excerpt(), 10);
-            $last_post['permalink'] = get_theme_mod('realtor_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0];
+            $last_post['permalink'] = get_theme_mod('poporealestate_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0];
 
             $flip_counter++;
             continue;
@@ -93,13 +93,13 @@
                                     class="category"><?php echo get_post_meta(get_the_id(), 'address-locality')[0]; ?></span>
 
                                 <p><?php echo wp_trim_words(get_the_excerpt(), 10); ?></p>
-                                <a href="<?php echo get_theme_mod('realtor_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]; ?>">More Details <i class="fa fa-long-arrow-right"
+                                <a href="<?php echo get_theme_mod('poporealestate_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]; ?>">More Details <i class="fa fa-long-arrow-right"
                                                                                     aria-hidden="true"></i></a></div>
                         </div>
                         <div class="col-sm-6">
                             <?php
                             if (has_post_thumbnail()) {
-                                the_post_thumbnail("realtor_localities_thumbnail", ['class' => 'img-responsive']);
+                                the_post_thumbnail("poporealestate_localities_thumbnail", ['class' => 'img-responsive']);
                             } else { ?>
                                 <img src="http://placehold.it/320x300" width="320" height="300" alt=""
                                      class="img-responsive"/>
@@ -140,13 +140,13 @@
                                     class="category"><?php echo get_post_meta(get_the_id(), 'address-locality')[0]; ?></span>
 
                                 <p><?php echo wp_trim_words(get_the_excerpt(), 10); ?></p>
-                                <a href="<?php echo get_theme_mod('realtor_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]; ?>">More Details <i class="fa fa-long-arrow-right"
+                                <a href="<?php echo get_theme_mod('poporealestate_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]; ?>">More Details <i class="fa fa-long-arrow-right"
                                                                                     aria-hidden="true"></i></a></div>
                         </div>
                         <div class="col-sm-6">
                             <?php
                             if (has_post_thumbnail()) {
-                                the_post_thumbnail("realtor_localities_thumbnail", ['class' => 'img-responsive']);
+                                the_post_thumbnail("poporealestate_localities_thumbnail", ['class' => 'img-responsive']);
                             } else { ?>
                                 <img src="http://placehold.it/320x300" width="320" height="300" alt=""
                                      class="img-responsive"/>
@@ -183,7 +183,7 @@
                         <div class="col-sm-6">
                             <?php
                             if (has_post_thumbnail()) {
-                                the_post_thumbnail("realtor_localities_thumbnail", ['class' => 'img-responsive']);
+                                the_post_thumbnail("poporealestate_localities_thumbnail", ['class' => 'img-responsive']);
                             } else { ?>
                                 <img src="http://placehold.it/320x300" width="320" height="300" alt=""
                                      class="img-responsive"/>
@@ -198,7 +198,7 @@
                                     class="category"><?php echo get_post_meta(get_the_id(), 'address-locality')[0]; ?></span>
 
                                 <p><?php echo wp_trim_words(get_the_excerpt(), 10); ?></p>
-                                <a href="<?php echo get_theme_mod('realtor_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]; ?>">More Details <i class="fa fa-long-arrow-right"
+                                <a href="<?php echo get_theme_mod('poporealestate_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]; ?>">More Details <i class="fa fa-long-arrow-right"
                                                                                     aria-hidden="true"></i></a></div>
                         </div>
 
@@ -211,7 +211,7 @@
                         <div class="col-sm-6">
                             <?php
                             if (has_post_thumbnail()) {
-                                the_post_thumbnail("realtor_localities_thumbnail", ['class' => 'img-responsive']);
+                                the_post_thumbnail("poporealestate_localities_thumbnail", ['class' => 'img-responsive']);
                             } else { ?>
                                 <img src="http://placehold.it/320x300" width="320" height="300" alt=""
                                      class="img-responsive"/>
@@ -226,7 +226,7 @@
                                     class="category"><?php echo get_post_meta(get_the_id(), 'address-locality')[0]; ?></span>
 
                                 <p><?php echo wp_trim_words(get_the_excerpt(), 10); ?></p>
-                                <a href="<?php echo get_theme_mod('realtor_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]; ?>">More Details <i class="fa fa-long-arrow-right"
+                                <a href="<?php echo get_theme_mod('poporealestate_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]; ?>">More Details <i class="fa fa-long-arrow-right"
                                                                                     aria-hidden="true"></i></a></div>
                         </div>
 
@@ -252,13 +252,13 @@
                                     class="category"><?php echo get_post_meta(get_the_id(), 'address-locality')[0]; ?></span>
 
                                 <p><?php echo wp_trim_words(get_the_excerpt(), 10); ?></p>
-                                <a href="<?php echo get_theme_mod('realtor_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]; ?>">More Details <i class="fa fa-long-arrow-right"
+                                <a href="<?php echo get_theme_mod('poporealestate_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]; ?>">More Details <i class="fa fa-long-arrow-right"
                                                                                     aria-hidden="true"></i></a></div>
                         </div>
                         <div class="col-sm-6">
                             <?php
                             if (has_post_thumbnail()) {
-                                the_post_thumbnail("realtor_localities_thumbnail", ['class' => 'img-responsive']);
+                                the_post_thumbnail("poporealestate_localities_thumbnail", ['class' => 'img-responsive']);
                             } else { ?>
                                 <img src="http://placehold.it/320x300" width="320" height="300" alt=""
                                      class="img-responsive"/>
@@ -276,7 +276,7 @@
                         <div class="col-sm-6">
                             <?php
                             if (has_post_thumbnail()) {
-                                the_post_thumbnail("realtor_localities_thumbnail", ['class' => 'img-responsive']);
+                                the_post_thumbnail("poporealestate_localities_thumbnail", ['class' => 'img-responsive']);
                             } else { ?>
                                 <img src="http://placehold.it/320x300" width="320" height="300" alt=""
                                      class="img-responsive"/>
@@ -291,7 +291,7 @@
                                     class="category"><?php echo get_post_meta(get_the_id(), 'address-locality')[0]; ?></span>
 
                                 <p><?php echo wp_trim_words(get_the_excerpt(), 10); ?></p>
-                                <a href="<?php echo get_theme_mod('realtor_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]; ?>">More Details <i class="fa fa-long-arrow-right"
+                                <a href="<?php echo get_theme_mod('poporealestate_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]; ?>">More Details <i class="fa fa-long-arrow-right"
                                                                                     aria-hidden="true"></i></a></div>
                         </div>
 
@@ -310,13 +310,13 @@
                                     class="category"><?php echo get_post_meta(get_the_id(), 'address-locality')[0]; ?></span>
 
                                 <p><?php echo wp_trim_words(get_the_excerpt(), 10); ?></p>
-                                <a href="<?php echo get_theme_mod('realtor_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]; ?>">More Details <i class="fa fa-long-arrow-right"
+                                <a href="<?php echo get_theme_mod('poporealestate_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]; ?>">More Details <i class="fa fa-long-arrow-right"
                                                                                     aria-hidden="true"></i></a></div>
                         </div>
                         <div class="col-sm-6">
                             <?php
                             if (has_post_thumbnail()) {
-                                the_post_thumbnail("realtor_localities_thumbnail", ['class' => 'img-responsive']);
+                                the_post_thumbnail("poporealestate_localities_thumbnail", ['class' => 'img-responsive']);
                             } else { ?>
                                 <img src="http://placehold.it/320x300" width="320" height="300" alt=""
                                      class="img-responsive"/>
@@ -335,7 +335,7 @@
                         <div class="col-sm-6">
                             <?php
                             if (has_post_thumbnail()) {
-                                the_post_thumbnail("realtor_localities_thumbnail", ['class' => 'img-responsive']);
+                                the_post_thumbnail("poporealestate_localities_thumbnail", ['class' => 'img-responsive']);
                             } else { ?>
                                 <img src="http://placehold.it/320x300" width="320" height="300" alt=""
                                      class="img-responsive"/>
@@ -350,7 +350,7 @@
                                     class="category"><?php echo get_post_meta(get_the_id(), 'address-locality')[0]; ?></span>
 
                                 <p><?php echo wp_trim_words(get_the_excerpt(), 10); ?></p>
-                                <a href="<?php echo get_theme_mod('realtor_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]; ?>">More Details <i class="fa fa-long-arrow-right"
+                                <a href="<?php echo get_theme_mod('poporealestate_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]; ?>">More Details <i class="fa fa-long-arrow-right"
                                                                                     aria-hidden="true"></i></a></div>
                         </div>
 
@@ -380,7 +380,7 @@
                     <div class="col-sm-6">
                         <?php
                         if (has_post_thumbnail()) {
-                            the_post_thumbnail("realtor_localities_thumbnail", ['class' => 'img-responsive']);
+                            the_post_thumbnail("poporealestate_localities_thumbnail", ['class' => 'img-responsive']);
                         } else { ?>
                             <img src="http://placehold.it/320x300" width="320" height="300" alt=""
                                  class="img-responsive"/>
@@ -395,7 +395,7 @@
                                     class="category"><?php echo get_post_meta(get_the_id(), 'address-locality')[0]; ?></span>
 
                             <p><?php echo wp_trim_words(get_the_excerpt(), 10); ?></p>
-                            <a href="<?php echo get_theme_mod('realtor_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]; ?>">More Details <i class="fa fa-long-arrow-right"
+                            <a href="<?php echo get_theme_mod('poporealestate_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]; ?>">More Details <i class="fa fa-long-arrow-right"
                                                                                 aria-hidden="true"></i></a></div>
                     </div>
                 </div>
@@ -412,13 +412,13 @@
                                     class="category"><?php echo get_post_meta(get_the_id(), 'address-locality')[0]; ?></span>
 
                             <p><?php echo wp_trim_words(get_the_excerpt(), 10); ?></p>
-                            <a href="<?php echo get_theme_mod('realtor_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]; ?>">More Details <i class="fa fa-long-arrow-right"
+                            <a href="<?php echo get_theme_mod('poporealestate_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]; ?>">More Details <i class="fa fa-long-arrow-right"
                                                                                 aria-hidden="true"></i></a></div>
                     </div>
                     <div class="col-sm-6">
                         <?php
                         if (has_post_thumbnail()) {
-                            the_post_thumbnail("realtor_localities_thumbnail", ['class' => 'img-responsive']);
+                            the_post_thumbnail("poporealestate_localities_thumbnail", ['class' => 'img-responsive']);
                         } else { ?>
                             <img src="http://placehold.it/320x300" width="320" height="300" alt=""
                                  class="img-responsive"/>
@@ -435,7 +435,7 @@
                     <div class="col-sm-6">
                         <?php
                         if (has_post_thumbnail()) {
-                            the_post_thumbnail("realtor_localities_thumbnail", ['class' => 'img-responsive']);
+                            the_post_thumbnail("poporealestate_localities_thumbnail", ['class' => 'img-responsive']);
                         } else { ?>
                             <img src="http://placehold.it/320x300" width="320" height="300" alt=""
                                  class="img-responsive"/>
@@ -451,7 +451,7 @@
                                     class="category"><?php echo get_post_meta(get_the_id(), 'address-locality')[0]; ?></span>
 
                             <p><?php echo wp_trim_words(get_the_excerpt(), 10); ?></p>
-                            <a href="<?php echo get_theme_mod('realtor_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]; ?>">More Details <i class="fa fa-long-arrow-right"
+                            <a href="<?php echo get_theme_mod('poporealestate_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]; ?>">More Details <i class="fa fa-long-arrow-right"
                                                                                 aria-hidden="true"></i></a></div>
                     </div>
 
@@ -469,8 +469,8 @@
 
 <?php else: ?>
     <div class="not-found">
-        <h2><?php _e("No Localities found", "realtor"); ?></h2>
-        <span><?php _e("No posts were found", "realtor"); ?> </span>
+        <h2><?php _e("No Localities found", "poporealestate"); ?></h2>
+        <span><?php _e("No posts were found", "poporealestate"); ?> </span>
     </div>
 
 

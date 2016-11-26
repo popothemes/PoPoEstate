@@ -19,7 +19,7 @@
 
                                     <?php while ( have_posts() ) : the_post(); ?>
                                     <?php if(has_post_thumbnail()) { ?>
-                                        <div class="b-image"><img src="<?php echo the_post_thumbnail_url('realtor_single_blog_thumbnail');?>" width="773" height="430" alt="" class="img-responsive" /></div>
+                                        <div class="b-image"><img src="<?php echo the_post_thumbnail_url('poporealestate_single_blog_thumbnail');?>" width="773" height="430" alt="" class="img-responsive" /></div>
                                         <?php
                                     }
                                     ?>
@@ -46,6 +46,6 @@
             </div>
         </section>
     </div>
-    <h4 class="hidden">Realtor</h4>
+    <h4 class="hidden">poporealestate</h4>
 </article>
 <?php get_footer(); ?>

@@ -87,7 +87,7 @@ class poporealestate_Recent_Searches extends WP_Widget {
         $title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( 'Recent Searches', 'poporealestate' );
         ?>
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_attr_e( 'Title:', 'poporealestate' ); ?></label>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php echo esc_attr( 'Title:', 'poporealestate' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
         </p>
         <p> <?php _e("Show recent searches", 'poporealestate'); ?>
@@ -122,6 +122,7 @@ class poporealestate_Featured_Properties extends WP_Widget {
     }
 
     public function widget( $args, $instance ) {
+
         include(locate_template('template-parts/featured-properties-sidebar.php'));
     }
 
@@ -133,11 +134,11 @@ class poporealestate_Featured_Properties extends WP_Widget {
         $listing_link = ! empty( $instance['listing_link'] ) ? $instance['listing_link'] : esc_html__( '', 'poporealestate' );
         ?>
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_attr_e( 'Title:', 'poporealestate' ); ?></label>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php echo esc_attr( 'Title:', 'poporealestate' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
         </p>
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'listing_link' ) ); ?>"><?php esc_attr_e( 'Properties List URL:', 'poporealestate' ); ?></label>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'listing_link' ) ); ?>"><?php echo esc_attr( 'Properties List URL:', 'poporealestate' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'listing_link' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'listing_link' ) ); ?>" type="text" value="<?php echo esc_attr( $listing_link ); ?>">
         </p>
     <?php
@@ -210,11 +211,11 @@ class poporealestate_Short_Description extends WP_Widget {
         $link = ! empty( $instance['link'] ) ? $instance['link'] : esc_html__( '', 'poporealestate' );
         ?>
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'description' ) ); ?>"><?php esc_attr_e( 'Short Description:', 'poporealestate' ); ?></label>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'description' ) ); ?>"><?php echo esc_attr( 'Short Description:', 'poporealestate' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'description' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'description' ) ); ?>" type="textarea" value="<?php echo esc_attr( $description ); ?>">
         </p>
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'link' ) ); ?>"><?php esc_attr_e( 'Read More Link:', 'poporealestate' ); ?></label>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'link' ) ); ?>"><?php echo esc_attr( 'Read More Link:', 'poporealestate' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'link' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'link' ) ); ?>" type="text" value="<?php echo esc_attr( $link ); ?>">
         </p>
         <?php

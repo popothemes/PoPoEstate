@@ -25,19 +25,19 @@ $curauth = $wp_query->get_queried_object();
 
                         <div class="col-sm-8">
                             <div class="row">
-                                <?php get_template_part("template-parts/agent-details-author-page"); ?>
+                                <?php get_template_part("template-parts/agent-details"); ?>
 
                                 <?php
 
-                                $regular_posts_args = array(
+                                $args = array(
 
                                     'post_type'       =>  'property',
                                     'paged'         =>  get_query_var('paged'),
                                     'author__in'    =>  $curauth->ID,
 
                                 );
-                                query_posts($regular_posts_args);
-                                get_template_part("template-parts/properties-loop");
+                                $the_query = new WP_Query( $args );
+                                require(locate_template( 'template-parts/properties-loop.php'));
 
                                 ?>
 

@@ -5,7 +5,7 @@ function poporealestate_css()
     global $poporealestate_default_options;
     $css="";
 
-    $css=$css.'.testimonial-image{background:url('.get_theme_mod('poporealestate_home_testimonials_image',$poporealestate_default_options['poporealestate_home_testimonial_image']).') no-repeat left bottom;padding:50px 0 220px 356px;}';
+    $css=$css.'.testimonial-image{background:url('.esc_url(get_theme_mod('poporealestate_home_testimonials_image',$poporealestate_default_options['poporealestate_home_testimonial_image'])).') no-repeat left bottom;padding:50px 0 220px 356px;}';
     $css=$css.'.address-button i,.call-button i{background:'.poporealestate_get_primary_color().';}';
     list($r, $g, $b) = sscanf(poporealestate_get_primary_color(), "#%02x%02x%02x");
     $css=$css.'.advance-search-section{background:'."rgba($r,$g,$b,0.7);}";
@@ -68,14 +68,10 @@ function poporealestate_css()
     .top-header{background:".poporealestate_get_secondary_color().";}
     .footer {background: ".poporealestate_get_secondary_color().";}
 
-    ".get_theme_mod('poporealestate_custom_css','')."
+    ".esc_textarea(get_theme_mod('poporealestate_custom_css',''))."
 
 
     ";
-
-
-
-
 
     return $css;
 

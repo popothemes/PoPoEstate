@@ -14,13 +14,14 @@
                     <div class="item">
                         <div class="testimonial-item">
                             <p><?php echo $testimonial->post_content; ?></p>
-                            <h6 class="team-image"><?php echo get_post_meta($testimonial->ID,'name')[0] ?></h6> <span><?php echo get_post_meta($testimonial->ID,'tagline')[0] ?></span></div>
+                            <h6 class="team-image"><?php echo esc_html(get_post_meta($testimonial->ID,'name')[0]); ?></h6>
+                            <span><?php echo esc_html(get_post_meta($testimonial->ID,'tagline')[0]); ?></span></div>
                     </div>
                     <?php
                     }
                     if(empty($testimonials))
                     {
-                        echo "No testimonials found";
+                        __("There are not testimonials to display",'poporealestate');
 
                     }
                     ?>

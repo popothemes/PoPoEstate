@@ -19,7 +19,7 @@
                         for($i=1;$i<=3;$i++)
                         {
                             if(trim(get_theme_mod('poporealestate_top_header_link_'.$i.'_title',"")) == ""){continue;}
-                            echo '<a href="'.get_theme_mod('poporealestate_top_header_link_'.$i.'_url', '#').'"><i class="fa '.get_theme_mod('poporealestate_top_header_link_'.$i.'_icon', $poporealestate_default_options['poporealestate_top_header_link_'.$i.'_icon']).'" aria-hidden="true"></i> '.get_theme_mod('poporealestate_top_header_link_'.$i.'_title', '').'</a>';
+                            echo '<a href="'.esc_url(get_theme_mod('poporealestate_top_header_link_'.$i.'_url', '#')).'"><i class="fa '.esc_attr(get_theme_mod('poporealestate_top_header_link_'.$i.'_icon', $poporealestate_default_options['poporealestate_top_header_link_'.$i.'_icon'])).'" aria-hidden="true"></i> '.esc_html(get_theme_mod('poporealestate_top_header_link_'.$i.'_title', '')).'</a>';
 
                         }
 
@@ -40,11 +40,11 @@
                 <div class="col-sm-9 text-right">
           <span class="address-button">
             <i class="fa fa-map-marker" aria-hidden="true"></i>
-              <div class="poporealestate_header_address"><?php echo get_theme_mod('poporealestate_header_address', $poporealestate_default_options['poporealestate_header_address']); ?></div>
+              <div class="poporealestate_header_address"><?php echo wp_kses_post(get_theme_mod('poporealestate_header_address', $poporealestate_default_options['poporealestate_header_address'])); ?></div>
           </span>
           <span class="call-button" id="header-number">
             <i class="fa fa-phone" aria-hidden="true"></i>
-              <div class="poporealestate_header_contact"><?php echo get_theme_mod('poporealestate_header_contact', $poporealestate_default_options['poporealestate_header_contact']); ?></div>
+              <div class="poporealestate_header_contact"><?php echo wp_kses_post(get_theme_mod('poporealestate_header_contact', $poporealestate_default_options['poporealestate_header_contact'])); ?></div>
 
           </span>
                 </div>

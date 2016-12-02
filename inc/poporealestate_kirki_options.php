@@ -37,7 +37,6 @@ if ( class_exists( 'Kirki' ) ) {
 
 
     //Styles Options
-
     Kirki::add_field('poporealestate_styles_primary_color_control', array(
         'type' => 'color',
         'settings' => 'poporealestate_styles_primary_color',
@@ -48,7 +47,7 @@ if ( class_exists( 'Kirki' ) ) {
         'alpha' => true,
         'partial_refresh' => array(
             'poporealestate_styles_primary_color_partial' => array(
-                'selector' => '#poporealestate-dynamic-embedded-css',
+                'selector' => '#poporealestate-dynamic-style-inline-css',
                 'render_callback' => function () {
 
                     return poporealestate_css();
@@ -66,8 +65,8 @@ if ( class_exists( 'Kirki' ) ) {
         'priority' => 2,
         'alpha' => true,
         'partial_refresh' => array(
-            'poporealestate_styles_primary_color_partial' => array(
-                'selector' => '#poporealestate-dynamic-embedded-css',
+            'poporealestate_styles_secondary_color_partial' => array(
+                'selector' => '#poporealestate-dynamic-style-inline-css',
                 'render_callback' => function () {
 
                     return poporealestate_css();
@@ -138,7 +137,7 @@ if ( class_exists( 'Kirki' ) ) {
         ),
         'partial_refresh' => array(
             'poporealestate_custom_css_partial' => array(
-                'selector' => '#poporealestate-dynamic-embedded-css',
+                'selector' => '#poporealestate-dynamic-style-inline-css',
                 'render_callback' => function () {
 
                     return poporealestate_css();
@@ -669,6 +668,25 @@ if ( class_exists( 'Kirki' ) ) {
                 'selector' => '#cta_single_col_button',
                 'render_callback' => function () {
                     return '<i class="fa ' . get_theme_mod('poporealestate_home_cta_single_col_button_icon') . '" aria-hidden="true"></i>' . get_theme_mod('poporealestate_home_cta_single_col_button_text');
+                },
+            ))
+
+    ));
+    Kirki::add_field('poporealestate_home_cta_single_col_button_url_control', array(
+        'type' => 'text',
+        'settings' => 'poporealestate_home_cta_single_col_button_url',
+        'section' => 'poporealestate_home_call_to_action_single_column_section',
+        'default' => '#',
+        'priority' => 4,
+        'partial_refresh' => array(
+            'poporealestate_home_cta_single_col_button_url_partial' => array(
+                'selector' => '#poporealestate_home_cta_single_col_button',
+                'render_callback' => function () { ?>
+                    <a href="<?php echo esc_url(get_theme_mod('poporealestate_home_cta_single_col_button_url','#')) ?>" id="cta_single_col_button" class="btn btn-default wow fadeInDown" data-wow-delay="500ms">
+                        <i class="fa <?php echo esc_attr(get_theme_mod('poporealestate_home_cta_single_col_button_icon'))?>" aria-hidden="true"></i>
+                        <?php echo esc_attr(get_theme_mod('poporealestate_home_cta_single_col_button_text'))?>
+                    </a>
+                    <?php
                 },
             ))
 

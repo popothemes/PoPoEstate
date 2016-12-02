@@ -1,8 +1,6 @@
-<?php if (have_posts()) : $flip_counter = 1;
+<?php if ($the_query->have_posts()) : $flip_counter = 1;
     $last_post = []; ?>
-
-    <?php while (have_posts()): the_post();
-
+    <?php while ($the_query->have_posts()): $the_query->the_post();
         if ($flip_counter == 3) {
             ?>
             <div class=" col-lg-4 col-sm-6 hidden-md-col mobile-locality">
@@ -11,7 +9,7 @@
                         <div class="col-sm-6">
                             <?php
                             if (has_post_thumbnail()) {
-                                echo the_post_thumbnail("poporealestate_localities_thumbnail", ['class' => 'img-responsive']);
+                                echo esc_url(the_post_thumbnail("poporealestate_localities_thumbnail", ['class' => 'img-responsive']));
                             } else { ?>
                                 <img src="http://placehold.it/320x300" width="320" height="300" alt=""
                                      class="img-responsive"/>
@@ -23,10 +21,10 @@
                             <div class="localities-text">
                                 <h4><?php the_title();?></h4>
                                 <span
-                                    class="category"><?php echo get_post_meta(get_the_id(), 'address-locality')[0]; ?></span>
+                                    class="category"><?php echo esc_html(get_post_meta(get_the_id(), 'address-locality')[0]); ?></span>
 
                                 <p><?php echo wp_trim_words(get_the_excerpt(), 10); ?></p>
-                                <a href="<?php echo get_theme_mod('poporealestate_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]; ?>">More Details <i class="fa fa-long-arrow-right"
+                                <a href="<?php echo esc_url(get_theme_mod('poporealestate_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]); ?>">More Details <i class="fa fa-long-arrow-right"
                                                                                     aria-hidden="true"></i></a></div>
                         </div>
                     </div>
@@ -46,7 +44,7 @@
             $last_post['title'] = get_the_title();
             $last_post['address-locality'] = get_post_meta(get_the_id(), 'address-locality')[0];
             $last_post['excerpt'] = wp_trim_words(get_the_excerpt(), 10);
-            $last_post['permalink'] = get_theme_mod('poporealestate_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0];
+            $last_post['permalink'] = esc_html(get_theme_mod('poporealestate_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]);
 
             $flip_counter++;
             continue;
@@ -60,18 +58,18 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="localities-text">
-                                <h4><?php the_title(); ?></h4>
+                                <h4><?php the_title();?></h4>
                                 <span
-                                    class="category"><?php echo get_post_meta(get_the_id(), 'address-locality')[0]; ?></span>
+                                    class="category"><?php echo esc_html(get_post_meta(get_the_id(), 'address-locality')[0]); ?></span>
 
                                 <p><?php echo wp_trim_words(get_the_excerpt(), 10); ?></p>
-                                <a href="<?php echo get_theme_mod('poporealestate_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]; ?>">More Details <i class="fa fa-long-arrow-right"
-                                                                                    aria-hidden="true"></i></a></div>
+                                <a href="<?php echo esc_url(get_theme_mod('poporealestate_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]); ?>">More Details <i class="fa fa-long-arrow-right"
+                                                                                                                                                                                              aria-hidden="true"></i></a></div>
                         </div>
                         <div class="col-sm-6">
                             <?php
                             if (has_post_thumbnail()) {
-                                the_post_thumbnail("poporealestate_localities_thumbnail", ['class' => 'img-responsive']);
+                                echo esc_url(the_post_thumbnail("poporealestate_localities_thumbnail", ['class' => 'img-responsive']));
                             } else { ?>
                                 <img src="http://placehold.it/320x300" width="320" height="300" alt=""
                                      class="img-responsive"/>
@@ -89,12 +87,13 @@
 
                         <div class="col-sm-6">
                             <div class="localities-text">
-                                <h4><?php echo $last_post['title']; ?></h4>
+                                <h4><?php the_title();?></h4>
                                 <span
-                                    class="category"><?php echo $last_post['address-locality']; ?></span>
-                                <p><?php echo $last_post['excerpt']; ?></p>
-                                <a href="<?php echo get_theme_mod('poporealestate_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]; ?>">More Details <i class="fa fa-long-arrow-right"
-                                                                                    aria-hidden="true"></i></a></div>
+                                    class="category"><?php echo esc_html(get_post_meta(get_the_id(), 'address-locality')[0]); ?></span>
+
+                                <p><?php echo wp_trim_words(get_the_excerpt(), 10); ?></p>
+                                <a href="<?php echo esc_url(get_theme_mod('poporealestate_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]); ?>">More Details <i class="fa fa-long-arrow-right"
+                                                                                                                                                                                              aria-hidden="true"></i></a></div>
                         </div>
                         <div class="col-sm-6">
                             <?php echo $last_post['image']; ?>
@@ -105,20 +104,20 @@
             <div class=" col-lg-4 col-sm-6 hidden-localities">
                 <div class="localities-box wow fadeInDown" data-wow-delay="100ms">
                     <div class="row">
-                        <div class="col-sm-6">
+                        <<div class="col-sm-6">
                             <div class="localities-text">
                                 <h4><?php the_title();?></h4>
                                 <span
-                                    class="category"><?php echo get_post_meta(get_the_id(), 'address-locality')[0]; ?></span>
+                                    class="category"><?php echo esc_html(get_post_meta(get_the_id(), 'address-locality')[0]); ?></span>
 
                                 <p><?php echo wp_trim_words(get_the_excerpt(), 10); ?></p>
-                                <a href="<?php echo get_theme_mod('poporealestate_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]; ?>">More Details <i class="fa fa-long-arrow-right"
-                                                                                    aria-hidden="true"></i></a></div>
+                                <a href="<?php echo esc_url(get_theme_mod('poporealestate_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]); ?>">More Details <i class="fa fa-long-arrow-right"
+                                                                                                                                                                                              aria-hidden="true"></i></a></div>
                         </div>
                         <div class="col-sm-6">
                             <?php
                             if (has_post_thumbnail()) {
-                                the_post_thumbnail("poporealestate_localities_thumbnail", ['class' => 'img-responsive']);
+                                echo esc_url(the_post_thumbnail("poporealestate_localities_thumbnail", ['class' => 'img-responsive']));
                             } else { ?>
                                 <img src="http://placehold.it/320x300" width="320" height="300" alt=""
                                      class="img-responsive"/>
@@ -135,7 +134,7 @@
                         <div class="col-sm-6">
                             <?php
                             if (has_post_thumbnail()) {
-                                the_post_thumbnail("poporealestate_localities_thumbnail", ['class' => 'img-responsive']);
+                                echo esc_url(the_post_thumbnail("poporealestate_localities_thumbnail", ['class' => 'img-responsive']));
                             } else { ?>
                                 <img src="http://placehold.it/320x300" width="320" height="300" alt=""
                                      class="img-responsive"/>
@@ -145,13 +144,13 @@
                         </div>
                         <div class="col-sm-6">
                             <div class="localities-text">
-                                <h4><?php the_title(); ?></h4>
+                                <h4><?php the_title();?></h4>
                                 <span
-                                    class="category"><?php echo get_post_meta(get_the_id(), 'address-locality')[0]; ?></span>
+                                    class="category"><?php echo esc_html(get_post_meta(get_the_id(), 'address-locality')[0]); ?></span>
 
                                 <p><?php echo wp_trim_words(get_the_excerpt(), 10); ?></p>
-                                <a href="<?php echo get_theme_mod('poporealestate_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]; ?>">More Details <i class="fa fa-long-arrow-right"
-                                                                                    aria-hidden="true"></i></a></div>
+                                <a href="<?php echo esc_url(get_theme_mod('poporealestate_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]); ?>">More Details <i class="fa fa-long-arrow-right"
+                                                                                                                                                                                              aria-hidden="true"></i></a></div>
                         </div>
 
                     </div>
@@ -173,16 +172,16 @@
                             <div class="localities-text">
                                 <h4><?php the_title();?></h4>
                                 <span
-                                    class="category"><?php echo get_post_meta(get_the_id(), 'address-locality')[0]; ?></span>
+                                    class="category"><?php echo esc_html(get_post_meta(get_the_id(), 'address-locality')[0]); ?></span>
 
                                 <p><?php echo wp_trim_words(get_the_excerpt(), 10); ?></p>
-                                <a href="<?php echo get_theme_mod('poporealestate_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]; ?>">More Details <i class="fa fa-long-arrow-right"
-                                                                                    aria-hidden="true"></i></a></div>
+                                <a href="<?php echo esc_url(get_theme_mod('poporealestate_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]); ?>">More Details <i class="fa fa-long-arrow-right"
+                                                                                                                                                                                              aria-hidden="true"></i></a></div>
                         </div>
                         <div class="col-sm-6">
                             <?php
                             if (has_post_thumbnail()) {
-                                the_post_thumbnail("poporealestate_localities_thumbnail", ['class' => 'img-responsive']);
+                                echo esc_url(the_post_thumbnail("poporealestate_localities_thumbnail", ['class' => 'img-responsive']));
                             } else { ?>
                                 <img src="http://placehold.it/320x300" width="320" height="300" alt=""
                                      class="img-responsive"/>
@@ -200,7 +199,7 @@
                         <div class="col-sm-6">
                             <?php
                             if (has_post_thumbnail()) {
-                                the_post_thumbnail("poporealestate_localities_thumbnail", ['class' => 'img-responsive']);
+                                echo esc_url(the_post_thumbnail("poporealestate_localities_thumbnail", ['class' => 'img-responsive']));
                             } else { ?>
                                 <img src="http://placehold.it/320x300" width="320" height="300" alt=""
                                      class="img-responsive"/>
@@ -212,11 +211,11 @@
                             <div class="localities-text">
                                 <h4><?php the_title();?></h4>
                                 <span
-                                    class="category"><?php echo get_post_meta(get_the_id(), 'address-locality')[0]; ?></span>
+                                    class="category"><?php echo esc_html(get_post_meta(get_the_id(), 'address-locality')[0]); ?></span>
 
                                 <p><?php echo wp_trim_words(get_the_excerpt(), 10); ?></p>
-                                <a href="<?php echo get_theme_mod('poporealestate_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]; ?>">More Details <i class="fa fa-long-arrow-right"
-                                                                                    aria-hidden="true"></i></a></div>
+                                <a href="<?php echo esc_url(get_theme_mod('poporealestate_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]); ?>">More Details <i class="fa fa-long-arrow-right"
+                                                                                                                                                                                              aria-hidden="true"></i></a></div>
                         </div>
 
 
@@ -229,7 +228,7 @@
                         <div class="col-sm-6">
                             <?php
                             if (has_post_thumbnail()) {
-                                the_post_thumbnail("poporealestate_localities_thumbnail", ['class' => 'img-responsive']);
+                                echo esc_url(the_post_thumbnail("poporealestate_localities_thumbnail", ['class' => 'img-responsive']));
                             } else { ?>
                                 <img src="http://placehold.it/320x300" width="320" height="300" alt=""
                                      class="img-responsive"/>
@@ -239,13 +238,13 @@
                         </div>
                         <div class="col-sm-6">
                             <div class="localities-text">
-                                <h4><?php the_title(); ?></h4>
+                                <h4><?php the_title();?></h4>
                                 <span
-                                    class="category"><?php echo get_post_meta(get_the_id(), 'address-locality')[0]; ?></span>
+                                    class="category"><?php echo esc_html(get_post_meta(get_the_id(), 'address-locality')[0]); ?></span>
 
                                 <p><?php echo wp_trim_words(get_the_excerpt(), 10); ?></p>
-                                <a href="<?php echo get_theme_mod('poporealestate_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]; ?>">More Details <i class="fa fa-long-arrow-right"
-                                                                                    aria-hidden="true"></i></a></div>
+                                <a href="<?php echo esc_url(get_theme_mod('poporealestate_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]); ?>">More Details <i class="fa fa-long-arrow-right"
+                                                                                                                                                                                              aria-hidden="true"></i></a></div>
                         </div>
 
                     </div>
@@ -274,7 +273,7 @@
                     <div class="col-sm-6">
                         <?php
                         if (has_post_thumbnail()) {
-                            the_post_thumbnail("poporealestate_localities_thumbnail", ['class' => 'img-responsive']);
+                            echo esc_url(the_post_thumbnail("poporealestate_localities_thumbnail", ['class' => 'img-responsive']));
                         } else { ?>
                             <img src="http://placehold.it/320x300" width="320" height="300" alt=""
                                  class="img-responsive"/>
@@ -286,11 +285,11 @@
                         <div class="localities-text">
                             <h4><?php the_title();?></h4>
                                 <span
-                                    class="category"><?php echo get_post_meta(get_the_id(), 'address-locality')[0]; ?></span>
+                                    class="category"><?php echo esc_html(get_post_meta(get_the_id(), 'address-locality')[0]); ?></span>
 
                             <p><?php echo wp_trim_words(get_the_excerpt(), 10); ?></p>
-                            <a href="<?php echo get_theme_mod('poporealestate_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]; ?>">More Details <i class="fa fa-long-arrow-right"
-                                                                                aria-hidden="true"></i></a></div>
+                            <a href="<?php echo esc_url(get_theme_mod('poporealestate_search_page').'?location='.get_post_meta(get_the_id(), 'address-locality')[0]); ?>">More Details <i class="fa fa-long-arrow-right"
+                                                                                                                                                                                          aria-hidden="true"></i></a></div>
                     </div>
                 </div>
             </div>
@@ -312,4 +311,4 @@
 
 
 <?php endif;
-wp_reset_query(); ?>
+wp_reset_postdata(); ?>

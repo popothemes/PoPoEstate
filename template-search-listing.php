@@ -32,9 +32,6 @@ $results_found=$obj_name->found_posts;
           </p>
           <span class="line"></span>
         </div>
-        <div class="col-sm-6 sort-item">
-
-        </div>
       </div>
       </div>
     </div>
@@ -48,8 +45,12 @@ $results_found=$obj_name->found_posts;
           <div class="col-sm-8">
             <div class="row">
 
-                <?php query_posts($search_arguments); ?>
-                <?php get_template_part("template-parts/properties-loop"); ?>
+                <?php
+                $the_query = new WP_Query( $search_arguments );
+
+                require(locate_template( 'template-parts/properties-loop.php'));
+
+                ?>
 
              
 

@@ -20,7 +20,7 @@
                             <?php
                             get_search_query();
                             ?>
-                            <?php get_template_part("template-parts/posts-loop"); ?>
+                            <?php get_template_part("template-parts/posts-loop-index"); ?>
                         </div>
                     </div>
                     <div class="col-sm-4">

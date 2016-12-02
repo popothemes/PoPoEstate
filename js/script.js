@@ -2,13 +2,6 @@ jQuery(document).ready(
 
     function(){
 
-        jQuery('button.btn.dropdown-toggle.btn-default').on('click',function(e) {
-
-
-
-        });
-
-
         //Home page menu search
         jQuery('.search-sec button i').on('click',function(e) {
 
@@ -62,6 +55,8 @@ jQuery(document).ready(
             locations = response;
 
         });
+
+
 
 
 

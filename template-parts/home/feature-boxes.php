@@ -12,18 +12,18 @@
 
             );
 
-            query_posts($regular_posts_args);
+            $the_query = new WP_Query( $regular_posts_args );
             ?>
 
 
-            <?php if(have_posts() ) : ?>
+            <?php if($the_query->have_posts() ) : ?>
 
-                <?php while( have_posts() ): the_post(); ?>
+                <?php while( $the_query->have_posts() ): $the_query->the_post(); ?>
 
                     <div class="col-sm-4">
                         <div class=" features-box">
                             <div class="features-icon wow fadeInLeft" data-wow-delay="200ms" id="home-featured-box-<?php echo get_the_ID(); ?>"><i
-                                    class="fa <?php echo get_post_meta(get_the_ID(), 'icon')[0] ?> fa-2"
+                                    class="fa <?php echo esc_attr(get_post_meta(get_the_ID(), 'icon')[0]); ?> fa-2"
                                     aria-hidden="true"></i></div>
                             <div class="features-text wow fadeInLeft" data-wow-delay="300ms"
                                  id="home-featured-box-<?php get_the_ID(); ?>-text">
@@ -31,7 +31,7 @@
 
                                 <p id="home-featured-box-<?php get_the_ID(); ?>-description"><?php the_content(); ?></p>
 
-                                <a href="<?php if(!empty(get_post_meta(get_the_ID(), 'url')[0])){echo get_post_meta(get_the_ID(), 'url')[0];} ?>"> Read More <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                <a href="<?php if(!empty(get_post_meta(get_the_ID(), 'url')[0])){echo esc_url(get_post_meta(get_the_ID(), 'url')[0]);} ?>"> Read More <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                             </div>
                         </div>
                     </div>
@@ -41,7 +41,7 @@
                 <?php endwhile;?>
 
 
-            <?php endif; wp_reset_query(); ?>
+            <?php endif; wp_reset_postdata(); ?>
 
 
 

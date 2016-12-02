@@ -17,7 +17,7 @@
                         if (!empty(get_the_author_meta('facebook-url')))
                         {
                           ?>
-                          <li><a href="<?php get_the_author_meta('facebook-url'); ?>" class="fb"><i class="fa fa-facebook"></i></a></li>
+                          <li><a href="<?php esc_url(get_the_author_meta('facebook-url')); ?>" class="fb"><i class="fa fa-facebook"></i></a></li>
 
                           <?php
 
@@ -28,7 +28,7 @@
                         if (!empty(get_the_author_meta('twitter-url')))
                         {
                           ?>
-                          <li><a href="<?php get_the_author_meta('twitter-url'); ?>" class="fb"><i class="fa fa-facebook"></i></a></li>
+                          <li><a href="<?php esc_url(get_the_author_meta('twitter-url')); ?>" class="fb"><i class="fa fa-twitter"></i></a></li>
 
                           <?php
 
@@ -39,7 +39,7 @@
                         if (!empty(get_the_author_meta('pinterest-url')))
                         {
                           ?>
-                          <li><a href="<?php get_the_author_meta('pinterest-url'); ?>" class="pin"><i class="fa fa-pinterest-p"></i></a></li>
+                          <li><a href="<?php esc_url(get_the_author_meta('pinterest-url')); ?>" class="pin"><i class="fa fa-pinterest-p"></i></a></li>
 
                           <?php
 
@@ -50,7 +50,7 @@
                         if (!empty(get_the_author_meta('googleplus-url')))
                         {
                           ?>
-                          <li><a href="<?php get_the_author_meta('googleplus-url'); ?>" class="gp"><i class="ei ei-social_googleplus"></i></a></li>
+                          <li><a href="<?php esc_url(get_the_author_meta('googleplus-url')); ?>" class="gp"><i class="fa fa-googleplus"></i></a></li>
 
                           <?php
 
@@ -61,7 +61,7 @@
                         if (!empty(get_the_author_meta('tumblr-url')))
                         {
                           ?>
-                          <li><a href="<?php get_the_author_meta('tumblr-url'); ?>" class="tm"><i class="fa fa-tumblr"></i></a></li>
+                          <li><a href="<?php esc_url(get_the_author_meta('tumblr-url')); ?>" class="tm"><i class="fa fa-tumblr"></i></a></li>
 
                           <?php
 
@@ -72,7 +72,7 @@
                         if (!empty(get_the_author_meta('instagram-url')))
                         {
                           ?>
-                          <li><a href="<?php get_the_author_meta('instagram-url'); ?>" class="fb"><i class="fa fa-instagram"></i></a></li>
+                          <li><a href="<?php esc_url(get_the_author_meta('instagram-url')); ?>" class="fb"><i class="fa fa-instagram"></i></a></li>
 
                           <?php
 

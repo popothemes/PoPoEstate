@@ -44,7 +44,7 @@
                                 echo $write_comments;
                                 ?>
 
-                              </span>   |        <span><a href="javascript:;"><i class="more"></i>Share this post</a></span></div>
+                              </span>
                             <?php the_content(); ?>
                             <?php
                             $defaults = array(

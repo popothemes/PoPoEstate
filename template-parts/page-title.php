@@ -7,20 +7,20 @@
             if(is_home()) {
                 echo get_bloginfo();
             }
-            elseif(is_author())
+            else if(is_author())
             {
                 global $wp_query;
                 $curauth = $wp_query->get_queried_object();
                 echo __('Properties by ','poporealestate').$curauth->display_name;
             }
-            if(is_category())
+            else if(is_category())
             {
                 echo __('All posts in ', 'poporealestate');
                 echo '"';
                 single_cat_title();
                 echo '"';
             }
-            if(is_tag())
+            else if(is_tag())
             {
                 echo __('All posts tagged with ', 'poporealestate');
                 echo '"';
@@ -31,7 +31,7 @@
             }
             else
             {
-                echo get_the_title(); 
+                echo get_the_title();
             }
 
             ?>

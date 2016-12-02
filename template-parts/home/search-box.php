@@ -13,11 +13,11 @@ global $poporealestate_default_options;
                         <img src="<?php
                         if(get_theme_mod('poporealestate_home_banner_background_image',$poporealestate_default_options['poporealestate_home_banner_background_image'])=="")
                         {
-                            echo $poporealestate_default_options['poporealestate_home_banner_background_image'];
+                            echo esc_url($poporealestate_default_options['poporealestate_home_banner_background_image']);
                         }
                         else
                         {
-                            echo get_theme_mod('poporealestate_home_banner_background_image',$poporealestate_default_options['poporealestate_home_banner_background_image']);
+                            echo esc_url(get_theme_mod('poporealestate_home_banner_background_image',$poporealestate_default_options['poporealestate_home_banner_background_image']));
                         } ?>"
                                                                                         alt="banner"/>
                         </div>
@@ -25,16 +25,16 @@ global $poporealestate_default_options;
                         <div class="carousel-caption">
                             <div class="container">
                                 <div class="caption-box">
-                                    <h1 class="wow fadeInLeft" data-wow-delay="1000ms"><?php echo get_theme_mod('poporealestate_home_banner_title', $poporealestate_default_options['poporealestate_home_banner_title']); ?></h1>
+                                    <h1 class="wow fadeInLeft" data-wow-delay="1000ms"><?php echo wp_kses_post(get_theme_mod('poporealestate_home_banner_title', $poporealestate_default_options['poporealestate_home_banner_title'])); ?></h1>
 
-                                    <form method="get" action="<?php echo get_theme_mod('poporealestate_search_page'); ?>"
+                                    <form method="get" action="<?php echo esc_url(get_theme_mod('poporealestate_search_page')); ?>"
                                     ">
                                     <div class="advance-search-section">
                                         <div class="advance-search">
                                             <div class="select-option2">
                                                 <div class="multilang wow fadeInDown" data-wow-delay="900ms">
                                                     <select class="selectpicker" name="status">
-                                                        <option value="any">Status</option>
+                                                        <option value="any"><?php _e('Status','poporealestate'); ?></option>
                                                         <?php poporealestate_select_property_statuses(""); ?>
                                                     </select>
                                                 </div>
@@ -43,17 +43,12 @@ global $poporealestate_default_options;
                                                 <input id="poporealestate-home-search-box" autocomplete="off" type="text" name="location" class="form-control" placeholder="<?php echo __("Location","poporealestate"); ?>"/>
                                                 <i>X</i>
                                                 <ul class="dropdown-menu" id="poporealestate-search-dropdown-menu">
-
-<!--                                                    <li><a href="javascript:;">Mazyr Ipsum </a></li>-->
-<!--                                                    <li><a href="javascript:;"><span>Mami</span> Beach</a></li>-->
-<!--                                                    <li><a href="javascript:;">Mexico</a></li>-->
-<!--                                                    <li><a href="javascript:;">Meihekou</a></li>-->
                                                 </ul>
                                             </div>
                                             <div class="select-option2">
                                                 <div class="multilang wow fadeInDown" data-wow-delay="900ms">
                                                     <select class="selectpicker" name="beds">
-                                                        <option value="any">Bedrooms</option>
+                                                        <option value="any"><?php _e('Bedrooms','poporealestate'); ?></option>
                                                         <?php poporealestate_get_min_beds(""); ?>
                                                     </select>
                                                 </div>
@@ -61,7 +56,7 @@ global $poporealestate_default_options;
                                             <div class="select-option3 brnone">
                                                 <div class="multilang wow fadeInDown" data-wow-delay="900ms">
                                                     <select class="selectpicker" name="type">
-                                                        <option value="any">Type</option>
+                                                        <option value="any"><?php _e('Type','poporealestate'); ?></option>
                                                         <?php poporealestate_select_property_types(""); ?>
                                                     </select>
                                                 </div>

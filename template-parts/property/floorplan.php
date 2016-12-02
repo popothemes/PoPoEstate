@@ -10,9 +10,8 @@
                     <?php
 
                     foreach (get_post_meta(get_the_id(), 'attachments') as $key => $value) {
-                        echo '<div class="item"><img src="'.wp_get_attachment_image_src($value, 'poporealestate_attachments')[0].'" width="185" height="auto" alt="" /></div>                                ';
+                        echo '<div class="item"><img src="'.wp_get_attachment_image_src($value, 'poporealestate_attachments')[0].'" width="185" height="auto" alt="'.__('Floor Plan', 'poporealestate').'" /></div>                                ';
                     }
-
                     ?>
                   </div>
                   <a href="javascript:;" class="left-arrow"><span class="ti-arrow-circle-left"></span></a><a href="javascript:;" class="right-arrow"><span class="ti-arrow-circle-right"></span></a></div>
@@ -26,7 +25,7 @@
                         <?php
 
                         foreach (get_post_meta(get_the_id(), 'attachments') as $key => $value) {
-                            echo '<div class="item" style="background-image: url(\''.wp_get_attachment_image_src($value, 'poporealestate_attachments')[0].'\');"></div>';
+                            echo '<div class="item" style="background-image: url(\''.esc_url(wp_get_attachment_image_src($value, 'poporealestate_attachments')[0]).'\');"></div>';
                         }
                         ?>
 

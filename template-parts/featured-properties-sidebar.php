@@ -17,90 +17,72 @@ $featured_posts_args = array(
     ),
 
 );
-query_posts($featured_posts_args);
-
+$the_query = new WP_Query($featured_posts_args);
 ?>
-    <div class="left-container">
+    <div class="left-container featured-properties" id="featured-sidebar">
         <h3><?php echo $instance['title']; ?></h3>
 
+        <?php if ($the_query->have_posts()) : ?>
 
-        <?php if (have_posts()) : ?>
-                <?php while (have_posts()): the_post(); ?>
+            <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
+
+                <a href="<?php the_permalink(); ?>">
+                    <div class="s-property">
+                        <div class="row">
+                            <div class="col-xs-5"><img
+                                    src="<?php
+                                    if (has_post_thumbnail()) {
+                                        echo the_post_thumbnail_url('poporealestate_featured_property_thumbnail');
+
+                                    } else {
+                                        echo esc_url('http://placehold.it/137x137');
+
+                                    }
+
+                                    ?>"
+                                    width="137" height="137" alt="" class="img-responsive"></div>
+
+                            <div class="col-xs-7 s-property-detail">
+                                <h5><?php the_title(); ?></h5>
+                <span
+                    class="price">
+                    <?php
+
+                    if (empty(get_post_meta(get_the_id(), 'price')[0])) {
+                        _e('N/A', 'poporealestate');
+                    } else {
+
+                        echo esc_html(get_theme_mod('poporealestate_currency_prefix', $poporealestate_default_options['poporealestate_currency_prefix']).get_post_meta(get_the_id(), 'price')[0]);
+
+                    }
+                    ?></span>
 
 
-                    <?php if (has_post_thumbnail()) { ?>
-                        <a href="<?php the_permalink();?>">
-                        <div class="s-property">
-                            <div class="row">
-                                <div class="col-xs-5"><img
-                                        src="<?php echo the_post_thumbnail_url('poporealestate_featured_property_thumbnail'); ?>"
-                                        width="137" height="137" alt="" class="img-responsive"></div>
-
-                                <div class="col-xs-7 s-property-detail">
-                                    <h5><?php the_title(); ?></h5>
-                                    <span class="price"><?php echo get_theme_mod('poporealestate_currency_prefix', $poporealestate_default_options['poporealestate_currency_prefix']) ?><?php echo get_post_meta(get_the_id(), 'price')[0]; ?></span>
-
-                                    <div class="r-property-space">
-                                        <div class="row">
-                                            <div class="col-sm-6"><i
-                                                    class="sqm"></i><?php echo get_post_meta(get_the_id(), 'area', true); ?> <?php echo get_theme_mod('poporealestate_area_postfix', $poporealestate_default_options['poporealestate_area_postfix']) ?>
-                                            </div>
-                                            <div class="col-sm-6"><i
-                                                    class="bed"></i>Beds: <?php echo get_post_meta(get_the_id(), 'beds', true); ?>
-                                            </div>
-                                            <div class="col-sm-6"><i
-                                                    class="bath"></i>Baths: <?php echo get_post_meta(get_the_id(), 'baths', true); ?>
-                                            </div>
-                                            <div class="col-sm-6"><i
-                                                    class="garage"></i>Garage: <?php echo get_post_meta(get_the_id(), 'parking', true); ?>
-                                            </div>
+                                <div class="r-property-space">
+                                    <div class="row">
+                                        <div class="col-sm-6"><i
+                                                class="sqm"></i>
+                                            <?php echo esc_attr(get_post_meta(get_the_id(), 'area', true)); ?>
+                                            <?php echo esc_attr(get_theme_mod('poporealestate_area_postfix', $poporealestate_default_options['poporealestate_area_postfix'])); ?>
+                                        </div>
+                                        <div class="col-sm-6"><i
+                                                class="bed"></i><?php _e('Beds:', 'poporealestate') ?> <?php echo esc_html(get_post_meta(get_the_id(), 'beds', true)); ?>
+                                        </div>
+                                        <div class="col-sm-6"><i
+                                                class="bath"></i><?php _e('Baths:', 'poporealestate') ?> <?php echo esc_html(get_post_meta(get_the_id(), 'baths', true)); ?>
+                                        </div>
+                                        <div class="col-sm-6"><i
+                                                class="garage"></i><?php _e('Parking:', 'poporealestate') ?> <?php echo esc_html(get_post_meta(get_the_id(), 'parking', true)); ?>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        </a>
+                    </div>
+                </a>
 
 
-                        <?php
-                    } else { ?>
-
-                        <div class="s-property">
-                            <div class="row">
-                                <div class="col-xs-5"><img src="http://placehold.it/369x202" width="137" height="137"
-                                                           alt="" class="img-responsive"></div>
-                                <div class="col-xs-7 s-property-detail">
-                                    <h5><?php the_title(); ?></h5>
-                                    <span
-                                        class="price"><?php echo get_theme_mod('poporealestate_currency_prefix', $poporealestate_default_options['poporealestate_currency_prefix']) ?><?php echo get_post_meta(get_the_id(), 'price')[0]; ?></span>
-
-                                    <div class="r-property-space">
-                                        <div class="row">
-                                            <div class="col-sm-6"><i
-                                                    class="sqm"></i><?php echo get_post_meta(get_the_id(), 'area', true); ?> <?php echo get_theme_mod('poporealestate_area_postfix', $poporealestate_default_options['poporealestate_area_postfix']) ?>
-                                            </div>
-                                            <div class="col-sm-6"><i
-                                                    class="bed"></i>Beds: <?php echo get_post_meta(get_the_id(), 'beds', true); ?>
-                                            </div>
-                                            <div class="col-sm-6"><i
-                                                    class="bath"></i>Baths: <?php echo get_post_meta(get_the_id(), 'baths', true); ?>
-                                            </div>
-                                            <div class="col-sm-6"><i
-                                                    class="garage"></i>Garage: <?php echo get_post_meta(get_the_id(), 'parking', true); ?>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        ?>
-
-
-                    <?php } ?>
-
-
-                <?php endwhile; ?>
+            <?php endwhile; ?>
 
 
         <?php else: ?>
@@ -109,9 +91,9 @@ query_posts($featured_posts_args);
 
         <?php endif;
         ?>
-        <a href="<?php echo get_theme_mod('poporealestate_listing_page', ''); ?>"
+        <a href="<?php echo esc_url($instance['listing_link']); ?>"
            class="property-link"><?php echo __('All Properties', 'poporealestate'); ?><i class="fa fa-caret-right"
-                                                                                  aria-hidden="true"></i></a>
+                                                                                         aria-hidden="true"></i></a>
     </div>
 
-<?php wp_reset_query(); ?>
+<?php wp_reset_postdata(); ?>

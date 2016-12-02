@@ -46,8 +46,8 @@ get_header();
 
                                 );
 
-                                query_posts($regular_posts_args);
-                                get_template_part("template-parts/posts-loop");
+                                $the_query = new WP_Query( $regular_posts_args );
+                                require(locate_template("template-parts/posts-loop.php"));
                             }
                             ?>
 
@@ -63,9 +63,9 @@ get_header();
 
                             );
 
+                            $the_query = new WP_Query( $regular_posts_args );
+                            require(locate_template("template-parts/posts-loop.php"));
                             ?>
-                            <?php query_posts($regular_posts_args); ?>
-                            <?php get_template_part("template-parts/posts-loop"); ?>
                         </div>
                     </div>
                     <div class="col-sm-4">

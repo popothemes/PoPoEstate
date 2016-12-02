@@ -24,9 +24,6 @@ get_header();
                             <?php endwhile; wp_reset_query();?>
                             <span class="line"></span>
                         </div>
-                        <div class="col-sm-6 sort-item">
-
-                        </div>
                     </div>
                 </div>
             </div>
@@ -42,7 +39,7 @@ get_header();
 
                                 <?php
 
-                                $regular_posts_args = array(
+                                $args = array(
 
                                     'post_type' => 'property',
                                     'paged'         =>  get_query_var('paged'),
@@ -60,8 +57,8 @@ get_header();
 
 
                                 );
-                                query_posts($regular_posts_args);
-                                get_template_part("template-parts/properties-loop");
+                                $the_query = new WP_Query( $args );
+                                require(locate_template( 'template-parts/properties-loop.php'));
 
                                 ?>
 

@@ -30,7 +30,7 @@
                                 );
 
                                 query_posts($regular_posts_args);
-                                get_template_part("template-parts/posts-loop");
+                                get_template_part("template-parts/posts-loop-index");
                             }
                             ?>
 
@@ -48,7 +48,7 @@
 
                             ?>
                             <?php query_posts($regular_posts_args); ?>
-                            <?php get_template_part("template-parts/posts-loop"); ?>
+                            <?php get_template_part("template-parts/posts-loop-index"); ?>
                         </div>
                     </div>
                     <div class="col-sm-4">

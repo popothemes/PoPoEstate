@@ -106,19 +106,9 @@
 
     </div>
     <?php
-    if (function_exists('wp_bootstrap_pagination')) {
-        wp_bootstrap_pagination(
-            array(
-                'before_output' => '<nav aria-label="Page navigation"><ul class="pagination">',
-                'after_output' => '</ul></nav>'
-            )
-        );
-    }
-    else
-    {
-        posts_nav_link( ' &#183; ', __('previous page', 'poporealestate'), __('next page','poporealestate') );
 
-    }
+    poporealestate_pagination($the_query->max_num_pages);
+
     wp_reset_postdata();
     ?>
 

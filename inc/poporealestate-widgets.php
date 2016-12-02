@@ -56,7 +56,7 @@ class poporealestate_Recent_Searches extends WP_Widget {
             <?php
             $searches=get_option('poporealestate_last_searches');
 
-            if(empty($searches))
+            if(!empty($searches))
             {
                 sort($searches);
                 foreach($searches as $value) {

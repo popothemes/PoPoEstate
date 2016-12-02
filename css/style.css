@@ -35,6 +35,9 @@
 */
 
 /* Begin Code for WordPress adaption */
+.properties-carousel .property-space {
+    padding-left: 5px;
+}
 .featured-properties .price {
     width: 100%;
     padding-top: 0px;
@@ -1243,6 +1246,7 @@ header, article, footer,.top-header{overflow:;}
 }
 
 @media(max-width:767px){
+
 .one-link{text-align:center;}
 .head-one .social-media{text-align:center;}
 .one-link a {padding: 0 3px;font-size: 12px;}
@@ -1289,8 +1293,8 @@ a.navbar-brand{display:block;color:#fff;text-align:left;padding:10px;}
 .r-property-price span {width: 49%;}
 .arrow {text-align: center;position: relative;top: -10px;}
 .phone-img {text-align: right;padding: 20px 0 0;}
-.section-testimonials{padding:40px 0;}
-.testimonial-image {padding: 0 0 3px;background: none;}
+.section-testimonials{padding:40px 0 !important;}
+.testimonial-image {padding: 0 0 3px !important; background: none !important;}
 .news-img img {width:100%;}
 .page-title {padding: 15px;}
 .page-title .breadcrumb {text-align: left;padding: 5px 0;}

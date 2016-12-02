@@ -79,7 +79,17 @@
                                         <h4><?php the_title(); ?></h4>
 
 
-                                        <p><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i><?php echo esc_html(get_post_meta(get_the_id(), 'address')[0]); ?></p>
+                                        <p><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>
+                                            <?php
+                                            if(!empty(get_post_meta(get_the_id(), 'address')[0]))
+                                            {
+                                                echo esc_html(get_post_meta(get_the_id(), 'address')[0]);
+                                            }
+                                            else
+                                            {
+                                                _e('Location Not Specified', 'poporealestate');
+                                            }
+                                            ?></p>
                                     </div>
                                 </div></div>
                         <span class="lable-tag">
@@ -120,8 +130,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="property-price"><span class=""><?php echo esc_attr(get_theme_mod('poporealestate_currency_prefix', $poporealestate_default_options['poporealestate_currency_prefix'])); ?>
-                                <?php echo esc_attr(get_post_meta(get_the_id(), 'price')[0]); ?></span>
+                        <div class="property-price"><span class=""><?php if(!empty(get_post_meta(get_the_id(), 'price')[0])){ ?>
+                                    <?php echo esc_html(get_theme_mod('poporealestate_currency_prefix', $poporealestate_default_options['poporealestate_currency_prefix'])); ?>
+                                    <?php echo esc_html(get_post_meta(get_the_id(), 'price')[0]); ?>
+                                <?php }else{_e('N/A', 'poporealestate');} ?></span>
                             <a href="<?php the_permalink(); ?>"><?php _e('More Details', 'poporealestate'); ?><i
                                     class="fa fa-caret-right" aria-hidden="true"></i></a></div>
                     </div>

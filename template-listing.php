@@ -42,6 +42,7 @@ get_header();
 
                                     'post_type'       =>  'property',
                                     'paged'         =>  get_query_var('paged'),
+                                    'posts_per_page' => 10,
 
                                 );
                                 $the_query = new WP_Query( $args );

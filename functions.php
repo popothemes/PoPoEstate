@@ -953,4 +953,48 @@ if (!function_exists('poporealestate_get_secondary_color')) {
     }
 }
 
+//Pagination
+
+if ( ! function_exists( 'poporealestate_pagination' ) ) {
+
+    function poporealestate_pagination( $pages = '' ) {
+
+        global $paged;
+
+        if ( empty( $paged ) ) {
+            $paged = 1;
+        }
+
+        $prev = $paged - 1;
+        $next = $paged + 1;
+        $range = 2; // only change it to show more links
+        $show_items = ( $range * 2 ) + 1;
+
+        if ( $pages == '' ) {
+            global $wp_query;
+            $pages = $wp_query->max_num_pages;
+            if ( ! $pages ) {
+                $pages = 1;
+            }
+        }
+
+        if ( 1 != $pages ) {
+            echo '<nav aria-label="Page navigation">';
+            echo "<ul class='pagination'>";
+            echo ( $paged > 2 && $paged > $range + 1 && $show_items < $pages ) ? "<li><a href='" . get_pagenum_link( 1 ) . "''>&laquo; " . __( 'First', 'poporealestate' ) . "</a> </li>" : "";
+            echo ( $paged > 1 && $show_items < $pages ) ? "<li><a href='" . get_pagenum_link( $prev ) . "' >&laquo; " . __( 'Previous', 'poporealestate' ) . "</a></li> " : "";
+
+            for ( $i = 1; $i <= $pages; $i++ ) {
+                if ( 1 != $pages && ( ! ( $i >= $paged + $range + 1 || $i <= $paged - $range - 1 ) || $pages <= $show_items ) ) {
+                    echo ( $paged == $i ) ? "<li class='active'><a href='" . get_pagenum_link( $i ) . "' class='current' >" . $i . "</a> </li>" : "<li><a href='" . get_pagenum_link( $i ) . "' >" . $i . "</a> </li>";
+                }
+            }
+
+            echo ( $paged < $pages && $show_items < $pages ) ? "<li><a href='" . get_pagenum_link( $next ) . "' >" . __( 'Next', 'poporealestate' ) . " &raquo;</a></li> " : "";
+            echo ( $paged < $pages - 1 && $paged + $range - 1 < $pages && $show_items < $pages ) ? "<li><a href='" . get_pagenum_link( $pages ) . "' >" . __( 'Last', 'poporealestate' ) . " &raquo;</a> </li>" : "";
+            echo "</div></nav>";
+        }
+    }
+}
+
 ?>

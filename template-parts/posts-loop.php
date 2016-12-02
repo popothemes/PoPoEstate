@@ -81,17 +81,7 @@ else {
                     
                         <?php endwhile;?>
 
-        <?php
-        if (function_exists('wp_bootstrap_pagination') ) {
-                        wp_bootstrap_pagination();
-        }
-    else
-    {
-        posts_nav_link( ' &#183; ', __('previous page', 'poporealestate'), __('next page', 'poporealestate') );
-
-    }
-
-        ?>
+        <?php poporealestate_pagination($the_query->max_num_pages); ?>
 
                     
                     

@@ -55,7 +55,7 @@
                             if (!empty(get_the_author_meta('googleplus-url', $agent->ID)))
                             {
                                 ?>
-                                <li><a href="<?php esc_url(get_the_author_meta('googleplus-url', $agent->ID)); ?>" class="gp"><i class="fa fa-google-plustes"></i></a></li>
+                                <li><a href="<?php esc_url(get_the_author_meta('googleplus-url', $agent->ID)); ?>" class="gp"><i class="fa fa-google-plus"></i></a></li>
 
                                 <?php
 

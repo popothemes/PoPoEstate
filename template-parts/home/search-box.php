@@ -34,13 +34,13 @@ global $poporealestate_default_options;
                                             <div class="select-option2">
                                                 <div class="multilang wow fadeInDown" data-wow-delay="900ms">
                                                     <select class="selectpicker" name="status">
-                                                        <option value="any"><?php _e('Status','poporealestate'); ?></option>
+                                                        <option value="any"><?php _e('Status','popo-real-estate'); ?></option>
                                                         <?php poporealestate_select_property_statuses(""); ?>
                                                     </select>
                                                 </div>
                                             </div>
                                             <div class="text-option">
-                                                <input id="poporealestate-home-search-box" autocomplete="off" type="text" name="location" class="form-control" placeholder="<?php echo __("Location","poporealestate"); ?>"/>
+                                                <input id="poporealestate-home-search-box" autocomplete="off" type="text" name="location" class="form-control" placeholder="<?php echo __("Location",'popo-real-estate'); ?>"/>
                                                 <i>X</i>
                                                 <ul class="dropdown-menu" id="poporealestate-search-dropdown-menu">
                                                 </ul>
@@ -48,7 +48,7 @@ global $poporealestate_default_options;
                                             <div class="select-option2">
                                                 <div class="multilang wow fadeInDown" data-wow-delay="900ms">
                                                     <select class="selectpicker" name="beds">
-                                                        <option value="any"><?php _e('Bedrooms','poporealestate'); ?></option>
+                                                        <option value="any"><?php _e('Bedrooms','popo-real-estate'); ?></option>
                                                         <?php poporealestate_get_min_beds(""); ?>
                                                     </select>
                                                 </div>
@@ -56,7 +56,7 @@ global $poporealestate_default_options;
                                             <div class="select-option3 brnone">
                                                 <div class="multilang wow fadeInDown" data-wow-delay="900ms">
                                                     <select class="selectpicker" name="type">
-                                                        <option value="any"><?php _e('Type','poporealestate'); ?></option>
+                                                        <option value="any"><?php _e('Type','popo-real-estate'); ?></option>
                                                         <?php poporealestate_select_property_types(""); ?>
                                                     </select>
                                                 </div>

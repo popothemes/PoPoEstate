@@ -2,7 +2,7 @@
     <div>
         <div class="search-section">
             <div class="input-group">
-                <input type="text" name="s" class="form-control" placeholder="<?php _e("Search by keyword", 'poporealestate'); ?>">
+                <input type="text" name="s" class="form-control" placeholder="<?php _e("Search by keyword", 'popo-real-estate'); ?>">
               <span class="input-group-btn">
                 <button class="btn btn-default" type="submit"><i class="ti-search"></i></button>
               </span>

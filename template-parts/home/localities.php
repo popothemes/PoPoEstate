@@ -11,7 +11,7 @@
             <i class="fa fa-spinner fa-pulse fa-3x fa-fw" id="poporealestate-localities-spinner"></i>
 
         </div>
-        <div class="loading" id="poporealestate-localities-load-more"><span><i class="fa fa-spinner" aria-hidden="true"></i> <strong><?php _e('LOAD MORE','poporealestate'); ?></strong></span></div>
+        <div class="loading" id="poporealestate-localities-load-more"><span><i class="fa fa-spinner" aria-hidden="true"></i> <strong><?php _e('LOAD MORE','popo-real-estate'); ?></strong></span></div>
     </div>
 
 </section>

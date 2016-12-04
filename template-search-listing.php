@@ -23,7 +23,7 @@ $results_found=$obj_name->found_posts;
       <div class="row">
         <div class="col-sm-6">
           <p>
-            <h4><?php printf( esc_html__( '%d Results Found', 'poporealestate' ), $results_found ); ?></h4>
+            <h4><?php printf( esc_html__( '%d Results Found', 'popo-real-estate' ), $results_found ); ?></h4>
 
             <?php while ( have_posts() ) : the_post(); ?>
                 <?php the_content(); ?>
@@ -48,6 +48,8 @@ $results_found=$obj_name->found_posts;
                 <?php
                 $the_query = new WP_Query( $search_arguments );
 
+                //load_template(get_template_directory().'/template-parts/properties-loop.php', 'true');
+
                 require(locate_template( 'template-parts/properties-loop.php'));
 
                 ?>
@@ -62,6 +64,6 @@ $results_found=$obj_name->found_posts;
     </section>
     
   </div>
-  <h4 class="hidden">poporealestate</h4>
+  <h4 class="hidden">Popo Real Estate</h4>
 </article>    
 <?php get_footer(); ?>

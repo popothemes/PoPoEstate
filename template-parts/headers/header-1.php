@@ -78,7 +78,7 @@
                     wp_nav_menu($menu_args);
                     ?>
                     <div class="search-sec navbar-right">
-                        <input type="text" class="form-control" id="header-1-search-keyword" name="s" placeholder="<?php _e('Type','poporealestate') ?>" />
+                        <input type="text" class="form-control" id="header-1-search-keyword" name="s" placeholder="<?php _e('Type','popo-real-estate') ?>" />
                         <button type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
                     </div>
                     <div class="clearfix"></div>

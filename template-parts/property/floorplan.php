@@ -10,7 +10,7 @@
                     <?php
 
                     foreach (get_post_meta(get_the_id(), 'attachments') as $key => $value) {
-                        echo '<div class="item"><img src="'.wp_get_attachment_image_src($value, 'poporealestate_attachments')[0].'" width="185" height="auto" alt="'.__('Floor Plan', 'poporealestate').'" /></div>                                ';
+                        echo '<div class="item"><img src="'.wp_get_attachment_image_src($value, 'poporealestate_attachments')[0].'" width="185" height="auto" alt="'.__('Floor Plan', 'popo-real-estate').'" /></div>                                ';
                     }
                     ?>
                   </div>

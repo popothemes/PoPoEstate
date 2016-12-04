@@ -42,22 +42,22 @@ global $post;
 
                                 if (comments_open() ) {
                                     if ($num_comments == 0 ) {
-                                        $comments = __('No Comments', 'poporealestate');
+                                        $comments = __('No Comments', 'popo-real-estate');
                                     } elseif ($num_comments > 1 ) {
-                                        $comments = $num_comments . __(' Comments', 'poporealestate');
+                                        $comments = $num_comments . __(' Comments', 'popo-real-estate');
                                     } else {
-                                        $comments = __('1 Comment','poporealestate');
+                                        $comments = __('1 Comment','popo-real-estate');
                                     }
                                     $write_comments = '<a href="' . get_comments_link() .'"><i class="fa fa-comment" aria-hidden="true"></i>'. $comments.'</a>';
                                 } else {
-                                    $write_comments =  __('Comments Disabled','poporealestate');
+                                    $write_comments =  __('Comments Disabled','popo-real-estate');
                                 }
                                     echo $write_comments;
                                     ?>
 
                                   </div>
                                 <div class="col-sm-5"><a href="<?php echo esc_url( get_category_link( get_the_category()[0]->term_id ) ) ?>"><i aria-hidden="true" class="fa fa-tag"></i><?php print_r(get_the_category()[0]->name); ?></a></div>
-                                <div class="col-sm-3"><a href="<?php echo get_the_permalink(); ?>"><i class="fa fa-share"></i><?php _e('More', 'poporealestate') ?><span class="screen-reader-text">of <?php the_title(); ?></span></a></div>
+                                <div class="col-sm-3"><a href="<?php echo get_the_permalink(); ?>"><i class="fa fa-share"></i><?php _e('More', 'popo-real-estate') ?><span class="screen-reader-text">of <?php the_title(); ?></span></a></div>
                                 </div>
                               </div>
                             </div>
@@ -73,7 +73,7 @@ global $post;
     }  
     else
     {
-        echo __('No Related Posts Found', 'poporealestate');
+        echo __('No Related Posts Found', 'popo-real-estate');
     }
 
 

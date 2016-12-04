@@ -225,7 +225,7 @@ add_filter('script_loader_tag', 'poporealestate_add_async_attribute', 10, 2);
 if (!function_exists('poporealestate_register_main_menu')) {
     function poporealestate_register_main_menu()
     {
-        register_nav_menu('main-menu', __('Main Menu', 'poporealestate'));
+        register_nav_menu('main-menu', __('Main Menu', 'popo-real-estate'));
     }
 }
 add_action('init', 'poporealestate_register_main_menu');
@@ -240,7 +240,7 @@ if (!function_exists('poporealestate_comments')) {
             case 'trackback' :
                 ?>
                 <li class="pingback">
-                    <p><?php _e('Pingback:', 'poporealestate'); ?><?php comment_author_link(); ?><?php edit_comment_link(__('(Edit)', 'poporealestate'), ' '); ?></p>
+                    <p><?php _e('Pingback:', 'popo-real-estate'); ?><?php comment_author_link(); ?><?php edit_comment_link(__('(Edit)', 'popo-real-estate'), ' '); ?></p>
                 </li>
                 <?php
                 break;
@@ -254,9 +254,9 @@ if (!function_exists('poporealestate_comments')) {
                         <p><?php comment_text(); ?></p>
 
                         <div class="comment-info">
-                            <span><?php printf(__('Posted By: ', 'poporealestate') . '<a href="' . comment_author_url() . '">%s</a>', sprintf('<cite class="fn">%s</cite>', get_comment_author_link())); ?></span>
-                            | <span><?php printf(__('%1$s', 'poporealestate'), get_comment_date()); ?></span> |
-                            <span> <?php comment_reply_link(array_merge(array('after' => '', 'reply_text' => __('Reply<i class="ti-arrow-top-right"></i>', 'poporealestate')), array('depth' => $depth, 'max_depth' => $args['max_depth']))); ?></span>
+                            <span><?php printf(__('Posted By: ', 'popo-real-estate') . '<a href="' . comment_author_url() . '">%s</a>', sprintf('<cite class="fn">%s</cite>', get_comment_author_link())); ?></span>
+                            | <span><?php printf(__('%1$s', 'popo-real-estate'), get_comment_date()); ?></span> |
+                            <span> <?php comment_reply_link(array_merge(array('after' => '', 'reply_text' => __('Reply<i class="ti-arrow-top-right"></i>', 'popo-real-estate')), array('depth' => $depth, 'max_depth' => $args['max_depth']))); ?></span>
                         </div>
                     </div>
 
@@ -748,93 +748,93 @@ if (!function_exists('poporealestate_get_search_query_arguments')) {
 //Kirki Translations
 add_filter('kirki/my_config/l10n', function ($l10n) {
 
-    $l10n['background-color'] = esc_attr__('Background Color', 'poporealestate');
-    $l10n['background-image'] = esc_attr__('Background Image', 'poporealestate');
-    $l10n['no-repeat'] = esc_attr__('No Repeat', 'poporealestate');
-    $l10n['repeat-all'] = esc_attr__('Repeat All', 'poporealestate');
-    $l10n['repeat-x'] = esc_attr__('Repeat Horizontally', 'poporealestate');
-    $l10n['repeat-y'] = esc_attr__('Repeat Vertically', 'poporealestate');
-    $l10n['inherit'] = esc_attr__('Inherit', 'poporealestate');
-    $l10n['background-repeat'] = esc_attr__('Background Repeat', 'poporealestate');
-    $l10n['cover'] = esc_attr__('Cover', 'poporealestate');
-    $l10n['contain'] = esc_attr__('Contain', 'poporealestate');
-    $l10n['background-size'] = esc_attr__('Background Size', 'poporealestate');
-    $l10n['fixed'] = esc_attr__('Fixed', 'poporealestate');
-    $l10n['scroll'] = esc_attr__('Scroll', 'poporealestate');
-    $l10n['background-attachment'] = esc_attr__('Background Attachment', 'poporealestate');
-    $l10n['left-top'] = esc_attr__('Left Top', 'poporealestate');
-    $l10n['left-center'] = esc_attr__('Left Center', 'poporealestate');
-    $l10n['left-bottom'] = esc_attr__('Left Bottom', 'poporealestate');
-    $l10n['right-top'] = esc_attr__('Right Top', 'poporealestate');
-    $l10n['right-center'] = esc_attr__('Right Center', 'poporealestate');
-    $l10n['right-bottom'] = esc_attr__('Right Bottom', 'poporealestate');
-    $l10n['center-top'] = esc_attr__('Center Top', 'poporealestate');
-    $l10n['center-center'] = esc_attr__('Center Center', 'poporealestate');
-    $l10n['center-bottom'] = esc_attr__('Center Bottom', 'poporealestate');
-    $l10n['background-position'] = esc_attr__('Background Position', 'poporealestate');
-    $l10n['background-opacity'] = esc_attr__('Background Opacity', 'poporealestate');
-    $l10n['on'] = esc_attr__('ON', 'poporealestate');
-    $l10n['off'] = esc_attr__('OFF', 'poporealestate');
-    $l10n['all'] = esc_attr__('All', 'poporealestate');
-    $l10n['cyrillic'] = esc_attr__('Cyrillic', 'poporealestate');
-    $l10n['cyrillic-ext'] = esc_attr__('Cyrillic Extended', 'poporealestate');
-    $l10n['devanagari'] = esc_attr__('Devanagari', 'poporealestate');
-    $l10n['greek'] = esc_attr__('Greek', 'poporealestate');
-    $l10n['greek-ext'] = esc_attr__('Greek Extended', 'poporealestate');
-    $l10n['khmer'] = esc_attr__('Khmer', 'poporealestate');
-    $l10n['latin'] = esc_attr__('Latin', 'poporealestate');
-    $l10n['latin-ext'] = esc_attr__('Latin Extended', 'poporealestate');
-    $l10n['vietnamese'] = esc_attr__('Vietnamese', 'poporealestate');
-    $l10n['hebrew'] = esc_attr__('Hebrew', 'poporealestate');
-    $l10n['arabic'] = esc_attr__('Arabic', 'poporealestate');
-    $l10n['bengali'] = esc_attr__('Bengali', 'poporealestate');
-    $l10n['gujarati'] = esc_attr__('Gujarati', 'poporealestate');
-    $l10n['tamil'] = esc_attr__('Tamil', 'poporealestate');
-    $l10n['telugu'] = esc_attr__('Telugu', 'poporealestate');
-    $l10n['thai'] = esc_attr__('Thai', 'poporealestate');
-    $l10n['serif'] = _x('Serif', 'font style', 'poporealestate');
-    $l10n['sans-serif'] = _x('Sans Serif', 'font style', 'poporealestate');
-    $l10n['monospace'] = _x('Monospace', 'font style', 'poporealestate');
-    $l10n['font-family'] = esc_attr__('Font Family', 'poporealestate');
-    $l10n['font-size'] = esc_attr__('Font Size', 'poporealestate');
-    $l10n['font-weight'] = esc_attr__('Font Weight', 'poporealestate');
-    $l10n['line-height'] = esc_attr__('Line Height', 'poporealestate');
-    $l10n['font-style'] = esc_attr__('Font Style', 'poporealestate');
-    $l10n['letter-spacing'] = esc_attr__('Letter Spacing', 'poporealestate');
-    $l10n['top'] = esc_attr__('Top', 'poporealestate');
-    $l10n['bottom'] = esc_attr__('Bottom', 'poporealestate');
-    $l10n['left'] = esc_attr__('Left', 'poporealestate');
-    $l10n['right'] = esc_attr__('Right', 'poporealestate');
-    $l10n['color'] = esc_attr__('Color', 'poporealestate');
-    $l10n['add-image'] = esc_attr__('Add Image', 'poporealestate');
-    $l10n['change-image'] = esc_attr__('Change Image', 'poporealestate');
-    $l10n['remove'] = esc_attr__('Remove', 'poporealestate');
-    $l10n['no-image-selected'] = esc_attr__('No Image Selected', 'poporealestate');
-    $l10n['select-font-family'] = esc_attr__('Select a font-family', 'poporealestate');
-    $l10n['variant'] = esc_attr__('Variant', 'poporealestate');
-    $l10n['subsets'] = esc_attr__('Subset', 'poporealestate');
-    $l10n['size'] = esc_attr__('Size', 'poporealestate');
-    $l10n['height'] = esc_attr__('Height', 'poporealestate');
-    $l10n['spacing'] = esc_attr__('Spacing', 'poporealestate');
-    $l10n['ultra-light'] = esc_attr__('Ultra-Light 100', 'poporealestate');
-    $l10n['ultra-light-italic'] = esc_attr__('Ultra-Light 100 Italic', 'poporealestate');
-    $l10n['light'] = esc_attr__('Light 200', 'poporealestate');
-    $l10n['light-italic'] = esc_attr__('Light 200 Italic', 'poporealestate');
-    $l10n['book'] = esc_attr__('Book 300', 'poporealestate');
-    $l10n['book-italic'] = esc_attr__('Book 300 Italic', 'poporealestate');
-    $l10n['regular'] = esc_attr__('Normal 400', 'poporealestate');
-    $l10n['italic'] = esc_attr__('Normal 400 Italic', 'poporealestate');
-    $l10n['medium'] = esc_attr__('Medium 500', 'poporealestate');
-    $l10n['medium-italic'] = esc_attr__('Medium 500 Italic', 'poporealestate');
-    $l10n['semi-bold'] = esc_attr__('Semi-Bold 600', 'poporealestate');
-    $l10n['semi-bold-italic'] = esc_attr__('Semi-Bold 600 Italic', 'poporealestate');
-    $l10n['bold'] = esc_attr__('Bold 700', 'poporealestate');
-    $l10n['bold-italic'] = esc_attr__('Bold 700 Italic', 'poporealestate');
-    $l10n['extra-bold'] = esc_attr__('Extra-Bold 800', 'poporealestate');
-    $l10n['extra-bold-italic'] = esc_attr__('Extra-Bold 800 Italic', 'poporealestate');
-    $l10n['ultra-bold'] = esc_attr__('Ultra-Bold 900', 'poporealestate');
-    $l10n['ultra-bold-italic'] = esc_attr__('Ultra-Bold 900 Italic', 'poporealestate');
-    $l10n['invalid-value'] = esc_attr__('Invalid Value', 'poporealestate');
+    $l10n['background-color'] = esc_attr__('Background Color', 'popo-real-estate');
+    $l10n['background-image'] = esc_attr__('Background Image', 'popo-real-estate');
+    $l10n['no-repeat'] = esc_attr__('No Repeat', 'popo-real-estate');
+    $l10n['repeat-all'] = esc_attr__('Repeat All', 'popo-real-estate');
+    $l10n['repeat-x'] = esc_attr__('Repeat Horizontally', 'popo-real-estate');
+    $l10n['repeat-y'] = esc_attr__('Repeat Vertically', 'popo-real-estate');
+    $l10n['inherit'] = esc_attr__('Inherit', 'popo-real-estate');
+    $l10n['background-repeat'] = esc_attr__('Background Repeat', 'popo-real-estate');
+    $l10n['cover'] = esc_attr__('Cover', 'popo-real-estate');
+    $l10n['contain'] = esc_attr__('Contain', 'popo-real-estate');
+    $l10n['background-size'] = esc_attr__('Background Size', 'popo-real-estate');
+    $l10n['fixed'] = esc_attr__('Fixed', 'popo-real-estate');
+    $l10n['scroll'] = esc_attr__('Scroll', 'popo-real-estate');
+    $l10n['background-attachment'] = esc_attr__('Background Attachment', 'popo-real-estate');
+    $l10n['left-top'] = esc_attr__('Left Top', 'popo-real-estate');
+    $l10n['left-center'] = esc_attr__('Left Center', 'popo-real-estate');
+    $l10n['left-bottom'] = esc_attr__('Left Bottom', 'popo-real-estate');
+    $l10n['right-top'] = esc_attr__('Right Top', 'popo-real-estate');
+    $l10n['right-center'] = esc_attr__('Right Center', 'popo-real-estate');
+    $l10n['right-bottom'] = esc_attr__('Right Bottom', 'popo-real-estate');
+    $l10n['center-top'] = esc_attr__('Center Top', 'popo-real-estate');
+    $l10n['center-center'] = esc_attr__('Center Center', 'popo-real-estate');
+    $l10n['center-bottom'] = esc_attr__('Center Bottom', 'popo-real-estate');
+    $l10n['background-position'] = esc_attr__('Background Position', 'popo-real-estate');
+    $l10n['background-opacity'] = esc_attr__('Background Opacity', 'popo-real-estate');
+    $l10n['on'] = esc_attr__('ON', 'popo-real-estate');
+    $l10n['off'] = esc_attr__('OFF', 'popo-real-estate');
+    $l10n['all'] = esc_attr__('All', 'popo-real-estate');
+    $l10n['cyrillic'] = esc_attr__('Cyrillic', 'popo-real-estate');
+    $l10n['cyrillic-ext'] = esc_attr__('Cyrillic Extended', 'popo-real-estate');
+    $l10n['devanagari'] = esc_attr__('Devanagari', 'popo-real-estate');
+    $l10n['greek'] = esc_attr__('Greek', 'popo-real-estate');
+    $l10n['greek-ext'] = esc_attr__('Greek Extended', 'popo-real-estate');
+    $l10n['khmer'] = esc_attr__('Khmer', 'popo-real-estate');
+    $l10n['latin'] = esc_attr__('Latin', 'popo-real-estate');
+    $l10n['latin-ext'] = esc_attr__('Latin Extended', 'popo-real-estate');
+    $l10n['vietnamese'] = esc_attr__('Vietnamese', 'popo-real-estate');
+    $l10n['hebrew'] = esc_attr__('Hebrew', 'popo-real-estate');
+    $l10n['arabic'] = esc_attr__('Arabic', 'popo-real-estate');
+    $l10n['bengali'] = esc_attr__('Bengali', 'popo-real-estate');
+    $l10n['gujarati'] = esc_attr__('Gujarati', 'popo-real-estate');
+    $l10n['tamil'] = esc_attr__('Tamil', 'popo-real-estate');
+    $l10n['telugu'] = esc_attr__('Telugu', 'popo-real-estate');
+    $l10n['thai'] = esc_attr__('Thai', 'popo-real-estate');
+    $l10n['serif'] = _x('Serif', 'font style', 'popo-real-estate');
+    $l10n['sans-serif'] = _x('Sans Serif', 'font style', 'popo-real-estate');
+    $l10n['monospace'] = _x('Monospace', 'font style', 'popo-real-estate');
+    $l10n['font-family'] = esc_attr__('Font Family', 'popo-real-estate');
+    $l10n['font-size'] = esc_attr__('Font Size', 'popo-real-estate');
+    $l10n['font-weight'] = esc_attr__('Font Weight', 'popo-real-estate');
+    $l10n['line-height'] = esc_attr__('Line Height', 'popo-real-estate');
+    $l10n['font-style'] = esc_attr__('Font Style', 'popo-real-estate');
+    $l10n['letter-spacing'] = esc_attr__('Letter Spacing', 'popo-real-estate');
+    $l10n['top'] = esc_attr__('Top', 'popo-real-estate');
+    $l10n['bottom'] = esc_attr__('Bottom', 'popo-real-estate');
+    $l10n['left'] = esc_attr__('Left', 'popo-real-estate');
+    $l10n['right'] = esc_attr__('Right', 'popo-real-estate');
+    $l10n['color'] = esc_attr__('Color', 'popo-real-estate');
+    $l10n['add-image'] = esc_attr__('Add Image', 'popo-real-estate');
+    $l10n['change-image'] = esc_attr__('Change Image', 'popo-real-estate');
+    $l10n['remove'] = esc_attr__('Remove', 'popo-real-estate');
+    $l10n['no-image-selected'] = esc_attr__('No Image Selected', 'popo-real-estate');
+    $l10n['select-font-family'] = esc_attr__('Select a font-family', 'popo-real-estate');
+    $l10n['variant'] = esc_attr__('Variant', 'popo-real-estate');
+    $l10n['subsets'] = esc_attr__('Subset', 'popo-real-estate');
+    $l10n['size'] = esc_attr__('Size', 'popo-real-estate');
+    $l10n['height'] = esc_attr__('Height', 'popo-real-estate');
+    $l10n['spacing'] = esc_attr__('Spacing', 'popo-real-estate');
+    $l10n['ultra-light'] = esc_attr__('Ultra-Light 100', 'popo-real-estate');
+    $l10n['ultra-light-italic'] = esc_attr__('Ultra-Light 100 Italic', 'popo-real-estate');
+    $l10n['light'] = esc_attr__('Light 200', 'popo-real-estate');
+    $l10n['light-italic'] = esc_attr__('Light 200 Italic', 'popo-real-estate');
+    $l10n['book'] = esc_attr__('Book 300', 'popo-real-estate');
+    $l10n['book-italic'] = esc_attr__('Book 300 Italic', 'popo-real-estate');
+    $l10n['regular'] = esc_attr__('Normal 400', 'popo-real-estate');
+    $l10n['italic'] = esc_attr__('Normal 400 Italic', 'popo-real-estate');
+    $l10n['medium'] = esc_attr__('Medium 500', 'popo-real-estate');
+    $l10n['medium-italic'] = esc_attr__('Medium 500 Italic', 'popo-real-estate');
+    $l10n['semi-bold'] = esc_attr__('Semi-Bold 600', 'popo-real-estate');
+    $l10n['semi-bold-italic'] = esc_attr__('Semi-Bold 600 Italic', 'popo-real-estate');
+    $l10n['bold'] = esc_attr__('Bold 700', 'popo-real-estate');
+    $l10n['bold-italic'] = esc_attr__('Bold 700 Italic', 'popo-real-estate');
+    $l10n['extra-bold'] = esc_attr__('Extra-Bold 800', 'popo-real-estate');
+    $l10n['extra-bold-italic'] = esc_attr__('Extra-Bold 800 Italic', 'popo-real-estate');
+    $l10n['ultra-bold'] = esc_attr__('Ultra-Bold 900', 'popo-real-estate');
+    $l10n['ultra-bold-italic'] = esc_attr__('Ultra-Bold 900 Italic', 'popo-real-estate');
+    $l10n['invalid-value'] = esc_attr__('Invalid Value', 'popo-real-estate');
 
     return $l10n;
 
@@ -869,7 +869,7 @@ add_action('customize_controls_print_styles', 'poporealestate_customizer_preview
 //Registering Sidebars
 register_sidebar(array(
 
-    'name' => __('Sidebar', 'poporealestate'),
+    'name' => __('Sidebar', 'popo-real-estate'),
     'id' => 'sidebar-1',
     'before_widget' => '<section id="%1$s" class="widget %2$s">',
     'after_widget' => "</section>\n",
@@ -879,7 +879,7 @@ register_sidebar(array(
 ));
 register_sidebar(array(
 
-    'name' => __('Blog', 'poporealestate'),
+    'name' => __('Blog', 'popo-real-estate'),
     'id' => 'blog-sidebar',
     'before_widget' => '<section id="%1$s" class="widget %2$s">',
     'after_widget' => "</section>\n",
@@ -889,7 +889,7 @@ register_sidebar(array(
 ));
 register_sidebar(array(
 
-    'name' => __('Property Listing', 'poporealestate'),
+    'name' => __('Property Listing', 'popo-real-estate'),
     'id' => 'property-sidebar',
     'before_widget' => '<li id="%1$s" class="widget %2$s">',
     'after_widget' => "</li>\n",
@@ -900,7 +900,7 @@ register_sidebar(array(
 
 register_sidebars(4, array(
 
-    'name' => __('Footer %d', 'poporealestate'),
+    'name' => __('Footer %d', 'popo-real-estate'),
     'before_widget' => '<section id="%1$s" class="widget %2$s">',
     'after_widget' => "</section>\n",
     'before_title' => '<h6 class="widgettitle">',
@@ -981,8 +981,8 @@ if ( ! function_exists( 'poporealestate_pagination' ) ) {
         if ( 1 != $pages ) {
             echo '<nav aria-label="Page navigation">';
             echo "<ul class='pagination'>";
-            echo ( $paged > 2 && $paged > $range + 1 && $show_items < $pages ) ? "<li><a href='" . get_pagenum_link( 1 ) . "''>&laquo; " . __( 'First', 'poporealestate' ) . "</a> </li>" : "";
-            echo ( $paged > 1 && $show_items < $pages ) ? "<li><a href='" . get_pagenum_link( $prev ) . "' >&laquo; " . __( 'Previous', 'poporealestate' ) . "</a></li> " : "";
+            echo ( $paged > 2 && $paged > $range + 1 && $show_items < $pages ) ? "<li><a href='" . get_pagenum_link( 1 ) . "''>&laquo; " . __( 'First', 'popo-real-estate' ) . "</a> </li>" : "";
+            echo ( $paged > 1 && $show_items < $pages ) ? "<li><a href='" . get_pagenum_link( $prev ) . "' >&laquo; " . __( 'Previous', 'popo-real-estate' ) . "</a></li> " : "";
 
             for ( $i = 1; $i <= $pages; $i++ ) {
                 if ( 1 != $pages && ( ! ( $i >= $paged + $range + 1 || $i <= $paged - $range - 1 ) || $pages <= $show_items ) ) {
@@ -990,8 +990,8 @@ if ( ! function_exists( 'poporealestate_pagination' ) ) {
                 }
             }
 
-            echo ( $paged < $pages && $show_items < $pages ) ? "<li><a href='" . get_pagenum_link( $next ) . "' >" . __( 'Next', 'poporealestate' ) . " &raquo;</a></li> " : "";
-            echo ( $paged < $pages - 1 && $paged + $range - 1 < $pages && $show_items < $pages ) ? "<li><a href='" . get_pagenum_link( $pages ) . "' >" . __( 'Last', 'poporealestate' ) . " &raquo;</a> </li>" : "";
+            echo ( $paged < $pages && $show_items < $pages ) ? "<li><a href='" . get_pagenum_link( $next ) . "' >" . __( 'Next', 'popo-real-estate' ) . " &raquo;</a></li> " : "";
+            echo ( $paged < $pages - 1 && $paged + $range - 1 < $pages && $show_items < $pages ) ? "<li><a href='" . get_pagenum_link( $pages ) . "' >" . __( 'Last', 'popo-real-estate' ) . " &raquo;</a> </li>" : "";
             echo "</div></nav>";
         }
     }

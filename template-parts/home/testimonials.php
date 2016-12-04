@@ -21,7 +21,7 @@
                     }
                     if(empty($testimonials))
                     {
-                        __("There are not testimonials to display",'poporealestate');
+                        __("There are not testimonials to display",'popo-real-estate');
 
                     }
                     ?>

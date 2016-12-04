@@ -64,6 +64,8 @@ https://www.pexels.com/photo/house-car-vintage-old-2818/
 The Apple icon used in graphics is copyright of Apple Inc.
 The Google icon used in graphics is copyright of Google Inc.
 
+TGM Plugin Activation version 2.6.1. Copyrights 2016 TGMPA. TGM Plugin Activation library is licensed under GPL 2.0 or later. Source: http://tgmpluginactivation.com/
+
 
 # About Popo Real Estate #
 

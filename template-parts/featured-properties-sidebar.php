@@ -49,7 +49,7 @@ $the_query = new WP_Query($featured_posts_args);
                     <?php
 
                     if (empty(get_post_meta(get_the_id(), 'price')[0])) {
-                        _e('N/A', 'poporealestate');
+                        _e('N/A', 'popo-real-estate');
                     } else {
 
                         echo esc_html(get_theme_mod('poporealestate_currency_prefix', $poporealestate_default_options['poporealestate_currency_prefix']).get_post_meta(get_the_id(), 'price')[0]);
@@ -66,13 +66,13 @@ $the_query = new WP_Query($featured_posts_args);
                                             <?php echo esc_attr(get_theme_mod('poporealestate_area_postfix', $poporealestate_default_options['poporealestate_area_postfix'])); ?>
                                         </div>
                                         <div class="col-sm-6"><i
-                                                class="bed"></i><?php _e('Beds:', 'poporealestate') ?> <?php echo esc_html(get_post_meta(get_the_id(), 'beds', true)); ?>
+                                                class="bed"></i><?php _e('Beds:', 'popo-real-estate') ?> <?php echo esc_html(get_post_meta(get_the_id(), 'beds', true)); ?>
                                         </div>
                                         <div class="col-sm-6"><i
-                                                class="bath"></i><?php _e('Baths:', 'poporealestate') ?> <?php echo esc_html(get_post_meta(get_the_id(), 'baths', true)); ?>
+                                                class="bath"></i><?php _e('Baths:', 'popo-real-estate') ?> <?php echo esc_html(get_post_meta(get_the_id(), 'baths', true)); ?>
                                         </div>
                                         <div class="col-sm-6"><i
-                                                class="garage"></i><?php _e('Parking:', 'poporealestate') ?> <?php echo esc_html(get_post_meta(get_the_id(), 'parking', true)); ?>
+                                                class="garage"></i><?php _e('Parking:', 'popo-real-estate') ?> <?php echo esc_html(get_post_meta(get_the_id(), 'parking', true)); ?>
                                         </div>
                                     </div>
                                 </div>
@@ -87,12 +87,12 @@ $the_query = new WP_Query($featured_posts_args);
 
         <?php else: ?>
 
-            <p><?php echo __('There are no featured properties.', 'poporealestate'); ?></p>
+            <p><?php echo __('There are no featured properties.', 'popo-real-estate'); ?></p>
 
         <?php endif;
         ?>
         <a href="<?php echo esc_url($instance['listing_link']); ?>"
-           class="property-link"><?php echo __('All Properties', 'poporealestate'); ?><i class="fa fa-caret-right"
+           class="property-link"><?php echo __('All Properties', 'popo-real-estate'); ?><i class="fa fa-caret-right"
                                                                                          aria-hidden="true"></i></a>
     </div>
 

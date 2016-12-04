@@ -40,25 +40,25 @@
                         <div class="row">
                             <div class="col-sm-3">
                             <i class="sqm"></i>
-                            <?php echo __('Area:', 'poporealestate'); ?> <?php echo esc_attr(get_post_meta(get_the_id(), 'area', true)); ?> <?php echo esc_attr(get_theme_mod('poporealestate_area_postfix', $poporealestate_default_options['poporealestate_area_postfix'])); ?>
+                            <?php echo __('Area:', 'popo-real-estate'); ?> <?php echo esc_attr(get_post_meta(get_the_id(), 'area', true)); ?> <?php echo esc_attr(get_theme_mod('poporealestate_area_postfix', $poporealestate_default_options['poporealestate_area_postfix'])); ?>
                             </div>
                             <div class="col-sm-3">
                             <i class="bath"></i>
-                            <?php echo __('Baths:', 'poporealestate'); ?> <?php echo esc_attr(get_post_meta(get_the_id(), 'baths', true)); ?>
+                            <?php echo __('Baths:', 'popo-real-estate'); ?> <?php echo esc_attr(get_post_meta(get_the_id(), 'baths', true)); ?>
                             </div>
                             <div class="col-sm-3">
                             <i class="bed"></i>
-                            <?php echo __('Beds:', 'poporealestate'); ?> <?php echo esc_attr(get_post_meta(get_the_id(), 'beds', true)); ?>
+                            <?php echo __('Beds:', 'popo-real-estate'); ?> <?php echo esc_attr(get_post_meta(get_the_id(), 'beds', true)); ?>
                             </div>
                             <div class="col-sm-3">
                             <i class="garage"></i>
-                            <?php echo __('Parking:', 'poporealestate'); ?> <?php echo esc_attr(get_post_meta(get_the_id(), 'parking', true)); ?>
+                            <?php echo __('Parking:', 'popo-real-estate'); ?> <?php echo esc_attr(get_post_meta(get_the_id(), 'parking', true)); ?>
                             </div>
                         </div>
                     </div>
                     <div class="property-price"><span class=""><?php echo esc_attr(get_theme_mod('poporealestate_currency_prefix', $poporealestate_default_options['poporealestate_currency_prefix'])); ?>
                             <?php echo esc_attr(get_post_meta(get_the_id(), 'price')[0]); ?></span>
-                        <a href="<?php the_permalink(); ?>"><?php _e('More Details', 'poporealestate'); ?><i
+                        <a href="<?php the_permalink(); ?>"><?php _e('More Details', 'popo-real-estate'); ?><i
                                 class="fa fa-caret-right" aria-hidden="true"></i></a></div>
                 </div>
             </div>
@@ -87,7 +87,7 @@
                                             }
                                             else
                                             {
-                                                _e('Location Not Specified', 'poporealestate');
+                                                _e('Location Not Specified', 'popo-real-estate');
                                             }
                                             ?></p>
                                     </div>
@@ -114,27 +114,27 @@
                             <div class="row">
                                 <div class="col-sm-3">
                                     <i class="sqm"></i>
-                                    <?php echo __('Area:', 'poporealestate'); ?> <?php echo esc_attr(get_post_meta(get_the_id(), 'area', true)); ?> <?php echo esc_attr(get_theme_mod('poporealestate_area_postfix', $poporealestate_default_options['poporealestate_area_postfix'])); ?>
+                                    <?php echo __('Area:', 'popo-real-estate'); ?> <?php echo esc_attr(get_post_meta(get_the_id(), 'area', true)); ?> <?php echo esc_attr(get_theme_mod('poporealestate_area_postfix', $poporealestate_default_options['poporealestate_area_postfix'])); ?>
                                 </div>
                                 <div class="col-sm-3">
                                     <i class="bath"></i>
-                                    <?php echo __('Baths:', 'poporealestate'); ?> <?php echo esc_attr(get_post_meta(get_the_id(), 'baths', true)); ?>
+                                    <?php echo __('Baths:', 'popo-real-estate'); ?> <?php echo esc_attr(get_post_meta(get_the_id(), 'baths', true)); ?>
                                 </div>
                                 <div class="col-sm-3">
                                     <i class="bed"></i>
-                                    <?php echo __('Beds:', 'poporealestate'); ?> <?php echo esc_attr(get_post_meta(get_the_id(), 'beds', true)); ?>
+                                    <?php echo __('Beds:', 'popo-real-estate'); ?> <?php echo esc_attr(get_post_meta(get_the_id(), 'beds', true)); ?>
                                 </div>
                                 <div class="col-sm-3">
                                     <i class="garage"></i>
-                                    <?php echo __('Parking:', 'poporealestate'); ?> <?php echo esc_attr(get_post_meta(get_the_id(), 'parking', true)); ?>
+                                    <?php echo __('Parking:', 'popo-real-estate'); ?> <?php echo esc_attr(get_post_meta(get_the_id(), 'parking', true)); ?>
                                 </div>
                             </div>
                         </div>
                         <div class="property-price"><span class=""><?php if(!empty(get_post_meta(get_the_id(), 'price')[0])){ ?>
                                     <?php echo esc_html(get_theme_mod('poporealestate_currency_prefix', $poporealestate_default_options['poporealestate_currency_prefix'])); ?>
                                     <?php echo esc_html(get_post_meta(get_the_id(), 'price')[0]); ?>
-                                <?php }else{_e('N/A', 'poporealestate');} ?></span>
-                            <a href="<?php the_permalink(); ?>"><?php _e('More Details', 'poporealestate'); ?><i
+                                <?php }else{_e('N/A', 'popo-real-estate');} ?></span>
+                            <a href="<?php the_permalink(); ?>"><?php _e('More Details', 'popo-real-estate'); ?><i
                                     class="fa fa-caret-right" aria-hidden="true"></i></a></div>
                     </div>
             </div>
@@ -148,8 +148,8 @@
 <?php else: ?>
 
     <div class="not-found">
-        <h1><?php _e("No Properties Found", "poporealestate"); ?><h2/>
-            <span><?php _e("Properties you are looking for were not found", "poporealestate"); ?> </span>
+        <h1><?php _e("No Properties Found", 'popo-real-estate'); ?><h2/>
+            <span><?php _e("Properties you are looking for were not found", 'popo-real-estate'); ?> </span>
     </div>
 
 <?php endif;

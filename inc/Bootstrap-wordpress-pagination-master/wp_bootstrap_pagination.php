@@ -9,8 +9,8 @@ function wp_bootstrap_pagination( $args = array() )
     $defaults = array(
         'range'           => 4,
         'custom_query'    => false,
-        'previous_string' => __('Previous', 'poporealestate'),
-        'next_string'     => __('Next', 'poporealestate'),
+        'previous_string' => __('Previous', 'popo-real-estate'),
+        'next_string'     => __('Next', 'popo-real-estate'),
         'before_output'   => '<div class="post-nav"><ul class="pager">',
         'after_output'    => '</ul></div>'
     );
@@ -58,11 +58,11 @@ function wp_bootstrap_pagination( $args = array() )
     
     $firstpage = esc_attr(get_pagenum_link(1));
     if ($firstpage && (1 != $page) ) {
-        $echo .= '<li class="previous"><a href="' . $firstpage . '">' . __('First', 'poporealestate') . '</a></li>';
+        $echo .= '<li class="previous"><a href="' . $firstpage . '">' . __('First', 'popo-real-estate') . '</a></li>';
     }
 
     if ($previous && (1 != $page) ) {
-        $echo .= '<li><a href="' . $previous . '" title="' . __('previous', 'poporealestate') . '">' . $args['previous_string'] . '</a></li>';
+        $echo .= '<li><a href="' . $previous . '" title="' . __('previous', 'popo-real-estate') . '">' . $args['previous_string'] . '</a></li>';
     }
     
     if (!empty($min) && !empty($max) ) {
@@ -78,12 +78,12 @@ function wp_bootstrap_pagination( $args = array() )
     $next = intval($page) + 1;
     $next = esc_attr(get_pagenum_link($next));
     if ($next && ($count != $page) ) {
-        $echo .= '<li><a href="' . $next . '" title="' . __('next', 'poporealestate') . '">' . $args['next_string'] . '</a></li>';
+        $echo .= '<li><a href="' . $next . '" title="' . __('next', 'popo-real-estate') . '">' . $args['next_string'] . '</a></li>';
     }
     
     $lastpage = esc_attr(get_pagenum_link($count));
     if ($lastpage ) {
-        $echo .= '<li class="next"><a href="' . $lastpage . '">' . __('Last', 'poporealestate') . '</a></li>';
+        $echo .= '<li class="next"><a href="' . $lastpage . '">' . __('Last', 'popo-real-estate') . '</a></li>';
     }
 
     if (isset($echo) ) {

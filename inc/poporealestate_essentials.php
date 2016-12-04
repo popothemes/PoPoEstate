@@ -106,8 +106,8 @@ if (!function_exists('poporealestate_register_required_plugins')) {
             ),
             array(
                 'name' => 'Popo Real Estate Essentials', // The plugin name.
-                'slug' => 'poporealestate-essentials', // The plugin slug (typically the folder name).
-                'source' => 'http://www.popothemes.com/wordpress/free/plugin/poporealestate-essentials.zip', // The plugin source.
+                'slug' => 'popo-real-estate-essentials', // The plugin slug (typically the folder name).
+                'source' => 'http://www.popothemes.com/wordpress/free/plugin/popo-real-estate-essentials.zip', // The plugin source.
                 'required' => true, // If false, the plugin is only 'recommended' instead of required.
                 'version' => '1.5', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
                 'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
@@ -118,7 +118,7 @@ if (!function_exists('poporealestate_register_required_plugins')) {
 
 
             $config = array(
-                'id' => 'poporealestate',             // Unique ID for hashing notices for multiple instances of TGMPA.
+                'id' => 'popo-real-estate',             // Unique ID for hashing notices for multiple instances of TGMPA.
                 'default_path' => '',                      // Default absolute path to bundled plugins.
                 'menu' => 'tgmpa-install-plugins', // Menu slug.
                 'has_notices' => true,                    // Show admin notices or not.

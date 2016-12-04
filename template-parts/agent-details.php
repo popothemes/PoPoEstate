@@ -1,5 +1,5 @@
 <div class="p-box p-contact-agent">
-              <h4><?php echo __('Contact Agent', 'poporealestate'); ?></h4>
+              <h4><?php echo __('Contact Agent', 'popo-real-estate'); ?></h4>
               
               <div class="row">
                 <div class="col-sm-6 agent-detail">
@@ -111,7 +111,7 @@
 
                       if(empty(get_theme_mod("poporealestate_agent_form_shortcode","")))
                       {
-                        _e("Please add a Contact Form 7 shortcode in Agent settings of customizer to show a form here","poporealestate");
+                        _e("Please add a Contact Form 7 shortcode in Agent settings of customizer to show a form here",'popo-real-estate');
 
                       }
                       else

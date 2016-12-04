@@ -74,7 +74,7 @@ get_header();
 
 
   </div>
-  <h4 class="hidden">poporealestate</h4>
+  <h4 class="hidden">Popo Real Estate</h4>
 </article>
 
 

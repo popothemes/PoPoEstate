@@ -11,18 +11,18 @@
             {
                 global $wp_query;
                 $curauth = $wp_query->get_queried_object();
-                echo __('Properties by ','poporealestate').$curauth->display_name;
+                echo __('Properties by ','popo-real-estate').$curauth->display_name;
             }
             else if(is_category())
             {
-                echo __('All posts in ', 'poporealestate');
+                echo __('All posts in ', 'popo-real-estate');
                 echo '"';
                 single_cat_title();
                 echo '"';
             }
             else if(is_tag())
             {
-                echo __('All posts tagged with ', 'poporealestate');
+                echo __('All posts tagged with ', 'popo-real-estate');
                 echo '"';
                 single_tag_title();
                 echo '"';

@@ -24,14 +24,14 @@
               <div class="p-image"><img src="<?php echo the_post_thumbnail_url('poporealestate_property_single');?>" alt="" class="img-responsive" /></div>
               <div class="p-box p-detail p-paddingless">
                 <div class="single-status"><?php the_terms(get_the_id(), 'property_statuses', '', ', ', ''); ?></div><div class="single-type"><?php the_terms(get_the_id(), 'property_types', '', ', ', ''); ?></div>
-                <div class="single-brief"><?php echo get_post_meta(get_the_id(), 'area', true); ?> <?php echo esc_attr(get_theme_mod('poporealestate_area_postfix', $poporealestate_default_options['poporealestate_area_postfix'])); ?> | <?php echo get_post_meta(get_the_id(), 'beds', true); ?> <?php _e('Beds', 'poporealestate'); ?> | <?php echo get_post_meta(get_the_id(), 'baths', true); ?> <?php _e('Baths', 'poporealestate'); ?> | <?php echo get_post_meta(get_the_id(), 'parking', true); ?> <?php _e('Parking', 'poporealestate'); ?> </div><div class="price"><?php echo esc_attr(get_theme_mod('poporealestate_price_prefix', $poporealestate_default_options['poporealestate_currency_prefix'])); ?><?php echo get_post_meta(get_the_id(), 'price', true); ?> </div>
+                <div class="single-brief"><?php echo get_post_meta(get_the_id(), 'area', true); ?> <?php echo esc_attr(get_theme_mod('poporealestate_area_postfix', $poporealestate_default_options['poporealestate_area_postfix'])); ?> | <?php echo get_post_meta(get_the_id(), 'beds', true); ?> <?php _e('Beds', 'popo-real-estate'); ?> | <?php echo get_post_meta(get_the_id(), 'baths', true); ?> <?php _e('Baths', 'popo-real-estate'); ?> | <?php echo get_post_meta(get_the_id(), 'parking', true); ?> <?php _e('Parking', 'popo-real-estate'); ?> </div><div class="price"><?php echo esc_attr(get_theme_mod('poporealestate_price_prefix', $poporealestate_default_options['poporealestate_currency_prefix'])); ?><?php echo get_post_meta(get_the_id(), 'price', true); ?> </div>
               </div>
               <?php
               if(trim(get_the_content()) != '')
                {
                ?>
                <div class="p-box p-detail">
-                <h4><?php echo __('Property Description', 'poporealestate'); ?></h4>
+                <h4><?php echo __('Property Description', 'popo-real-estate'); ?></h4>
                 <p><?php the_content(); ?></p>
 
               </div>
@@ -94,7 +94,7 @@
                             array_push($features_col_1, $all_features[0]);
                         }
                         ?>
-                <h4><?php echo __('Property Features', 'poporealestate'); ?></h4>
+                <h4><?php echo __('Property Features', 'popo-real-estate'); ?></h4>
                 <div class="row">
                   <div class="col-sm-4">
                     <ul>
@@ -139,7 +139,7 @@
                 {
                 ?>
                 <div class="p-box">
-                <h4><?php echo __('Location', 'poporealestate'); ?></h4>
+                <h4><?php echo __('Location', 'popo-real-estate'); ?></h4>
                 <p><?php echo get_post_meta(get_the_id(), 'address')[0]; ?></p>
                 <div id="single-property-map"></div>
 
@@ -164,7 +164,7 @@
       </section>
       
     </div>
-    <h4 class="hidden">poporealestate</h4>
+    <h4 class="hidden">Popo Real Estate</h4>
   </article>
     <?php endwhile; ?>
     <?php get_footer(); ?>

@@ -25,21 +25,21 @@
                         ?>  
                         <div class="b-detail">
                           <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-                          <div class="blog-info"><span><?php echo __('By', 'poporealestate').' '; ?><a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><?php the_author(); ?></a></span>   |   <span><?php the_category(', '); ?></span>   |   <span>
+                          <div class="blog-info"><span><?php echo __('By', 'popo-real-estate').' '; ?><a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><?php the_author(); ?></a></span>   |   <span><?php the_category(', '); ?></span>   |   <span>
                                 <?php
                                   $num_comments = get_comments_number(); // get_comments_number returns only a numeric value
 
                                 if (comments_open() ) {
                                     if ($num_comments == 0 ) {
-                                        $comments = __('No Comments', 'poporealestate');
+                                        $comments = __('No Comments', 'popo-real-estate');
                                     } elseif ($num_comments > 1 ) {
-                                        $comments = $num_comments . __(' Comments', 'poporealestate');
+                                        $comments = $num_comments . __(' Comments', 'popo-real-estate');
                                     } else {
-                                        $comments = __('1 Comment','poporealestate');
+                                        $comments = __('1 Comment','popo-real-estate');
                                     }
                                         $write_comments = '<a href="' . get_comments_link() .'">'. $comments.'</a>';
                                 } else {
-                                        $write_comments =  __('Comments Disabled','poporealestate');
+                                        $write_comments =  __('Comments Disabled','popo-real-estate');
                                 }
                                 echo $write_comments;
                                 ?>
@@ -54,8 +54,8 @@
                                 'link_after'       => '',
                                 'next_or_number'   => 'number',
                                 'separator'        => ' ',
-                                'nextpagelink'     => __( 'Next page', 'poporealestate' ),
-                                'previouspagelink' => __( 'Previous page', 'poporealestate' ),
+                                'nextpagelink'     => __( 'Next page', 'popo-real-estate' ),
+                                'previouspagelink' => __( 'Previous page', 'popo-real-estate' ),
                                 'pagelink'         => '%',
                                 'echo'             => 1
                             );
@@ -84,7 +84,7 @@
                         if(has_tag())
                         {
                             ?>
-                            <div class="tags"> <?php __("Tags:", 'poporealestate'); the_tags();?> </div>
+                            <div class="tags"> <?php __("Tags:", 'popo-real-estate'); the_tags();?> </div>
 
                         <?php
 
@@ -95,7 +95,7 @@
                   </div>
                 </div>
                 <div class="recent-blog">
-                  <h2><?php echo __('Related Posts', 'poporealestate'); ?></h2>
+                  <h2><?php echo __('Related Posts', 'popo-real-estate'); ?></h2>
                   <div class="row">
 
                     <?php get_template_part('template-parts/related-posts'); ?>
@@ -116,7 +116,7 @@
           </div>
         </section>
   </div>
-  <h4 class="hidden">poporealestate</h4>
+  <h4 class="hidden">Popo Real Estate</h4>
 </article>
 <?php get_footer(); ?>
 

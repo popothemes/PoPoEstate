@@ -31,21 +31,21 @@
 
                                         if (comments_open() ) {
                                             if ($num_comments == 0 ) {
-                                                $comments = __('<i class="fa fa-comment" aria-hidden="true"></i> No Comments', 'poporealestate');
+                                                $comments = __('<i class="fa fa-comment" aria-hidden="true"></i> No Comments', 'popo-real-estate');
                                             } elseif ($num_comments > 1 ) {
-                                                $comments = '<i class="fa fa-comment" aria-hidden="true"></i>'.$num_comments . __(' Comments', 'poporealestate');
+                                                $comments = '<i class="fa fa-comment" aria-hidden="true"></i>'.$num_comments . __(' Comments', 'popo-real-estate');
                                             } else {
-                                                $comments = __('<i class="fa fa-comment" aria-hidden="true"></i> 1 Comment','poporealestate');
+                                                $comments = __('<i class="fa fa-comment" aria-hidden="true"></i> 1 Comment','popo-real-estate');
                                             }
                                             $write_comments = '<a href="' . get_comments_link() .'">'. $comments.'</a>';
                                         } else {
-                                            $write_comments =  __('<i class="fa fa-comment" aria-hidden="true"></i> Comments Disabled','poporealestate');
+                                            $write_comments =  __('<i class="fa fa-comment" aria-hidden="true"></i> Comments Disabled','popo-real-estate');
                                         }
                                         echo $write_comments;
                                         ?>
                                     </div>
                                 <div class="col-sm-5"><a href="<?php echo esc_url( get_category_link( get_the_category()[0]->term_id ) ) ?>"><i aria-hidden="true" class="fa fa-tag"></i><?php print_r(get_the_category()[0]->name); ?></a></div>
-                                <div class="col-sm-3"><a href="<?php echo get_the_permalink(); ?>"><i class="fa fa-share"></i><?php _e('More', 'poporealestate') ?><span class="screen-reader-text">of <?php the_title(); ?></span></a></div>
+                                <div class="col-sm-3"><a href="<?php echo get_the_permalink(); ?>"><i class="fa fa-share"></i><?php _e('More', 'popo-real-estate') ?><span class="screen-reader-text">of <?php the_title(); ?></span></a></div>
                             </div>
                         </div>
                     </div>
@@ -59,8 +59,8 @@
 
 <?php else: ?>
     <div class="not-found">
-        <h2><?php _e("Blog is empty", "poporealestate"); ?></h2>
-        <span><?php _e("No posts were found", "poporealestate"); ?> </span>
+        <h2><?php _e("Blog is empty", 'popo-real-estate'); ?></h2>
+        <span><?php _e("No posts were found", 'popo-real-estate'); ?> </span>
     </div>
 
 

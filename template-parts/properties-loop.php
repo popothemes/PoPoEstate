@@ -19,7 +19,7 @@
                                       }
                                       else
                                       {
-                                      _e('Location Not Specified', 'poporealestate');
+                                      _e('Location Not Specified', 'popo-real-estate');
                                       }
                                        ?>
                                 </p>
@@ -62,13 +62,13 @@
                                         <?php echo esc_attr(get_theme_mod('poporealestate_area_postfix', $poporealestate_default_options['poporealestate_area_postfix'])); ?>
                                 </div>
                                 <div class="col-sm-3"><i
-                                        class="bath"></i><?php _e('Baths:','poporealestate'); ?> <?php echo esc_attr(get_post_meta(get_the_id(), 'baths', true)); ?>
+                                        class="bath"></i><?php _e('Baths:','popo-real-estate'); ?> <?php echo esc_attr(get_post_meta(get_the_id(), 'baths', true)); ?>
                                 </div>
                                 <div class="col-sm-3"><i
-                                        class="bed"></i><?php _e('Beds:','poporealestate'); ?> <?php echo esc_attr(get_post_meta(get_the_id(), 'beds', true)); ?>
+                                        class="bed"></i><?php _e('Beds:','popo-real-estate'); ?> <?php echo esc_attr(get_post_meta(get_the_id(), 'beds', true)); ?>
                                 </div>
                                 <div class="col-sm-3"><i
-                                        class="garage"></i><?php _e('Parking:','poporealestate'); ?> <?php echo esc_attr(get_post_meta(get_the_id(), 'parking', true)); ?>
+                                        class="garage"></i><?php _e('Parking:','popo-real-estate'); ?> <?php echo esc_attr(get_post_meta(get_the_id(), 'parking', true)); ?>
                                 </div>
                             </div>
                         </div>
@@ -78,21 +78,21 @@
                                 <?php if(!empty(get_post_meta(get_the_id(), 'price')[0])){ ?>
                                 <?php echo esc_html(get_theme_mod('poporealestate_currency_prefix', $poporealestate_default_options['poporealestate_currency_prefix'])); ?>
                                          <?php echo esc_html(get_post_meta(get_the_id(), 'price')[0]); ?>
-                                         <?php }else{_e('N/A', 'poporealestate');} ?></span>
+                                         <?php }else{_e('N/A', 'popo-real-estate');} ?></span>
                             <?php
                             $num_comments = get_comments_number(); // get_comments_number returns only a numeric value
 
                             if (comments_open()) {
                                 if ($num_comments == 0) {
-                                    $comments = __('No Reviews', 'poporealestate');
+                                    $comments = __('No Reviews', 'popo-real-estate');
                                 } elseif ($num_comments > 1) {
-                                    $comments = $num_comments . __(' Reviews', 'poporealestate');
+                                    $comments = $num_comments . __(' Reviews', 'popo-real-estate');
                                 } else {
-                                    $comments = __('1 Review', 'poporealestate');
+                                    $comments = __('1 Review', 'popo-real-estate');
                                 }
                                 $write_comments = '<a href="' . get_comments_link() . '"><i class="ti-comment-alt"></i> ' . $comments . '</a>';
                             } else {
-                                $write_comments = __('Reviews Disabled', 'poporealestate');
+                                $write_comments = __('Reviews Disabled', 'popo-real-estate');
                             }
                             echo $write_comments;
                             ?>
@@ -115,8 +115,8 @@
 <?php else: ?>
 
     <div class="not-found">
-        <h1><?php _e("No Properties Found", "poporealestate"); ?><h2/>
-            <span><?php _e("Properties you are looking for were not found", "poporealestate"); ?> </span>
+        <h1><?php _e("No Properties Found", 'popo-real-estate'); ?><h2/>
+            <span><?php _e("Properties you are looking for were not found", 'popo-real-estate'); ?> </span>
     </div>
 
 <?php endif;

@@ -20,7 +20,7 @@ class poporealestate_Property_Search extends WP_Widget {
 
     public function form( $instance ) {
         echo "<p>";
-        _e('Property Search Form','poporealestate');
+        _e('Property Search Form','popo-real-estate');
         echo "</p>";
     }
 
@@ -40,9 +40,9 @@ class poporealestate_Recent_Searches extends WP_Widget {
     public function __construct() {
         $widget_ops = array(
             'classname' => 'poporealestate-recent-searches',
-            'description' => __('PopoHomes Recent Searches','poporealestate'),
+            'description' => __('PopoHomes Recent Searches','popo-real-estate'),
         );
-        parent::__construct( 'poporealestate-recent-searches', __('PopoHomes Recent Searches','poporealestate'), $widget_ops );
+        parent::__construct( 'poporealestate-recent-searches', __('PopoHomes Recent Searches','popo-real-estate'), $widget_ops );
     }
 
     public function widget( $args, $instance ) {
@@ -68,7 +68,7 @@ class poporealestate_Recent_Searches extends WP_Widget {
             else
             {
                 echo "<p>";
-                _e('There are no recent searches to show.','poporealestate');
+                _e('There are no recent searches to show.','popo-real-estate');
                 echo "</p>";
             }
 
@@ -84,13 +84,13 @@ class poporealestate_Recent_Searches extends WP_Widget {
 
     public function form( $instance ) {
 
-        $title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( 'Recent Searches', 'poporealestate' );
+        $title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( 'Recent Searches', 'popo-real-estate' );
         ?>
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php echo esc_attr( 'Title:', 'poporealestate' ); ?></label>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php echo esc_attr( 'Title:', 'popo-real-estate' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
         </p>
-        <p> <?php _e("Show recent searches", 'poporealestate'); ?>
+        <p> <?php _e("Show recent searches", 'popo-real-estate'); ?>
         </p>
 
         <?php
@@ -116,9 +116,9 @@ class poporealestate_Featured_Properties extends WP_Widget {
     public function __construct() {
         $widget_ops = array(
             'classname' => 'poporealestate-featured-properties',
-            'description' => __('PopoHomes Featured Properties','poporealestate'),
+            'description' => __('PopoHomes Featured Properties','popo-real-estate'),
         );
-        parent::__construct( 'poporealestate-featured-properties', __('PopoHomes Featured Properties','poporealestate'), $widget_ops );
+        parent::__construct( 'poporealestate-featured-properties', __('PopoHomes Featured Properties','popo-real-estate'), $widget_ops );
     }
 
     public function widget( $args, $instance ) {
@@ -130,15 +130,15 @@ class poporealestate_Featured_Properties extends WP_Widget {
 
     public function form( $instance ) {
 
-        $title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( 'Featured Properties', 'poporealestate' );
-        $listing_link = ! empty( $instance['listing_link'] ) ? $instance['listing_link'] : esc_html__( '', 'poporealestate' );
+        $title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( 'Featured Properties', 'popo-real-estate' );
+        $listing_link = ! empty( $instance['listing_link'] ) ? $instance['listing_link'] : esc_html__( '', 'popo-real-estate' );
         ?>
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php echo esc_attr( 'Title:', 'poporealestate' ); ?></label>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php echo esc_attr( 'Title:', 'popo-real-estate' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
         </p>
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'listing_link' ) ); ?>"><?php echo esc_attr( 'Properties List URL:', 'poporealestate' ); ?></label>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'listing_link' ) ); ?>"><?php echo esc_attr( 'Properties List URL:', 'popo-real-estate' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'listing_link' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'listing_link' ) ); ?>" type="text" value="<?php echo esc_attr( $listing_link ); ?>">
         </p>
     <?php
@@ -173,7 +173,7 @@ class poporealestate_Social_Icons extends WP_Widget {
 
     public function form( $instance ) {
         echo '<p>';
-        echo __('Configure Social Icons by going to Appearance > Customizer.','poporealestate');
+        echo __('Configure Social Icons by going to Appearance > Customizer.','popo-real-estate');
         echo '</p>';
     }
 
@@ -191,31 +191,31 @@ class poporealestate_Short_Description extends WP_Widget {
     public function __construct() {
         $widget_ops = array(
             'classname' => 'poporealestate-short-description',
-            'description' => __('PopoHomes Short Description','poporealestate'),
+            'description' => __('PopoHomes Short Description','popo-real-estate'),
         );
-        parent::__construct( 'poporealestate-short-description', __('PopoHomes Short Description','poporealestate'), $widget_ops );
+        parent::__construct( 'poporealestate-short-description', __('PopoHomes Short Description','popo-real-estate'), $widget_ops );
     }
 
     public function widget( $args, $instance ) {
         ?>
             <?php get_template_part('template-parts/logo'); ?>
             <p><?php echo $instance['description']; ?></p>
-            <a href="<?php $instance['link']; ?>"><?php echo __('Read More', 'poporealestate'); ?> <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+            <a href="<?php $instance['link']; ?>"><?php echo __('Read More', 'popo-real-estate'); ?> <i class="fa fa-caret-right" aria-hidden="true"></i></a>
         <?php
     }
 
 
     public function form( $instance ) {
 
-        $description = ! empty( $instance['description'] ) ? $instance['description'] : esc_html__( '', 'poporealestate' );
-        $link = ! empty( $instance['link'] ) ? $instance['link'] : esc_html__( '', 'poporealestate' );
+        $description = ! empty( $instance['description'] ) ? $instance['description'] : esc_html__( '', 'popo-real-estate' );
+        $link = ! empty( $instance['link'] ) ? $instance['link'] : esc_html__( '', 'popo-real-estate' );
         ?>
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'description' ) ); ?>"><?php echo esc_attr( 'Short Description:', 'poporealestate' ); ?></label>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'description' ) ); ?>"><?php echo esc_attr( 'Short Description:', 'popo-real-estate' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'description' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'description' ) ); ?>" type="textarea" value="<?php echo esc_attr( $description ); ?>">
         </p>
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'link' ) ); ?>"><?php echo esc_attr( 'Read More Link:', 'poporealestate' ); ?></label>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'link' ) ); ?>"><?php echo esc_attr( 'Read More Link:', 'popo-real-estate' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'link' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'link' ) ); ?>" type="text" value="<?php echo esc_attr( $link ); ?>">
         </p>
         <?php

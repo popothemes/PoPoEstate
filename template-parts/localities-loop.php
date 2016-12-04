@@ -305,8 +305,8 @@
 
 <?php else: ?>
     <div class="not-found">
-        <h2><?php _e("No Localities found", "poporealestate"); ?></h2>
-        <span><?php _e("No posts were found", "poporealestate"); ?> </span>
+        <h2><?php _e("No Localities found", 'popo-real-estate'); ?></h2>
+        <span><?php _e("No posts were found", 'popo-real-estate'); ?> </span>
     </div>
 
 

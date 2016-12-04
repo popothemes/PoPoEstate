@@ -7,12 +7,12 @@
                 <div class="sale-form">
 
                   <form method="get" action="<?php echo get_theme_mod('poporealestate_search_page'); ?>">
-                    <div class="form-group"><label><?php echo __('Enter Your Keyword', 'poporealestate'); ?></label><input type="text" class="form-control" name="keyword" placeholder="Search by title, description or features" value="<?php if(isset($_GET['keyword'])) {echo $_GET['keyword'];
+                    <div class="form-group"><label><?php echo __('Enter Your Keyword', 'popo-real-estate'); ?></label><input type="text" class="form-control" name="keyword" placeholder="Search by title, description or features" value="<?php if(isset($_GET['keyword'])) {echo $_GET['keyword'];
                    } ?>" /></div>
-                      <div class="form-group"><label><?php echo __('Location', 'poporealestate'); ?></label><input type="text" class="form-control" name="location" placeholder="Search by location, area etc." value="<?php if(isset($_GET['location'])) {echo $_GET['location'];
+                      <div class="form-group"><label><?php echo __('Location', 'popo-real-estate'); ?></label><input type="text" class="form-control" name="location" placeholder="Search by location, area etc." value="<?php if(isset($_GET['location'])) {echo $_GET['location'];
                           } ?>" /></div>
-                    <div class="form-group"><label><?php echo __('Property Status', 'poporealestate'); ?></label><select type="text" name="status" class="form-control" >
-                      <option value="any"><?php echo __('Any', 'poporealestate'); ?></option>
+                    <div class="form-group"><label><?php echo __('Property Status', 'popo-real-estate'); ?></label><select type="text" name="status" class="form-control" >
+                      <option value="any"><?php echo __('Any', 'popo-real-estate'); ?></option>
                         <?php
 
                         if(isset($_GET['status'])) {
@@ -27,8 +27,8 @@
                         ?>
 
                     </select></div>
-                    <div class="form-group"><label><?php echo __('Property Type', 'poporealestate'); ?></label><select name="type" type="text" class="form-control" >
-                            <option value="any"><?php echo __('Any', 'poporealestate'); ?></option>
+                    <div class="form-group"><label><?php echo __('Property Type', 'popo-real-estate'); ?></label><select name="type" type="text" class="form-control" >
+                            <option value="any"><?php echo __('Any', 'popo-real-estate'); ?></option>
                         <?php
 
                         if(isset($_GET['type'])) {
@@ -43,7 +43,7 @@
                         ?>
                     </select></div>
                     <div class="row form-group">
-                      <div class="col-sm-6"><label><?php echo __('Min Beds', 'poporealestate'); ?></label><select type="text" name="beds" class="form-control" >
+                      <div class="col-sm-6"><label><?php echo __('Min Beds', 'popo-real-estate'); ?></label><select type="text" name="beds" class="form-control" >
                       <option value="any">Any</option>
                               <?php
 
@@ -58,7 +58,7 @@
 
                               ?>
                     </select></div>
-                      <div class="col-sm-6"><label><?php echo __('Min Baths', 'poporealestate'); ?></label><select type="text" name="baths" class="form-control" >
+                      <div class="col-sm-6"><label><?php echo __('Min Baths', 'popo-real-estate'); ?></label><select type="text" name="baths" class="form-control" >
                       <option value="any">Any</option>
                               <?php
 
@@ -75,7 +75,7 @@
                     </select></div>
                     </div>
                       <div class="row form-group">
-                          <div class="col-sm-6"><label><?php echo __('Min Parking', 'poporealestate'); ?></label><select type="text" name="garage" class="form-control" >
+                          <div class="col-sm-6"><label><?php echo __('Min Parking', 'popo-real-estate'); ?></label><select type="text" name="garage" class="form-control" >
                                   <option value="any">Any</option>
                                   <?php
 
@@ -93,7 +93,7 @@
                       </div>
 
                     <div class="row form-group">
-                      <div class="col-sm-6"><label><?php printf(__('Min. Area (%s)', 'poporealestate'),get_theme_mod('poporealestate_area_postfix', $poporealestate_default_options['poporealestate_area_postfix'])); ?></label><select type="text" name="minarea" class="form-control" >
+                      <div class="col-sm-6"><label><?php printf(__('Min. Area (%s)', 'popo-real-estate'),get_theme_mod('poporealestate_area_postfix', $poporealestate_default_options['poporealestate_area_postfix'])); ?></label><select type="text" name="minarea" class="form-control" >
                       <option value="any">Any</option>
                               <?php
 
@@ -108,7 +108,7 @@
 
                               ?>
                     </select></div>
-                      <div class="col-sm-6"><label><?php printf(__('Max. Area (%s)', 'poporealestate'),get_theme_mod('poporealestate_area_postfix', $poporealestate_default_options['poporealestate_area_postfix'])); ?></label><select type="text" name="maxarea" class="form-control" >
+                      <div class="col-sm-6"><label><?php printf(__('Max. Area (%s)', 'popo-real-estate'),get_theme_mod('poporealestate_area_postfix', $poporealestate_default_options['poporealestate_area_postfix'])); ?></label><select type="text" name="maxarea" class="form-control" >
                       <option value="any">Any</option>
                               <?php
 
@@ -125,7 +125,7 @@
                     </select></div>
                     </div>
                     <div class="row form-group">
-                      <div class="col-sm-6"><label><?php printf(__('Price From (%s)', 'poporealestate'),get_theme_mod('poporealestate_currency_prefix', $poporealestate_default_options['poporealestate_currency_prefix'])); ?></label><select type="text" name="pricefrom" class="form-control" >
+                      <div class="col-sm-6"><label><?php printf(__('Price From (%s)', 'popo-real-estate'),get_theme_mod('poporealestate_currency_prefix', $poporealestate_default_options['poporealestate_currency_prefix'])); ?></label><select type="text" name="pricefrom" class="form-control" >
                       <option value="any">Any</option>
                               <?php
 
@@ -140,7 +140,7 @@
 
                               ?>
                     </select></div>
-                      <div class="col-sm-6"><label><?php printf(__('Price To (%s)', 'poporealestate'), get_theme_mod('poporealestate_currency_prefix', $poporealestate_default_options['poporealestate_currency_prefix'])); ?></label><select type="text" name="priceto" class="form-control" >
+                      <div class="col-sm-6"><label><?php printf(__('Price To (%s)', 'popo-real-estate'), get_theme_mod('poporealestate_currency_prefix', $poporealestate_default_options['poporealestate_currency_prefix'])); ?></label><select type="text" name="priceto" class="form-control" >
                       <option value="any">Any</option>
                               <?php
 

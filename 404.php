@@ -17,8 +17,8 @@
                 <div class="row">
                     <div class="col-sm-8">
                         <div class="blog-section">
-                           <h1><?php echo __('404! Page Not found', 'poporealestate'); ?></h1>
-                            <p><?php echo __('The page you might be looking for is not available. Please try the search.', 'poporealestate'); ?></p>
+                           <h1><?php echo __('404! Page Not found', 'popo-real-estate'); ?></h1>
+                            <p><?php echo __('The page you might be looking for is not available. Please try the search.', 'popo-real-estate'); ?></p>
                         </div>
                     </div>
                     <div class="col-sm-4">
@@ -31,7 +31,7 @@
         </section>
 
     </div>
-    <h4 class="hidden">poporealestate</h4>
+    <h4 class="hidden">Popo Real Estate</h4>
 </article>
 <?php get_footer(); ?>
 

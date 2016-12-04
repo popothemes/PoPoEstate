@@ -50,7 +50,7 @@
                         if (!empty(get_the_author_meta('googleplus-url')))
                         {
                           ?>
-                          <li><a href="<?php esc_url(get_the_author_meta('googleplus-url')); ?>" class="gp"><i class="fa fa-googleplus"></i></a></li>
+                          <li><a href="<?php esc_url(get_the_author_meta('googleplus-url')); ?>" class="gp"><i class="fa fa-google-plus"></i></a></li>
 
                           <?php
 

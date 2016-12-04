@@ -106,8 +106,8 @@ if (!function_exists('poporealestate_register_required_plugins')) {
             ),
             array(
                 'name' => 'Popo Real Estate Essentials', // The plugin name.
-                'slug' => 'popo-real-estate-essentials', // The plugin slug (typically the folder name).
-                'source' => 'http://www.popothemes.com/wordpress/free/plugin/popo-real-estate-essentials.zip', // The plugin source.
+                'slug' => 'poporealestate-essentials', // The plugin slug (typically the folder name).
+                'source' => 'http://www.popothemes.com/wordpress/free/plugin/poporealestate-essentials.zip', // The plugin source.
                 'required' => true, // If false, the plugin is only 'recommended' instead of required.
                 'version' => '1.5', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
                 'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
